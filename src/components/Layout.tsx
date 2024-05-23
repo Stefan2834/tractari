@@ -22,7 +22,8 @@ export default function RootLayout({
 				<meta name="Tractari" content="Tractari auto alin cotoban srl" />
 				<meta name="author" content="Iosif Stefan Alexandru" />
 				<meta name="keywords" content="tractari , auto, masina, cotoban, kot, alin kot, remorca, remorcare, tractare" />
-				<meta charset="UTF-8" />
+				<meta charSet="UTF-8" />
+
 				<meta
 					name="viewport"
 					content="width=device-width, initial-scale=1.0"

@@ -5,16 +5,16 @@ import Image from "next/image";
 export default function Navbar() {
 	return (
 		<>
-			<div className="fixed w-[calc(100%-64px)] h-32 flex items-center justify-between z-30 mx-8">
-				<div className="logo">
+			<div className="fixed w-full h-32 flex items-center justify-between z-30 px-8 grad">
+				<Link href="/" className="logo">
 					<Image src="/photo/logo.png" alt="logo" width={300} height={128} />
 					{/* <img src="../../public/photo/logo.png" alt="logo" /> */}
-				</div>
+				</Link>
 				<div className="text-white flex items-center justify-center text-xl">
-					<Link href="/" className="mx-4 py-2 px-4">Vezi poze</Link>
-					<Link href="/" className="mx-4 py-2 px-4">Cine suntem?</Link>
-					<Link href="/" className="mx-4 py-2 px-4">Servicile noastre</Link>
-					<Link href="/" className="mx-4 py-2 px-4">Contacteaza-ne</Link>
+					<Link href="/" className="mx-4 py-2 px-4 nav-link">Vezi poze</Link>
+					<Link href="/" className="mx-4 py-2 px-4 nav-link">Cine suntem?</Link>
+					<Link href="/" className="mx-4 py-2 px-4 nav-link">Servicile noastre</Link>
+					<Link href="/" className="mx-4 py-2 px-4 nav-link">Contacteaza-ne</Link>
 				</div>
 			</div>
 		</>

@@ -43,6 +43,7 @@ export default function Home() {
 					<span>Află mai multe</span>
 					<ChangeHistoryRoundedIcon
 						sx={{
+							color:"white",
 							fontSize: "60px",
 							mb: 8,
 							transform: "rotate(180deg)",

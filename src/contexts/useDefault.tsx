@@ -3,8 +3,8 @@ import axios from 'axios';
 
 
 interface DefaultContextValue {
-    number: number | null,
-    setNumber: (accessToken: number | null) => void,
+    number: number,
+    setNumber: (accessToken: number) => void,
 }
 
 

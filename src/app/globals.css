@@ -10,6 +10,13 @@
 	--main: #d7fc32;
 }
 
+@font-face {
+	font-family: "GetVoIP Grotesque";
+	src: url("../../public/font/getvoip_grotesque/GetVoIP\ Grotesque.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -17,38 +24,47 @@ body {
 	overflow-y: scroll;
 }
 
-.text-main {
-	color: var(--main);
-}
-.bg-main {
-	background-color: var(--main);
+.font {
+	font-family: "GetVoIP Grotesque", sans-serif;
 }
 
-.bg-main {
-	background-image: url(../../public/photo/bg-main.jpg);
+.bg-main-1 {
+	position: absolute;
+	top:0;
+	bottom:0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../../public/photo/bg-main-1.png);
 	background-position: center;
+	background-size: cover;
+	background-color: rgba(0, 0, 0, 0.4);
+	background-blend-mode: soft-light;
+	background-repeat: no-repeat;
+}
+
+.bg-main-2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url(../../public/photo/bg-main-2.jpg);
+	background-position: 0 -500px;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-blend-mode: darken;
+	background-blend-mode:soft-light;
 	background-color: rgba(0, 0, 0, 0.7);
+	clip-path: polygon(0 45%, 100% 25%, 100% 100%, 0% 100%);
 }
-.glow {
-	color: #fff;
-	text-align: center;
-	-webkit-animation: glow 1s ease-in-out infinite alternate;
-	-moz-animation: glow 1s ease-in-out infinite alternate;
-	animation: glow 1s ease-in-out infinite alternate;
+.down-hover {
+	transition: 400ms ease;
+}
+.down-hover:hover {
+	transform: translateY(10px);
 }
 
-@-webkit-keyframes glow {
-	from {
-		text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #d7fc3240,
-			0 0 20px #d7fc3240, 0 0 25px #d7fc3240, 0 0 30px #d7fc3240,
-			0 0 35px #d7fc3240;
-	}
-	to {
-		text-shadow: 0 0 10px #fff, 0 0 15px #d4fd1e40, 0 0 20px #d4fd1e40,
-			0 0 25px #d4fd1e40, 0 0 30px #d4fd1e40, 0 0 35px #d4fd1e40,
-			0 0 40px #d4fd1e40;
-	}
+.logo {
+	width: 300px;
+	height:128px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

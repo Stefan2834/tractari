@@ -2,9 +2,23 @@ import { SessionProvider } from "next-auth/react";
 import Layout from "../components/Layout";
 import { DefaultProvider } from "../contexts/useDefault";
 import "../app/globals.css";
+import { ThemeProvider } from '@mui/material/styles';
 
 import type { AppProps } from "next/app";
 import type { Session } from "next-auth";
+
+import { createTheme } from "@mui/material/styles";
+
+const theme = createTheme({
+	palette: {
+		primary: {
+			main: "#f9cb38",
+		},
+		secondary: {
+			main: "#0b0a0a",
+		},
+	},
+});
 
 export default function App({
 	Component,
@@ -12,11 +26,13 @@ export default function App({
 }: AppProps<{ session: Session }>) {
 	return (
 		<SessionProvider session={session}>
-			<DefaultProvider>
-				<Layout>
-					<Component {...pageProps} />
-				</Layout>
-			</DefaultProvider>
+			<ThemeProvider theme={theme}>
+				<DefaultProvider>
+					<Layout>
+						<Component {...pageProps} />
+					</Layout>
+				</DefaultProvider>
+			</ThemeProvider>
 		</SessionProvider>
 	);
 }

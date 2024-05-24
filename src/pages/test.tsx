@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function test() {
-	return <div className="main"></div>;
+	return <div className="paper">test</div>;
 }

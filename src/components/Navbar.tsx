@@ -1,20 +1,56 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Navbar() {
+	const currentScrollRef = useRef<number>(0);
+	const prevScrollRef = useRef<number>(0);
+	const scrollDirectionRef = useRef<string | null>(null);
+	const [scroll, setScroll] = useState<boolean>(true);
+
+	// useEffect(() => {
+	// 	const handleScroll = () => {
+	// 		const currentScrollPos = window.pageYOffset;
+	// 		const initialPos = scrollDirectionRef.current;
+	// 		scrollDirectionRef.current =
+	// 			currentScrollPos > currentScrollRef.current ? "down" : "up";
+	// 		prevScrollRef.current = currentScrollRef.current;
+	// 		currentScrollRef.current = currentScrollPos;
+	// 		if(initialPos !== scrollDirectionRef.current) {
+	// 			setScroll(scrollDirectionRef.current === "up");
+	// 		}
+	// 	};
+
+	// 	window.addEventListener("scroll", handleScroll);
+
+	// 	return () => {
+	// 		window.removeEventListener("scroll", handleScroll);
+	// 	};
+	// }, []);
+
 	return (
 		<>
-			<div className="fixed w-full h-32 flex items-center justify-between z-30 px-8 grad">
+			<div className="fixed w-full h-32 flex items-center justify-between z-30 px-8 grad nav-main">
 				<Link href="/" className="logo">
-					<Image src="/photo/logo.png" alt="logo" width={300} height={128} />
-					{/* <img src="../../public/photo/logo.png" alt="logo" /> */}
+					<img
+						src="/photo/logo.png"
+						alt="logo"
+						className="logo-img"
+					/>
 				</Link>
-				<div className="text-white flex items-center justify-center text-xl">
-					<Link href="/" className="mx-4 py-2 px-4 nav-link">Vezi poze</Link>
-					<Link href="/" className="mx-4 py-2 px-4 nav-link">Cine suntem?</Link>
-					<Link href="/" className="mx-4 py-2 px-4 nav-link">Servicile noastre</Link>
-					<Link href="/" className="mx-4 py-2 px-4 nav-link">Contacteaza-ne</Link>
+				<div className="text-white flex items-center justify-center text-xl nav-div">
+					<Link href="/" className="mx-4 py-2 px-4 nav-link">
+						Vezi poze
+					</Link>
+					<Link href="/" className="mx-4 py-2 px-4 nav-link">
+						Cine suntem?
+					</Link>
+					<Link href="/" className="mx-4 py-2 px-4 nav-link">
+						Servicile noastre
+					</Link>
+					<Link href="/" className="mx-4 py-2 px-4 nav-link">
+						Contacteaza-ne
+					</Link>
 				</div>
 			</div>
 		</>

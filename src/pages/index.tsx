@@ -3,8 +3,8 @@ import { Button } from "@mui/material";
 import Navbar from "../components/Navbar";
 import ChangeHistoryRoundedIcon from "@mui/icons-material/ChangeHistoryRounded";
 import { useTheme } from "@mui/material/styles";
-
 import { styled } from "@mui/system";
+
 
 const StyledIcon = styled(ChangeHistoryRoundedIcon)(({ theme }) => ({
 	color: "white",
@@ -15,38 +15,19 @@ const StyledIcon = styled(ChangeHistoryRoundedIcon)(({ theme }) => ({
 
 export default function Home() {
 	const theme = useTheme();
-	const [scroll, setScroll] = useState(0);
-
-	useEffect(() => {
-		const handleScroll = () => {
-			console.log("Current scroll: ", window.scrollY);
-			console.log("Previous scroll: ", scroll);
-			setScroll(window.scrollY);
-		};
-
-		window.addEventListener("scroll", handleScroll);
-
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
 
 	return (
 		<div className="w-full font" style={{ height: "200vh" }}>
 			<Navbar />
 			<div className="bg-main-1">
-				<div className="bg-elem" />
-				<div className="bg-elem" />
-				<div className="bg-elem" />
-				<div className="bg-elem" />
-				<div className="bg-elem" />
-				<div className="bg-elem" />
-				<div className="bg-elem" />
+				{Array.from({ length: 15 }).map((_, i_) => (
+					<div className="bg-elem" />
+				))}
 			</div>
 			<div className="bg-main-2" />
 			<div className="absolute-div">
 				<span className="text-white text-center text-lg">
-					Lorem ipsum dolor sit amet
+					Florești, Prahova
 				</span>
 			</div>
 			<div className="w-full h-screen text-2xl flex items-center justify-between flex-col z-10 relative">

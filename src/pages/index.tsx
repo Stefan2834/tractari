@@ -23,8 +23,6 @@ export default function Home() {
 			gsap.to(".moving-element", {
 				scrollTrigger: {
 					trigger: ".moving-element",
-					toggleAction: "play continue continue continue",
-					start: "top center",
 					scrub: 3,
 				},
 				x: "100vw",

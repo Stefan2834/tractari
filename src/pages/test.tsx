@@ -13,7 +13,6 @@ export default function App() {
 			gsap.to('.box', {
 				scrollTrigger: {
 					trigger: ".box",
-					toggleAction:"play none none none",
 					scrub:true,
 				},
 				x: 100

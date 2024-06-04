@@ -24,6 +24,8 @@ export default function Home() {
 				scrollTrigger: {
 					trigger: ".moving-element",
 					scrub: 3,
+					start:"top 70%",
+					end:"bottom 10%",
 				},
 				x: "100vw",
 				duration: 3,

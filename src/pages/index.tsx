@@ -20,14 +20,24 @@ export default function Home() {
 
 	useGSAP(
 		() => {
-			gsap.to(".moving-element", {
+			gsap.to(".moving-img", {
 				scrollTrigger: {
-					trigger: ".moving-element",
+					trigger: ".moving-img",
 					scrub: 3,
-					start:"top 70%",
-					end:"bottom 10%",
+					start: "top 99%",
+					end: "bottom 30%",
 				},
 				x: "100vw",
+				duration: 3,
+			});
+			gsap.to(".moving-text", {
+				scrollTrigger: {
+					trigger: ".moving-text",
+					scrub: 3,
+					start: "top 99%",
+					end: "bottom 80%",
+				},
+				x: "50vw",
 				duration: 3,
 			});
 		},
@@ -40,11 +50,16 @@ export default function Home() {
 			<div className="bg-main" />
 			<div className="main-element">
 				<div className="main-flex">
-					<div className="mb-4">
+					<div
+						className="mb-4 font-bold"
+						style={{ fontSize: "20px" }}
+					>
 						Tractări auto și asistență rutieră
 					</div>
-					<div className="mt-4 text-7xl">KOT ASISTENȚĂ RUTIERĂ</div>
-					<div className="font-second text-2xl">
+					<div className="mt-4 text-8xl font-bold">
+						KOT ASISTENȚĂ RUTIERĂ
+					</div>
+					<div className="font-second text-3xl font-normal">
 						Probleme pe drum? Suna-ne acum!
 					</div>
 					<Button
@@ -61,7 +76,8 @@ export default function Home() {
 					</Button>
 					<Link
 						href="/"
-						className="mt-2 font-second text-lg hover:underline"
+						className="mt-2 text-lg font-semibold hover:underline"
+						style={{ fontSize: "16px" }}
 					>
 						* sau lasă-ne un mesaj pe whatsapp
 						<ArrowRightAltIcon />
@@ -127,7 +143,7 @@ export default function Home() {
 				</div>
 			</div>
 			<div
-				style={{ height: "900px" }}
+				style={{ height: "1200px" }}
 				className="w-full mt-40 relative flex items-center justify-start"
 				ref={containerRef}
 			>
@@ -138,14 +154,24 @@ export default function Home() {
 						className="moving-img"
 					/>
 					<div className="moving-text">
-						Peste
-						<br />
-						<span className="text-5xl primary-color">1452</span>
-						<br />
-						Clienți mulțumiți
+						<p className="text-5xl">PESTE</p>
+						<span
+							className="primary-color font-bold"
+							style={{ fontSize: "256px", lineHeight: "1.1"}}
+						>
+							300
+						</span>
+						<p className="text-5xl">clienți mulțumiți</p>
 					</div>
 				</div>
 			</div>
+			<div className="w-full text-2xl text-center mb-4">
+				--- Recomandările noastre ---
+			</div>
+			<div
+				className="bg-red-400 w-full flex items-center justify-around"
+				style={{ height: "50vh" }}
+			></div>
 		</div>
 	);
 }

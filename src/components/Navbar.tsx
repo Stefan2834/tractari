@@ -38,7 +38,7 @@ export default function Navbar() {
 						className="logo-img"
 					/>
 				</Link>
-				<div className="text-white flex items-center justify-center text-xl nav-div">
+				<div className="text-white flex items-center justify-center text-xl nav-div font-semibold">
 					<Link href="/" className="mx-4 py-2 px-4 nav-link">
 						Servicile noastre
 					</Link>

@@ -22,14 +22,6 @@
 	background-color: var(--main);
 	color: white;
 }
-
-@font-face {
-	font-family: "GetVoIP Grotesque";
-	src: url("../../public/font/getvoip_grotesque/GetVoIP\ Grotesque.otf")
-		format("opentype");
-	font-weight: normal;
-	font-style: normal;
-}
 body {
 	margin: 0;
 	padding: 0;
@@ -38,12 +30,7 @@ body {
 }
 
 .font {
-	font-family: "GetVoIP Grotesque", sans-serif;
-}
-
-.font-second {
 	font-family: "Monserrat", sans-serif;
-	font-weight: 400;
 }
 
 .bg-main {
@@ -202,29 +189,29 @@ body {
 }
 
 .moving-element {
-	width: 600px;
-	height: 400px;
+	width: 100vw;
+	height: 1000px;
 	display: flex;
 	align-items: start;
 	justify-content: start;
 	position: relative;
-	transform: translateX(-50%);
 }
 
 .moving-img {
 	width:100%;
 	height:auto;
+	left:0;
 	object-fit: cover;
 	object-position: center;
 	position: absolute;
+	transform: translateX(-50%);
 }
 .moving-text {
-	position: relative;
+	position: absolute;
 	z-index: 1;
 	top:0;
+	transform: translate(-50%);
 	left:0;
 	font-size:20px;
 	text-align: center;
-	margin-left:150px;
-	margin-top:30px;
 }

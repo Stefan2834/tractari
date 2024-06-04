@@ -34,8 +34,9 @@ export default function Home() {
 				scrollTrigger: {
 					trigger: ".moving-text",
 					scrub: 3,
-					start: "top 99%",
+					start: "top 60%",
 					end: "bottom 80%",
+					markers:true
 				},
 				x: "50vw",
 				duration: 3,

@@ -30,7 +30,7 @@ export default function Navbar() {
 
 	return (
 		<>
-			<div className="fixed w-full h-32 flex items-center justify-between z-30 px-8 grad nav-main">
+			<div className="fixed w-full h-32 flex items-center justify-between z-30 pl-16 pr-8 grad nav-main">
 				<Link href="/" className="logo">
 					<img
 						src="/photo/logo.png"
@@ -40,13 +40,13 @@ export default function Navbar() {
 				</Link>
 				<div className="text-white flex items-center justify-center text-xl nav-div">
 					<Link href="/" className="mx-4 py-2 px-4 nav-link">
-						Vezi poze
+						Servicile noastre
 					</Link>
 					<Link href="/" className="mx-4 py-2 px-4 nav-link">
 						Cine suntem?
 					</Link>
 					<Link href="/" className="mx-4 py-2 px-4 nav-link">
-						Servicile noastre
+						Galerie foto
 					</Link>
 					<Link href="/" className="mx-4 py-2 px-4 nav-link">
 						Contacteaza-ne

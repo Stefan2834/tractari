@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger) 
 
 export default function App() {
-	const container = useRef();
+	const container: any = useRef();
 
 	useGSAP(
 		() => {

@@ -8,6 +8,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import BoltIcon from "@mui/icons-material/Bolt";
 import TimelapseIcon from "@mui/icons-material/Timelapse";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import { Rating, Avatar } from "@mui/material";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -34,9 +35,8 @@ export default function Home() {
 				scrollTrigger: {
 					trigger: ".moving-text",
 					scrub: 3,
-					start: "top 60%",
+					start: "top 80%",
 					end: "bottom 80%",
-					markers:true
 				},
 				x: "50vw",
 				duration: 3,
@@ -55,13 +55,13 @@ export default function Home() {
 						className="mb-4 font-bold"
 						style={{ fontSize: "20px" }}
 					>
-						Tractări auto și asistență rutieră
+						TRACTĂRI AUTO ȘI ASISTENȚĂ RUTIERĂ
 					</div>
 					<div className="mt-4 text-8xl font-bold">
 						KOT ASISTENȚĂ RUTIERĂ
 					</div>
 					<div className="font-second text-3xl font-normal">
-						Probleme pe drum? Suna-ne acum!
+						Probleme pe drum? Sună-ne acum!
 					</div>
 					<Button
 						variant="contained"
@@ -73,7 +73,7 @@ export default function Home() {
 							padding: "10px 20px",
 						}}
 					>
-						Disponibili NON STOP, sună acum
+						DISPONIBILI NON STOP, SUNĂ ACUM
 					</Button>
 					<Link
 						href="/"
@@ -96,11 +96,14 @@ export default function Home() {
 							/>
 						</div>
 						<div>
-							<p className="text-lg mt-3">Simplu și rapid</p>
-							<div className="w-full h-1 bg-black" />
+							<p className="text-2xl mt-3">Simplu și rapid</p>
+							<div
+								className="w-full bg-gray-400"
+								style={{ height: "1px" }}
+							/>
 						</div>
 					</div>
-					<p className="mt-2 text-sm text-gray-700 text-justify">
+					<p className="mt-2 text-md text-gray-800 text-justify">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 						sed do eiusmod tempor incididunt ut labore et dolore
 						magna aliqua. Ut enim ad minim veniam
@@ -114,11 +117,14 @@ export default function Home() {
 							/>
 						</div>
 						<div>
-							<p className="text-lg mt-3">Oriunde și oricâ nd</p>
-							<div className="w-full h-1 bg-black" />
+							<p className="text-2xl mt-3">Oriunde și oricând</p>
+							<div
+								className="w-full bg-gray-400"
+								style={{ height: "1px" }}
+							/>
 						</div>
 					</div>
-					<p className="mt-2 text-sm text-gray-700 text-justify">
+					<p className="mt-2 text-md text-gray-800 text-justify">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 						sed do eiusmod tempor incididunt ut labore et dolore
 						magna aliqua. Ut enim ad minim veniam
@@ -132,11 +138,14 @@ export default function Home() {
 							/>
 						</div>
 						<div>
-							<p className="text-lg mt-3">Servicii calitative</p>
-							<div className="w-full h-1 bg-black" />
+							<p className="text-2xl mt-3">Servicii calitative</p>
+							<div
+								className="w-full bg-gray-400"
+								style={{ height: "1px" }}
+							/>
 						</div>
 					</div>
-					<p className="mt-2 text-sm text-gray-700 text-justify">
+					<p className="mt-2 text-md text-gray-800 text-justify">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 						sed do eiusmod tempor incididunt ut labore et dolore
 						magna aliqua. Ut enim ad minim veniam
@@ -144,8 +153,8 @@ export default function Home() {
 				</div>
 			</div>
 			<div
-				style={{ height: "1200px" }}
-				className="w-full mt-40 relative flex items-center justify-start"
+				style={{ height: "800px", width: "1700px" }}
+				className="mt-40 relative flex items-center justify-start"
 				ref={containerRef}
 			>
 				<div className="moving-element">
@@ -158,7 +167,7 @@ export default function Home() {
 						<p className="text-5xl">PESTE</p>
 						<span
 							className="primary-color font-bold"
-							style={{ fontSize: "256px", lineHeight: "1.1"}}
+							style={{ fontSize: "256px", lineHeight: "1.1" }}
 						>
 							300
 						</span>
@@ -167,12 +176,104 @@ export default function Home() {
 				</div>
 			</div>
 			<div className="w-full text-2xl text-center mb-4">
-				--- Recomandările noastre ---
+				- RECOMANDĂRILE NOASTRE -
 			</div>
 			<div
-				className="bg-red-400 w-full flex items-center justify-around"
-				style={{ height: "50vh" }}
-			></div>
+				className="w-full flex items-start justify-center mt-8"
+				style={{ height: "auto" }}
+			>
+				<div className="review-element">
+					<Avatar
+						alt="Remy Sharp"
+						src="/photo/info.png"
+						sx={{
+							width: 110,
+							height: 110,
+							transform: "translateY(-50%)",
+							position: "absolute",
+						}}
+					/>
+					<Rating
+						name="half-rating-read"
+						defaultValue={4.5}
+						precision={0.5}
+						readOnly
+						size="large"
+						sx={{ marginTop: "60px" }}
+					/>
+					<p className="mt-2 font-light" style={{ fontSize: "18px" }}>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Ut et massa mi. Aliquam in hendrerit urna.
+					</p>
+					<p
+						className="mt-4 mb-8 font-medium uppercase text-left w-full"
+						style={{ fontSize: "18px" }}
+					>
+						Alexandru Mocanu
+					</p>
+				</div>
+				<div className="review-element">
+					<p className="mt-2 font-light" style={{ fontSize: "18px" }}>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Ut et massa mi. Aliquam in hendrerit urna.
+					</p>
+					<p
+						className="mt-4 mb-8 font-medium uppercase text-left w-full"
+						style={{ fontSize: "18px" }}
+					>
+						Alexandru Mocanu
+					</p>
+					<Rating
+						name="half-rating-read"
+						defaultValue={4.5}
+						precision={0.5}
+						readOnly
+						size="large"
+						sx={{ marginBottom: "60px" }}
+					/>
+					<Avatar
+						alt="Remy Sharp"
+						src="/photo/info.png"
+						sx={{
+							width: 110,
+							height: 110,
+							bottom: 0,
+							transform: "translateY(50%)",
+							position: "absolute",
+						}}
+					/>
+				</div>
+				<div className="review-element">
+					<Avatar
+						alt="Remy Sharp"
+						src="/photo/info.png"
+						sx={{
+							width: 110,
+							height: 110,
+							transform: "translateY(-50%)",
+							position: "absolute",
+						}}
+					/>
+					<Rating
+						name="half-rating-read"
+						defaultValue={4.5}
+						precision={0.5}
+						readOnly
+						size="large"
+						sx={{ marginTop: "60px" }}
+					/>
+					<p className="mt-2 font-light" style={{ fontSize: "18px" }}>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Ut et massa mi. Aliquam in hendrerit urna.
+					</p>
+					<p
+						className="mt-4 mb-8 font-medium uppercase text-left w-full"
+						style={{ fontSize: "18px" }}
+					>
+						Alexandru Mocanu
+					</p>
+				</div>
+			</div>
 		</div>
 	);
 }

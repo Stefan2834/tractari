@@ -48,7 +48,7 @@ export default function Navbar() {
 					<Link href="/" className="mx-4 py-2 px-4 nav-link">
 						Galerie foto
 					</Link>
-					<Link href="/" className="mx-4 py-2 px-4 nav-link">
+					<Link href="/" className="mx-4 py-2 px-4 nav-reverse">
 						Contacteaza-ne
 					</Link>
 				</div>

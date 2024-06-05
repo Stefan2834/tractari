@@ -87,7 +87,7 @@ body {
 	justify-content: space-between;
 	width: 1300px;
 	height: auto;
-	bottom: -100px;
+	top:calc(100vh - 100px);
 	left: 50%;
 	transform: translate(-50%);
 	position: absolute;
@@ -131,6 +131,13 @@ body {
 	transition: 400ms ease;
 	background-color: white;
 }
+.nav-reverse {
+	background-color: var(--main);
+	font-weight:500;
+	padding:10px 16px;
+	border-radius: 4px;
+	position: relative;
+}
 
 .nav-link:hover::before {
 	width: 100%;
@@ -147,7 +154,7 @@ body {
 /* ---Media Queries--- */
 
 @media screen and (max-width: 1400px) {
-	.nav-link {
+	.nav-link, .nav-reverse {
 		margin: 0 5px;
 		padding: 5px 10px;
 	}
@@ -189,8 +196,8 @@ body {
 }
 
 .moving-element {
-	width: 100vw;
-	height: 1000px;
+	width: 1700px;
+	height: 800px;
 	display: flex;
 	align-items: start;
 	justify-content: start;
@@ -214,4 +221,21 @@ body {
 	left:0;
 	font-size:20px;
 	text-align: center;
+}
+
+
+
+.review-element {
+	width: 400px;
+	height:auto;
+	background-color: #fcfcfc;
+	display: flex;
+	align-items: center;
+	position: relative;
+	justify-content: flex-start;
+	flex-direction: column;
+	border-radius: 8px;
+	box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
+	margin:0 25px;
+	padding:0 20px 10px 20px;
 }

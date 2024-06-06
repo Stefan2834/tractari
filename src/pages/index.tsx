@@ -69,7 +69,7 @@ export default function Home() {
 	];
 
 	return (
-		<div className="w-full font" style={{ height: "600vh" }}>
+		<div className="w-full font">
 			<Navbar />
 			<div className="bg-main" />
 			<div className="main-element">
@@ -126,10 +126,9 @@ export default function Home() {
 							/>
 						</div>
 					</div>
-					<p className="mt-2 text-md text-gray-800 text-justify">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore
-						magna aliqua. Ut enim ad minim veniam
+					<p className="mt-2 text-md text-gray-800">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Ut et massa mi. Aliquam in hendrerit urna.
 					</p>
 				</div>
 				<div className="main-absolute-element">
@@ -147,10 +146,9 @@ export default function Home() {
 							/>
 						</div>
 					</div>
-					<p className="mt-2 text-md text-gray-800 text-justify">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore
-						magna aliqua. Ut enim ad minim veniam
+					<p className="mt-2 text-md text-gray-800">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Ut et massa mi. Aliquam in hendrerit urna.
 					</p>
 				</div>
 				<div className="main-absolute-element">
@@ -168,10 +166,9 @@ export default function Home() {
 							/>
 						</div>
 					</div>
-					<p className="mt-2 text-md text-gray-800 text-justify">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore
-						magna aliqua. Ut enim ad minim veniam
+					<p className="mt-2 text-md text-gray-800">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Ut et massa mi. Aliquam in hendrerit urna.
 					</p>
 				</div>
 			</div>
@@ -208,7 +205,7 @@ export default function Home() {
 				<div className="review-element">
 					<Avatar
 						alt="Remy Sharp"
-						src="/photo/avatars/avatar-1.png"
+						src="/photo/avatars/avatar-1.jpg"
 						sx={{
 							width: 110,
 							height: 110,
@@ -233,20 +230,20 @@ export default function Home() {
 						className="mt-4 mb-8 font-medium uppercase text-left w-full"
 						style={{ fontSize: "18px" }}
 					>
-						Alexandru Mocanu
+						Andrei Comșa
 					</p>
 				</div>
 				<div className="review-element">
 					<p className="mt-2 font-light" style={{ fontSize: "18px" }}>
-						De fiecare dată când l-am sunat pe Alin, a venit fără
-						ezitare, chiar și în miez de noapte. Super băiat. Nota
-						10!
+						Nu știu ce mă făceam fără serviciile prestate de acest
+						băiat. A reușit să ma salveze dintr-o situație
+						inimaginabilă. Recomand!
 					</p>
 					<p
 						className="mt-4 mb-8 font-medium uppercase text-left w-full"
 						style={{ fontSize: "18px" }}
 					>
-						Alexandru Mocanu
+						Iosif Ștefan
 					</p>
 					<Rating
 						name="half-rating-read"
@@ -258,7 +255,7 @@ export default function Home() {
 					/>
 					<Avatar
 						alt="Remy Sharp"
-						src="/photo/avatars/avatar-2.png"
+						src="/photo/avatars/avatar-2.jpg"
 						sx={{
 							width: 110,
 							height: 110,
@@ -271,7 +268,7 @@ export default function Home() {
 				<div className="review-element">
 					<Avatar
 						alt="Remy Sharp"
-						src="/photo/avatars/avatar-3.png"
+						src="/photo/avatars/avatar-3.jpg"
 						sx={{
 							width: 110,
 							height: 110,
@@ -288,15 +285,15 @@ export default function Home() {
 						sx={{ marginTop: "60px" }}
 					/>
 					<p className="mt-2 font-light" style={{ fontSize: "18px" }}>
-						De fiecare dată când l-am sunat pe Alin, a venit fără
-						ezitare, chiar și în miez de noapte. Super băiat. Nota
-						10!
+						Având în vedere că l-am sunat la 2 noaptea, a venit la
+						sute de kilometri distanță ca să mă ajute. Nu știu ce mă
+						faceam fără el. Sunați cu încredere!
 					</p>
 					<p
 						className="mt-4 mb-8 font-medium uppercase text-left w-full"
 						style={{ fontSize: "18px" }}
 					>
-						Alexandru Mocanu
+						Mareș Gabriel
 					</p>
 				</div>
 			</div>
@@ -423,7 +420,12 @@ export default function Home() {
 				className="w-full flex items-start justify-center mt-20"
 				style={{ height: "600px" }}
 			>
-				<div className="w-1/3 h-full mx-8 flex items-center justify-start flex-col">
+				<form
+					onSubmit={(e) => {
+						e.preventDefault();
+					}}
+					className="w-1/3 h-full mx-8 flex items-center justify-start flex-col"
+				>
 					<TextField
 						id="outlined-basic"
 						label="Numele tău"
@@ -458,6 +460,7 @@ export default function Home() {
 					/>
 					<Button
 						variant="contained"
+						type="submit"
 						sx={{
 							marginTop: "40px",
 							textTransform: "none",
@@ -468,7 +471,7 @@ export default function Home() {
 					>
 						Trimite-ne mesajul tău
 					</Button>
-				</div>
+				</form>
 				<div className="w-1/3 mx-8 text-bg" style={{ height: "500px" }}>
 					<img
 						src="/photo/Vector.png"

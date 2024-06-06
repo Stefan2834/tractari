@@ -18,6 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
 	const containerRef: any = useRef();
+	const [currentElement, setCurrentElement] = useState<number>(0);
 
 	useGSAP(
 		() => {
@@ -44,6 +45,21 @@ export default function Home() {
 		},
 		{ scope: containerRef }
 	);
+
+	const sliders = [
+		"/photo/avatars/avatar-1.png",
+		"/photo/avatars/avatar-2.png",
+		"/photo/avatars/avatar-3.png",
+		"/photo/avatars/avatar-1.png",
+		"/photo/avatars/avatar-2.png",
+		"/photo/avatars/avatar-3.png",
+		"/photo/avatars/avatar-1.png",
+		"/photo/avatars/avatar-2.png",
+		"/photo/avatars/avatar-3.png",
+		"/photo/avatars/avatar-1.png",
+		"/photo/avatars/avatar-2.png",
+		"/photo/avatars/avatar-3.png",
+	];
 
 	return (
 		<div className="w-full font" style={{ height: "400vh" }}>
@@ -182,7 +198,7 @@ export default function Home() {
 				className="w-full flex items-start justify-center mt-8"
 				style={{ height: "auto" }}
 			>
-				<div className="review-element">	
+				<div className="review-element">
 					<Avatar
 						alt="Remy Sharp"
 						src="/photo/avatars/avatar-1.png"
@@ -274,6 +290,45 @@ export default function Home() {
 					</p>
 				</div>
 			</div>
+			<div
+				className="mt-32 w-screen bg-black"
+				style={{ height: "600px" }}
+			>
+				<div
+					className="slider-container"
+					style={{
+						transform: `translateX(${
+							-(currentElement - 1) * 33.33
+						}vw)`,
+					}}
+				>
+					{sliders.map((img: any, index: number) => {
+						if (index === currentElement) {
+							return <div className="slider"></div>;
+						} else {
+							const rotate = currentElement - index;
+							return (
+								<div
+									className="slider"
+									style={{
+										transform: `translateY(${
+											rotate * 40
+										}px)`,
+									}}
+								></div>
+							);
+						}
+					})}
+				</div>
+			</div>
+			<div
+				className="w-20 h-20 bg-gray-700"
+				onClick={() => setCurrentElement((c) => c + 1)}
+			>LEFT</div>
+			<div
+				className="w-20 h-20 bg-gray-700"
+				onClick={() => setCurrentElement((c) => c - 1)}
+			>RIGHT</div>
 		</div>
 	);
 }

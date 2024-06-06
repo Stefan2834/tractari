@@ -151,6 +151,10 @@ body {
 	);
 }
 
+.grad-2 {
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(40,37,27,1) 100%);
+}
+
 /* ---Media Queries--- */
 
 @media screen and (max-width: 1400px) {
@@ -242,22 +246,44 @@ body {
 
 .slider-container {
 	width:500vw;
-	height:100%;
-	background-color: blue;
+	height:600px;
 	display: flex;
 	position: relative;
 	align-items: center;
 	justify-content: flex-start;
-	margin-top:100px;
 	transition: 400ms ease;
+	top:100px;
 }
 
 .slider {
-	background-color: red;
 	width:25vw;
 	position: relative;
 	margin:0 4.166vw;
 	height:100%;
 	position: relative;
 	transition: 400ms ease;
+	overflow: hidden;
+}
+
+.slider-inactive {
+	scale:0.8;
+	filter: brightness(0.5);
+}
+
+
+
+.slider-img {
+	object-position: center;
+	overflow: hidden;
+	object-fit:cover;
+	width:100%;
+	height:100%;
+	border-radius: 4px;
+}
+
+.text-bg {
+	background-image: url(../../public/photo/map.png);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
 }

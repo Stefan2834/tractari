@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@mui/material";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import Link from "next/link";
 
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
@@ -8,11 +9,16 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import BoltIcon from "@mui/icons-material/Bolt";
 import TimelapseIcon from "@mui/icons-material/Timelapse";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+
 import { Rating, Avatar } from "@mui/material";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+
+import TextField from "@mui/material/TextField";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,22 +53,23 @@ export default function Home() {
 	);
 
 	const sliders = [
-		"/photo/avatars/avatar-1.png",
-		"/photo/avatars/avatar-2.png",
-		"/photo/avatars/avatar-3.png",
-		"/photo/avatars/avatar-1.png",
-		"/photo/avatars/avatar-2.png",
-		"/photo/avatars/avatar-3.png",
-		"/photo/avatars/avatar-1.png",
-		"/photo/avatars/avatar-2.png",
-		"/photo/avatars/avatar-3.png",
-		"/photo/avatars/avatar-1.png",
-		"/photo/avatars/avatar-2.png",
-		"/photo/avatars/avatar-3.png",
+		"/photo/slider/slider-1.jpg",
+		"/photo/slider/slider-1.jpg",
+		"/photo/slider/slider-1.jpg",
+		"/photo/slider/slider-1.jpg",
+		"/photo/slider/slider-1.jpg",
+		"/photo/slider/slider-1.jpg",
+		"/photo/slider/slider-1.jpg",
+		"/photo/slider/slider-1.jpg",
+		"/photo/slider/slider-1.jpg",
+		"/photo/slider/slider-1.jpg",
+		"/photo/slider/slider-1.jpg",
+		"/photo/slider/slider-1.jpg",
+		"/photo/slider/slider-1.jpg",
 	];
 
 	return (
-		<div className="w-full font" style={{ height: "400vh" }}>
+		<div className="w-full font" style={{ height: "600vh" }}>
 			<Navbar />
 			<div className="bg-main" />
 			<div className="main-element">
@@ -218,8 +225,9 @@ export default function Home() {
 						sx={{ marginTop: "60px" }}
 					/>
 					<p className="mt-2 font-light" style={{ fontSize: "18px" }}>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Ut et massa mi. Aliquam in hendrerit urna.
+						De fiecare dată când l-am sunat pe Alin, a venit fără
+						ezitare, chiar și în miez de noapte. Super băiat. Nota
+						10!
 					</p>
 					<p
 						className="mt-4 mb-8 font-medium uppercase text-left w-full"
@@ -230,8 +238,9 @@ export default function Home() {
 				</div>
 				<div className="review-element">
 					<p className="mt-2 font-light" style={{ fontSize: "18px" }}>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Ut et massa mi. Aliquam in hendrerit urna.
+						De fiecare dată când l-am sunat pe Alin, a venit fără
+						ezitare, chiar și în miez de noapte. Super băiat. Nota
+						10!
 					</p>
 					<p
 						className="mt-4 mb-8 font-medium uppercase text-left w-full"
@@ -279,8 +288,9 @@ export default function Home() {
 						sx={{ marginTop: "60px" }}
 					/>
 					<p className="mt-2 font-light" style={{ fontSize: "18px" }}>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Ut et massa mi. Aliquam in hendrerit urna.
+						De fiecare dată când l-am sunat pe Alin, a venit fără
+						ezitare, chiar și în miez de noapte. Super băiat. Nota
+						10!
 					</p>
 					<p
 						className="mt-4 mb-8 font-medium uppercase text-left w-full"
@@ -290,10 +300,29 @@ export default function Home() {
 					</p>
 				</div>
 			</div>
+			<div className="w-full text-center text-6xl mt-40 font-semibold">
+				Nu suntem unica firmă de tractaj
+				<br /> 24/7 din România, însă...
+			</div>
+			<div className="w-full text-center font-light text-3xl mt-10">
+				Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa
+				că... Lorem ipsum dolor sit amet, <br />
+				consectetur adipiscing elit. Ut et massa mi. Aliquam in
+				hendrerit urna.Lorem ipsum dolor sit <br />
+				amet, consectetur adipiscing elit. Ut et massa mi.
+			</div>
 			<div
-				className="mt-32 w-screen bg-black"
-				style={{ height: "600px" }}
+				className="mt-32 w-screen relative"
+				style={{ height: "800px" }}
 			>
+				<div
+					className="absolute  w-full h-full overflow-visible"
+					style={{
+						background:
+							"linear-gradient(90deg, rgba(0,0,0,1) 50%, rgba(38,37,0,1) 100%)",
+						clipPath: "polygon(0 30%, 100% 0, 100% 70%, 0 100%)",
+					}}
+				/>
 				<div
 					className="slider-container"
 					style={{
@@ -303,32 +332,152 @@ export default function Home() {
 					}}
 				>
 					{sliders.map((img: any, index: number) => {
-						if (index === currentElement) {
-							return <div className="slider"></div>;
-						} else {
-							const rotate = currentElement - index;
+						const rotate: number = currentElement - index;
+						if (rotate === 0) {
 							return (
 								<div
-									className="slider"
+									className="slider slider-active"
 									style={{
 										transform: `translateY(${
-											rotate * 40
+											rotate * 200
 										}px)`,
 									}}
-								></div>
+								>
+									<img
+										src={img}
+										alt="avatar"
+										className="slider-img"
+									/>
+								</div>
+							);
+						} else {
+							return (
+								<div
+									className="slider slider-inactive"
+									style={{
+										transform: `translateY(${
+											rotate * 200
+										}px)`,
+									}}
+								>
+									<img
+										src={img}
+										alt="avatar"
+										className="slider-img"
+									/>
+								</div>
 							);
 						}
 					})}
 				</div>
 			</div>
+			<div className="w-full flex items-center justify-center -mt-32 relative z-10 text-white">
+				<div
+					className="w-16 h-16 primary mx-4 rounded-full flex items-center justify-center cursor-pointer"
+					style={{ boxShadow: "1px 2px 2px rgb(0,0,0,0.5)" }}
+					onClick={() => {
+						console.log(currentElement);
+						currentElement === 0
+							? setCurrentElement(sliders.length - 1)
+							: setCurrentElement((c) => c - 1);
+					}}
+				>
+					<ArrowLeftIcon fontSize="large" />
+				</div>
+				<div
+					className="w-16 h-16 primary mx-4 rounded-full flex items-center justify-center cursor-pointer"
+					style={{ boxShadow: "1px 2px 2px rgb(0,0,0,0.5)" }}
+					onClick={() =>
+						currentElement < sliders.length - 1
+							? setCurrentElement((c) => c + 1)
+							: setCurrentElement(0)
+					}
+				>
+					<ArrowRightIcon fontSize="large" />
+				</div>
+			</div>
+			<div className="mt-20 w-full flex items-center justify-center">
+				<Button
+					variant="contained"
+					sx={{
+						fontSize: "26px",
+						fontWeight: "500",
+						p: "10px 100px",
+						textTransform: "none",
+						color: "white",
+					}}
+				>
+					Vezi Galeria noastră foto!
+				</Button>
+			</div>
+			<div className="w-full text-center text-6xl mt-40 font-semibold">
+				Probleme pe drum? <br />
+				Contactează-ne acum!
+			</div>
+			<div className="w-full text-center font-light text-3xl mt-10">
+				Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa
+				că... Lorem ipsum <br />
+				dolor sit amet, consectetur adipiscing elit.
+			</div>
 			<div
-				className="w-20 h-20 bg-gray-700"
-				onClick={() => setCurrentElement((c) => c + 1)}
-			>LEFT</div>
-			<div
-				className="w-20 h-20 bg-gray-700"
-				onClick={() => setCurrentElement((c) => c - 1)}
-			>RIGHT</div>
+				className="w-full flex items-start justify-center mt-20"
+				style={{ height: "600px" }}
+			>
+				<div className="w-1/3 h-full mx-8 flex items-center justify-start flex-col">
+					<TextField
+						id="outlined-basic"
+						label="Numele tău"
+						variant="outlined"
+						sx={{
+							width: "100%",
+							marginBottom: "20px",
+							boxShadow: "2px 2px 3px rgba(0,0,0,0.5)",
+						}}
+					/>
+					<TextField
+						id="outlined-basic"
+						label="Email"
+						variant="outlined"
+						sx={{
+							width: "100%",
+							marginBottom: "20px",
+							boxShadow: "2px 2px 3px rgba(0,0,0,0.5)",
+						}}
+					/>
+					<TextField
+						id="standard-multiline-static"
+						label="Mesajul tău..."
+						multiline
+						type="email"
+						sx={{
+							width: "100%",
+							boxShadow: "2px 2px 3px rgba(0,0,0,0.5)",
+						}}
+						rows={12}
+						variant="outlined"
+					/>
+					<Button
+						variant="contained"
+						sx={{
+							marginTop: "40px",
+							textTransform: "none",
+							color: "white",
+							fontSize: "24px",
+							padding: "10px 28px",
+						}}
+					>
+						Trimite-ne mesajul tău
+					</Button>
+				</div>
+				<div className="w-1/3 mx-8 text-bg" style={{ height: "500px" }}>
+					<img
+						src="/photo/Vector.png"
+						alt="Map"
+						className="w-full h-full object-contain"
+					/>
+				</div>
+			</div>
+			<Footer />
 		</div>
 	);
 }

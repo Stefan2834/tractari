@@ -175,17 +175,17 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className="w-full text-2xl text-center mb-4">
+			<div className="w-full text-2xl text-center mb-10">
 				- RECOMANDĂRILE NOASTRE -
 			</div>
 			<div
 				className="w-full flex items-start justify-center mt-8"
 				style={{ height: "auto" }}
 			>
-				<div className="review-element">
+				<div className="review-element">	
 					<Avatar
 						alt="Remy Sharp"
-						src="/photo/info.png"
+						src="/photo/avatars/avatar-1.png"
 						sx={{
 							width: 110,
 							height: 110,
@@ -195,7 +195,7 @@ export default function Home() {
 					/>
 					<Rating
 						name="half-rating-read"
-						defaultValue={4.5}
+						defaultValue={5.0}
 						precision={0.5}
 						readOnly
 						size="large"
@@ -233,7 +233,7 @@ export default function Home() {
 					/>
 					<Avatar
 						alt="Remy Sharp"
-						src="/photo/info.png"
+						src="/photo/avatars/avatar-2.png"
 						sx={{
 							width: 110,
 							height: 110,
@@ -246,7 +246,7 @@ export default function Home() {
 				<div className="review-element">
 					<Avatar
 						alt="Remy Sharp"
-						src="/photo/info.png"
+						src="/photo/avatars/avatar-3.png"
 						sx={{
 							width: 110,
 							height: 110,
@@ -256,7 +256,7 @@ export default function Home() {
 					/>
 					<Rating
 						name="half-rating-read"
-						defaultValue={4.5}
+						defaultValue={5.0}
 						precision={0.5}
 						readOnly
 						size="large"

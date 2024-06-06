@@ -1,31 +1,30 @@
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
-gsap.registerPlugin(ScrollTrigger) 
-
-export default function App() {
-	const container: any = useRef();
-
-	useGSAP(
-		() => {
-			gsap.to('.box', {
-				scrollTrigger: {
-					trigger: ".box",
-					scrub:true,
-				},
-				x: 100
-			});
-		},
-		{ scope: container }
-	);
-
+export default function Test() {
 	return (
-		<div style={{height:"400vh"}}>
-			<div ref={container} style={{marginTop:"100vh"}}>
-				<div className="box bg-red-400">selector</div>
-			</div>
-		</div>
+		<Swiper
+			modules={[Navigation, Pagination, Scrollbar, A11y]}
+			spaceBetween={50}
+			slidesPerView={3}
+			centeredSlides={true}
+			loop={true}
+			navigation
+			EffectFade
+			pagination={{ clickable: true }}
+			scrollbar={{ draggable: true }}
+			onSwiper={(swiper) => console.log(swiper)}
+			onSlideChange={() => console.log("slide change")}
+			className="w-screen h-screen"
+		>
+			<SwiperSlide className="slide">Slide 1</SwiperSlide>
+			<SwiperSlide className="slide">Slide 2</SwiperSlide>
+			<SwiperSlide className="slide">Slide 3</SwiperSlide>
+			<SwiperSlide className="slide">Slide 4</SwiperSlide>
+		</Swiper>
 	);
 }

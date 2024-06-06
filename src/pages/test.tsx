@@ -1,30 +1,21 @@
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import React from 'react';
 
-export default function Test() {
-	return (
-		<Swiper
-			modules={[Navigation, Pagination, Scrollbar, A11y]}
-			spaceBetween={50}
-			slidesPerView={3}
-			centeredSlides={true}
-			loop={true}
-			navigation
-			EffectFade
-			pagination={{ clickable: true }}
-			scrollbar={{ draggable: true }}
-			onSwiper={(swiper) => console.log(swiper)}
-			onSlideChange={() => console.log("slide change")}
-			className="w-screen h-screen"
-		>
-			<SwiperSlide className="slide">Slide 1</SwiperSlide>
-			<SwiperSlide className="slide">Slide 2</SwiperSlide>
-			<SwiperSlide className="slide">Slide 3</SwiperSlide>
-			<SwiperSlide className="slide">Slide 4</SwiperSlide>
-		</Swiper>
-	);
-}
+const EmailRedirect = () => {
+    const handleSendEmail = () => {
+        const recipient = "iosifs617@gmail.com";
+        const subject = "Hello from Next.js";
+        const body = "This is a pre-filled email body for testing purposes.";
+        const mailtoLink = `mailto:${encodeURIComponent(recipient)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailtoLink;
+    };
+
+    return (
+        <div>
+            <h1>Email Redirect Example</h1>
+            <button onClick={handleSendEmail}>Send Email</button>
+        </div>
+    );
+};
+
+export default EmailRedirect;

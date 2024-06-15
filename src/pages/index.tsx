@@ -25,11 +25,14 @@ import TextField from "@mui/material/TextField";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-	const containerRef: any = useRef();
+	const containerRef = useRef<any>();
 	const [currentElement, setCurrentElement] = useState<number>(0);
 	const { screen } = useDefault();
 
-	
+	const name: string = useRef<any>();
+	const email: string = useRef<any>();
+	const message: string = useRef<any>();
+
 	useGSAP(
 		() => {
 			gsap.to(".moving-img", {
@@ -58,18 +61,15 @@ export default function Home() {
 
 	const sliders = [
 		"/photo/slider/slider-1.jpg",
-		"/photo/slider/slider-1.jpg",
-		"/photo/slider/slider-1.jpg",
-		"/photo/slider/slider-1.jpg",
-		"/photo/slider/slider-1.jpg",
-		"/photo/slider/slider-1.jpg",
-		"/photo/slider/slider-1.jpg",
-		"/photo/slider/slider-1.jpg",
-		"/photo/slider/slider-1.jpg",
-		"/photo/slider/slider-1.jpg",
-		"/photo/slider/slider-1.jpg",
-		"/photo/slider/slider-1.jpg",
-		"/photo/slider/slider-1.jpg",
+		"/photo/slider/slider-2.jpg",
+		"/photo/slider/slider-3.jpg",
+		"/photo/slider/slider-4.jpg",
+		"/photo/slider/slider-5.jpg",
+		"/photo/slider/slider-6.jpg",
+		"/photo/slider/slider-7.jpg",
+		"/photo/slider/slider-8.jpg",
+		"/photo/slider/slider-9.jpg",
+		"/photo/slider/slider-10.jpg",
 	];
 
 	return (
@@ -78,34 +78,42 @@ export default function Home() {
 			<div className="bg-main" />
 			<div className="main-element">
 				<div className="main-flex">
-					<div
+					<p
 						className="mb-4 font-bold m:mb-2"
-						style={{ fontSize: `${screen > 600 ? "20px" : "16px"}` }}
-					>
-						TRACTĂRI AUTO ȘI ASISTENȚĂ RUTIERĂ
-					</div>
-					<div className="mt-4 text-8xl font-bold m:text-5xl">
-						KOT ASISTENȚĂ RUTIERĂ
-					</div>
-					<div className="font-second text-3xl font-normal m:text-lg">
-						Probleme pe drum? Sună-ne acum!
-					</div>
-					<Button
-						variant="contained"
-						sx={{
-							color: "white",
-							textTransform: "none",
-							marginTop: "40px",
+						style={{
 							fontSize: `${screen > 600 ? "20px" : "16px"}`,
-							padding: `${screen > 600 ? "10px 20px" : "6px 12px"}`,
 						}}
 					>
-						DISPONIBILI NON STOP, SUNĂ ACUM
-					</Button>
+						TRACTĂRI AUTO ȘI ASISTENȚĂ RUTIERĂ
+					</p>
+					<h1 className="mt-4 text-8xl font-bold m:text-5xl">
+						KOT ASISTENȚĂ RUTIERĂ
+					</h1>
+					<h3 className="font-second text-3xl font-normal m:text-lg">
+						Probleme pe drum? Sună-ne acum!
+					</h3>
+					<Link href="tel:+40730222643">
+						<Button
+							variant="contained"
+							sx={{
+								color: "white",
+								textTransform: "none",
+								marginTop: "40px",
+								fontSize: `${screen > 600 ? "20px" : "16px"}`,
+								padding: `${
+									screen > 600 ? "10px 20px" : "6px 12px"
+								}`,
+							}}
+						>
+							DISPONIBILI NON STOP, SUNĂ ACUM
+						</Button>
+					</Link>
 					<Link
-						href="/"
+						href="https://wa.me/+400730222643"
 						className="mt-2 text-lg font-semibold hover:underline"
-						style={{ fontSize: `${screen > 600 ? "16px" : "12px"}` }}
+						style={{
+							fontSize: `${screen > 600 ? "16px" : "12px"}`,
+						}}
 					>
 						* sau lasă-ne un mesaj pe whatsapp
 						<ArrowRightAltIcon />
@@ -193,7 +201,10 @@ export default function Home() {
 						<p className="text-5xl m:text-4xl">PESTE</p>
 						<span
 							className="primary-color font-bold"
-							style={{ fontSize: `${screen > 600 ? "256px" : "196px"}`, lineHeight: "1.1" }}
+							style={{
+								fontSize: `${screen > 600 ? "256px" : "196px"}`,
+								lineHeight: "1.1",
+							}}
 						>
 							300
 						</span>
@@ -201,9 +212,9 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className="w-full text-2xl text-center mb-10 m:text-lg">
+			<h2 className="w-full text-2xl text-center mb-10 m:text-lg">
 				- RECOMANDĂRILE NOASTRE -
-			</div>
+			</h2>
 			<div
 				className="w-full flex items-start justify-center mt-8 xl:flex-wrap xl:justify-around"
 				style={{ height: "auto" }}
@@ -228,14 +239,21 @@ export default function Home() {
 						size="large"
 						sx={{ marginTop: "60px" }}
 					/>
-					<p className="mt-2 font-light" style={{ fontSize:`${screen > 600 ? "18px" : "14px"}` }}>
+					<p
+						className="mt-2 font-light"
+						style={{
+							fontSize: `${screen > 600 ? "18px" : "14px"}`,
+						}}
+					>
 						De fiecare dată când l-am sunat pe Alin, a venit fără
 						ezitare, chiar și în miez de noapte. Super băiat. Nota
 						10!
 					</p>
 					<p
 						className="mt-4 mb-8 font-medium uppercase text-left w-full m:mt-2 m:mb-4"
-						style={{ fontSize:`${screen > 600 ? "18px" : "14px"}` }}
+						style={{
+							fontSize: `${screen > 600 ? "18px" : "14px"}`,
+						}}
 					>
 						Andrei Comșa
 					</p>
@@ -244,7 +262,9 @@ export default function Home() {
 					<div>
 						<p
 							className="mt-2 font-light"
-							style={{ fontSize:`${screen > 600 ? "18px" : "14px"}` }}
+							style={{
+								fontSize: `${screen > 600 ? "18px" : "14px"}`,
+							}}
 						>
 							Nu știu ce mă făceam fără serviciile prestate de
 							acest băiat. A reușit să ma salveze dintr-o situație
@@ -252,7 +272,9 @@ export default function Home() {
 						</p>
 						<p
 							className="mt-4 mb-8 font-medium uppercase text-left w-full m:mt-2 m:mb-4"
-							style={{ fontSize:`${screen > 600 ? "18px" : "14px"}` }}
+							style={{
+								fontSize: `${screen > 600 ? "18px" : "14px"}`,
+							}}
 						>
 							Iosif Ștefan
 						</p>
@@ -307,32 +329,39 @@ export default function Home() {
 						size="large"
 						sx={{ marginTop: "60px" }}
 					/>
-					<p className="mt-2 font-light" style={{ fontSize:`${screen > 600 ? "18px" : "14px"}` }}>
+					<p
+						className="mt-2 font-light"
+						style={{
+							fontSize: `${screen > 600 ? "18px" : "14px"}`,
+						}}
+					>
 						Având în vedere că l-am sunat la 2 noaptea, a venit la
 						sute de kilometri distanță ca să mă ajute. Nu știu ce mă
 						faceam fără el. Sunați cu încredere!
 					</p>
 					<p
 						className="mt-4 mb-8 font-medium uppercase text-left w-full m:mt-2 m:mb-4"
-						style={{ fontSize:`${screen > 600 ? "18px" : "14px"}` }}
+						style={{
+							fontSize: `${screen > 600 ? "18px" : "14px"}`,
+						}}
 					>
 						Mareș Gabriel
 					</p>
 				</div>
 			</div>
-			<div className="w-full text-center text-6xl mt-40 font-semibold m:text-3xl">
+			<h1 className="w-full text-center text-6xl mt-40 font-semibold m:text-3xl">
 				Nu suntem unica firmă de tractaj
 				<br /> 24/7 din România, însă...
-			</div>
-			<div className="w-full text-center font-light text-3xl mt-10 m:text-xl">
+			</h1>
+			<p className="w-full text-center font-light text-3xl mt-10 m:text-xl">
 				Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa
 				că... Lorem ipsum dolor sit amet, <br />
 				consectetur adipiscing elit. Ut et massa mi. Aliquam in
 				hendrerit urna.Lorem ipsum dolor sit <br />
 				amet, consectetur adipiscing elit. Ut et massa mi.
-			</div>
+			</p>
 			<div
-				className="mt-32 w-screen relative overflow-hidden"
+				className="mt-32 w-screen relative"
 				style={{ height: "800px" }}
 			>
 				<div
@@ -359,7 +388,7 @@ export default function Home() {
 									className="slider slider-active"
 									style={{
 										transform: `translateY(${
-											rotate * 200
+											rotate * 150
 										}px)`,
 									}}
 								>
@@ -373,10 +402,11 @@ export default function Home() {
 						} else {
 							return (
 								<div
+									onClick={() => setCurrentElement(index)}
 									className="slider slider-inactive"
 									style={{
 										transform: `translateY(${
-											rotate * 200
+											rotate * 150
 										}px)`,
 										filter: `brightness(${
 											1 / Math.abs(rotate / 0.6)
@@ -420,28 +450,30 @@ export default function Home() {
 				</div>
 			</div>
 			<div className="mt-20 w-full flex items-center justify-center">
-				<Button
-					variant="contained"
-					sx={{
-						fontSize: `${screen > 600 ? "26px" : "18px"}`,
-						fontWeight: "500",
-						p: `${screen > 600 ? "10px 100px" : "8px 36px"}`,
-						textTransform: "none",
-						color: "white",
-					}}
-				>
-					Vezi Galeria noastră foto!
-				</Button>
+				<Link href="/gallery">
+					<Button
+						variant="contained"
+						sx={{
+							fontSize: `${screen > 600 ? "26px" : "18px"}`,
+							fontWeight: "500",
+							p: `${screen > 600 ? "10px 100px" : "8px 36px"}`,
+							textTransform: "none",
+							color: "white",
+						}}
+					>
+						Vezi Galeria noastră foto!
+					</Button>
+				</Link>
 			</div>
-			<div className="w-full text-center text-6xl mt-40 font-semibold m:text-3xl">
+			<h2 className="w-full text-center text-6xl mt-40 font-semibold m:text-3xl">
 				Probleme pe drum? <br />
 				Contactează-ne acum!
-			</div>
-			<div className="w-full text-center font-light text-3xl mt-10 m:text-xl m:mb-4">
+			</h2>
+			<p className="w-full text-center font-light text-3xl mt-10 m:text-xl m:mb-4">
 				Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa
 				că... Lorem ipsum <br />
 				dolor sit amet, consectetur adipiscing elit.
-			</div>
+			</p>
 			<div
 				className="w-full flex items-start justify-center mt-20 xl:flex-col xl:items-center m:mt-8"
 				style={{ height: `${screen > 1200 ? "600px" : "auto"}` }}
@@ -449,13 +481,19 @@ export default function Home() {
 				<form
 					onSubmit={(e) => {
 						e.preventDefault();
+						console.log("name:", name?.current);
+						console.log("email:", email?.current);
+						console.log("message", message?.current);
 					}}
 					className="w-1/3 h-full mx-8 flex items-center justify-start flex-col xl:w-[calc(100%-50px)] xl:justify-center"
 				>
 					<TextField
 						id="outlined-basic"
 						label="Numele tău"
+						type="text"
 						variant="outlined"
+						required
+						onChange={(e) => (name.current = e?.target?.value)}
 						sx={{
 							width: "100%",
 							marginBottom: "20px",
@@ -465,7 +503,10 @@ export default function Home() {
 					<TextField
 						id="outlined-basic"
 						label="Email"
+						type="email"
+						required
 						variant="outlined"
+						onChange={(e) => (email.current = e?.target?.value)}
 						sx={{
 							width: "100%",
 							marginBottom: "20px",
@@ -476,7 +517,8 @@ export default function Home() {
 						id="standard-multiline-static"
 						label="Mesajul tău..."
 						multiline
-						type="email"
+						required
+						onChange={(e) => (message.current = e?.target?.value)}
 						sx={{
 							width: "100%",
 							boxShadow: "2px 2px 3px rgba(0,0,0,0.5)",
@@ -492,7 +534,9 @@ export default function Home() {
 							textTransform: "none",
 							color: "white",
 							fontSize: `${screen > 600 ? "24px" : "18px"}`,
-							padding:`${screen > 600 ? "10px 28px" : "8px 14px"}`,
+							padding: `${
+								screen > 600 ? "10px 28px" : "8px 14px"
+							}`,
 						}}
 					>
 						Trimite-ne mesajul tău

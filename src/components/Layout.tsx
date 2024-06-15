@@ -29,7 +29,7 @@ export default function RootLayout({
 				<meta name="author" content="Iosif Stefan Alexandru" />
 				<meta
 					name="keywords"
-					content="tractari , auto, masina, cotoban, kot, alin kot, remorca, remorcare, tractare"
+					content="tractari , auto, masina, cotoban, kot, alin kot, remorca, remorcare, tractare, prahova"
 				/>
 				<meta charSet="UTF-8" />
 				<meta
@@ -47,8 +47,8 @@ export default function RootLayout({
 				<link rel="icon" href="/favicon.ico" sizes="any" />
 			</Head>
 			<main>{children}</main>
-			{/* <Analytics /> */}
-			{/* <SpeedInsights /> */}
+			<Analytics />
+			<SpeedInsights />
 		</div>
 	);
 }

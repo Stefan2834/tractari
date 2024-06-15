@@ -2,6 +2,7 @@ import { SessionProvider } from "next-auth/react";
 import Layout from "../components/Layout";
 import { DefaultProvider } from "../contexts/useDefault";
 import "../app/globals.css";
+import "../app/media.css";
 import { ThemeProvider } from '@mui/material/styles';
 
 import type { AppProps } from "next/app";

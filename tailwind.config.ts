@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  important: true,
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +9,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xxl': {'max': '1400px'},  
+        'xl': {'max': '1200px'},   
+        "m" : {"max" : "600px"}
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

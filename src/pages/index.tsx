@@ -29,9 +29,9 @@ export default function Home() {
 	const [currentElement, setCurrentElement] = useState<number>(0);
 	const { screen } = useDefault();
 
-	const name: string = useRef<any>();
-	const email: string = useRef<any>();
-	const message: string = useRef<any>();
+	const name = useRef<any>();
+	const email = useRef<any>();
+	const message = useRef<any>();
 
 	useGSAP(
 		() => {

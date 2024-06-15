@@ -7,8 +7,8 @@ import React, {
 } from "react";
 
 interface DefaultContextValue {
-	number: number | null;
-	setNumber: (accessToken: number | null) => void;
+	screen: number;
+	setScreen: (screen: number) => void;
 }
 
 export const DefaultContext = createContext<DefaultContextValue | undefined>(

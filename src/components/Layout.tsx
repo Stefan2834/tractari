@@ -21,6 +21,7 @@ export default function RootLayout({
 		<div className={inter.className}>
 			<Head>
 				<title>Kot Asistență</title>
+				<meta name="ahrefs-site-verification" content="7032a56cb4feb225916320921e1d52b8606b13ec5cbd11ac209c36834448b179" />
 				<meta
 					name="Tractari"
 					content="Tractari auto alin cotoban srl"

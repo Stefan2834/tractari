@@ -44,7 +44,7 @@ export default function RootLayout({
 				/>
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
-				<link rel="icon" href="/favicon.ico" sizes="32x32" />
+				<link rel="icon" href="/favicon.ico" sizes="any" />
 			</Head>
 			<main>{children}</main>
 			<Analytics />

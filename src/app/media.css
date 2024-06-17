@@ -101,6 +101,8 @@
 		width: calc(100% - 2px);
 		background-color: white;
 		border-radius: 2px;
+		transition: 400ms ease;
+		transform-origin: right;
 	}
 }
 

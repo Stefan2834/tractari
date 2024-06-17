@@ -74,12 +74,14 @@ export default function Footer() {
 					</Link>
 				</div>
 			</div>
-			<div className="w-full h-20 bg-black flex items-center justify-between px-24 -mt-1 xl:flex-col xl:items-start xl:justify-center xl:h-auto xl:py-6 m:px-8">
+			<div className="w-full h-20 bg-black flex items-center justify-between font-light px-24 -mt-1 xl:flex-col xl:items-start xl:justify-center xl:h-auto xl:py-6 m:px-8">
 				<p className="text-white font-normal text-lg m:text-base">
 					@2024 - All rights reserved
 				</p>
-				<p className="text-white font-normal text-lg m:text-base">
-					Designed and Developed by Iosif Ștefan & Mareș Gabriel
+				<p className="text-white font-light text-lg m:text-base">
+					Designed and Developed by{" "} 
+					<span className="underline">Iosif Ștefan</span> &{" "}
+					<span className="underline">Mareș Gabriel</span>
 				</p>
 			</div>
 		</footer>

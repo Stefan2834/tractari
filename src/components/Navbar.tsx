@@ -29,14 +29,29 @@ export default function Navbar() {
 	}, [screen]);
 
 	return (
-		<div className="fixed w-full h-32 flex items-center justify-between z-30 pl-16 pr-8 grad nav-main xl:pl-4 xl:pr-4">
+		<div className={`${screen > 900 ? "absolute" : "fixed"} w-full h-32 flex items-center justify-between z-30 pl-16 pr-8 nav-main xl:pl-4 xl:pr-4`}>
 			<Link href="/" className="logo">
 				<img src="/photo/logo.png" alt="logo" className="logo-img" />
 			</Link>
 			<div className="nav-ham" onClick={() => setNav((n) => !n)}>
-				<div className="line" style={{ width: "30px" }}></div>
-				<div className="line" style={{ width: "24px" }}></div>
-				<div className="line" style={{ width: "18px" }}></div>
+				<div
+					className="line"
+					style={{
+						width: "30px",
+						transform: `rotate(${nav ? "-45deg" : "0"})`,
+					}}
+				></div>
+				<div
+					className="line"
+					style={{ width: `${nav ? "0" : "24px"}` }}
+				></div>
+				<div
+					className="line"
+					style={{
+						width: `${nav ? "30px" : "18px"}`,
+						transform: `rotate(${nav ? "45deg" : "0"})`,
+					}}
+				></div>
 			</div>
 			<div
 				className="text-white flex items-center justify-center text-xl nav-div font-semibold"
@@ -70,7 +85,27 @@ export default function Navbar() {
 				>
 					Contacteaza-ne
 				</Link>
+				{screen < 900 && (
+					<div className="w-full h-28 absolute bottom-0 flex flex-col items-start justify-between px-6 pb-2">
+						<div>
+							<Link href="/" className="logo">
+								<img
+									src="/photo/logo.png"
+									alt="logo"
+									className="logo-img"
+								/>
+							</Link>
+						</div>
+						<div>
+							<p className="text-base">@2024 - All rights reserved</p>
+						</div>
+					</div>
+				)}
 			</div>
+			{screen < 900 && nav && (
+				<></>
+				// <div className="w-screen h-screen bg-red-400 absolute top-0 left-0 opacity-45" />
+			)}
 		</div>
 	);
 }

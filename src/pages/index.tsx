@@ -79,7 +79,7 @@ export default function Home() {
 			<div className="main-element">
 				<div className="main-flex">
 					<p
-						className="mb-4 font-bold m:mb-2"
+						className="mb-4 font-semibold m:mb-2"
 						style={{
 							fontSize: `${screen > 600 ? "20px" : "16px"}`,
 						}}
@@ -128,8 +128,10 @@ export default function Home() {
 				<div className="main-absolute-element">
 					<div className="flex items-start justify-start">
 						<div className="w-10 h-full mr-3 flex items-center justify-center">
-							<BoltIcon
-								style={{ fontSize: "50px", color: "#eec337" }}
+							<img
+								src="/photo/icons/lightning.png"
+								alt="lightning"
+								className="main-absolute-img"
 							/>
 						</div>
 						<div>
@@ -141,15 +143,17 @@ export default function Home() {
 						</div>
 					</div>
 					<p className="mt-2 text-md text-gray-800">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Ut et massa mi. Aliquam in hendrerit urna.
+						Sărim în ajutorul tău în cel mai scurt timp posibil. Nu
+						te îngrijora, vom fi acolo cât mai rapid.
 					</p>
 				</div>
 				<div className="main-absolute-element">
 					<div className="flex items-start justify-start">
 						<div className="w-10 h-full mr-3 flex items-center justify-center">
-							<TimelapseIcon
-								style={{ fontSize: "50px", color: "#eec337" }}
+							<img
+								src="/photo/icons/24.png"
+								alt="24 hours"
+								className="main-absolute-img"
 							/>
 						</div>
 						<div>
@@ -161,15 +165,17 @@ export default function Home() {
 						</div>
 					</div>
 					<p className="mt-2 text-md text-gray-800">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Ut et massa mi. Aliquam in hendrerit urna.
+						Venim oriunde în țară, la orice oră din zi și din
+						noapte. Nu ezita să ne contactezi.
 					</p>
 				</div>
 				<div className="main-absolute-element">
 					<div className="flex items-start justify-start">
 						<div className="w-10 h-full mr-3 flex items-center justify-center">
-							<CheckCircleOutlineIcon
-								style={{ fontSize: "50px", color: "#eec337" }}
+							<img
+								src="/photo/icons/checked.png"
+								alt="checked"
+								className="main-absolute-img"
 							/>
 						</div>
 						<div>
@@ -181,8 +187,8 @@ export default function Home() {
 						</div>
 					</div>
 					<p className="mt-2 text-md text-gray-800">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Ut et massa mi. Aliquam in hendrerit urna.
+						Oferim servicii de calitate superioară. Nu contează cât
+						de avariată este mașina, noi o vom tracta.
 					</p>
 				</div>
 			</div>
@@ -354,11 +360,15 @@ export default function Home() {
 				<br /> 24/7 din România, însă...
 			</h1>
 			<p className="w-full text-center font-light text-3xl mt-10 m:text-xl">
-				Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa
-				că... Lorem ipsum dolor sit amet, <br />
-				consectetur adipiscing elit. Ut et massa mi. Aliquam in
-				hendrerit urna.Lorem ipsum dolor sit <br />
-				amet, consectetur adipiscing elit. Ut et massa mi.
+				Ne pasă de clienții noștri, și apreciem o muncă de calitate.
+				Tractăm orice tip de autoturisme,
+				<br />
+				chiar dacă sistemul de direcție este grav avariat. Sărim în
+				ajutorul tău în cel mai scurt timp posibil,
+				<br />
+				oriunde în țară și la orice oră. Nu ezita să ne contactezi dacă
+				întâmpini probleme.
+				<br />
 			</p>
 			<div
 				className="mt-32 w-screen relative"
@@ -470,9 +480,11 @@ export default function Home() {
 				Contactează-ne acum!
 			</h2>
 			<p className="w-full text-center font-light text-3xl mt-10 m:text-xl m:mb-4">
-				Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa
-				că... Lorem ipsum <br />
-				dolor sit amet, consectetur adipiscing elit.
+				Nu ezita să ne contactezi dacă ai probleme cu mașina sau dacă ai
+				vreo
+				<br />
+				curiozitate legată de noi. Răspundem la orice oră în cel mai
+				scurt timp posibil.
 			</p>
 			<div
 				className="w-full flex items-start justify-center mt-20 xl:flex-col xl:items-center m:mt-8"
@@ -543,7 +555,7 @@ export default function Home() {
 					</Button>
 				</form>
 				<div
-					className="w-1/3 mx-8 text-bg xl:w-[calc(100%-50px)]"
+					className="w-1/3 mx-8 xl:w-[calc(100%-50px)]"
 					style={{ height: "500px" }}
 				>
 					<img

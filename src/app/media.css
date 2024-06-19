@@ -57,11 +57,6 @@
 }
 
 @media screen and (max-width: 900px) {
-	.nav-div {
-		flex-direction: column;
-		width: 300px;
-		height: 100vh;
-	}
 	.nav-main {
 		flex-direction: column-reverse;
 		height: 100px !important;
@@ -74,6 +69,7 @@
 		background-color: black;
 		height: 100vh !important;
 		position: absolute;
+		flex-direction: column;
 		transition: 400ms ease;
 	}
 	.nav-ham {

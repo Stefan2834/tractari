@@ -49,37 +49,34 @@ export default function Footer() {
 				</div>
 				<div className="flex items-center justify-center text-white font-semibold text-2xl mt-8">
 					<Link href="/">
-						<EmailOutlinedIcon
-							className="mx-3"
-							sx={{
-								fontSize: `${screen > 600 ? "50px" : "35px"}`,
-							}}
+						<img
+							src="/photo/icons/email.png"
+							alt="Email"
+							className={`${screen > 600 ? "h-9" : "h-6"} mx-3`}
 						/>
 					</Link>
 					<Link href="/">
-						<WhatsAppIcon
-							className="mx-3"
-							sx={{
-								fontSize: `${screen > 600 ? "50px" : "35px"}`,
-							}}
+						<img
+							src="/photo/icons/whatsapp.png"
+							alt="Email"
+							className={`${screen > 600 ? "h-9" : "h-6"} mx-3`}
 						/>
 					</Link>
 					<Link href="/">
-						<FacebookIcon
-							className="mx-3"
-							sx={{
-								fontSize: `${screen > 600 ? "50px" : "35px"}`,
-							}}
+						<img
+							src="/photo/icons/facebook.png"
+							alt="Email"
+							className={`${screen > 600 ? "h-9" : "h-6"} mx-3`}
 						/>
 					</Link>
 				</div>
 			</div>
 			<div className="w-full h-20 bg-black flex items-center justify-between font-light px-24 -mt-1 xl:flex-col xl:items-start xl:justify-center xl:h-auto xl:py-6 m:px-8">
-				<p className="text-white font-normal text-lg m:text-base">
+				<p className="text-white font-light text-lg m:text-base">
 					@2024 - All rights reserved
 				</p>
 				<p className="text-white font-light text-lg m:text-base">
-					Designed and Developed by{" "} 
+					Designed and Developed by{" "}
 					<span className="underline">Iosif Ștefan</span> &{" "}
 					<span className="underline">Mareș Gabriel</span>
 				</p>

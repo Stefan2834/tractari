@@ -27,7 +27,7 @@ import Navbar from "../components/Navbar";
 export default function test() {
 	return (
 		<>
-			<div className="w-full bg-red-400 overflow-scroll" style={{height:"100vh"}}>
+			<div className="w-full bg-red-400 overflow-y-scroll" style={{height:"100vh"}}>
 				<div style={{ height: "500vh" }}></div>
 			</div>
 		</>

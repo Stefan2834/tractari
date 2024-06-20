@@ -33,6 +33,7 @@ export default function Home() {
 	const email = useRef<any>();
 	const message = useRef<any>();
 
+
 	useGSAP(
 		() => {
 			gsap.to(".moving-img", {
@@ -73,7 +74,7 @@ export default function Home() {
 	];
 
 	return (
-		<div className="w-full font overflow-hidden">
+		<div className="w-full font overflow-hidden bg-white text-black">
 			<Navbar />
 			<div className="bg-main" />
 			<div className="main-element">
@@ -135,7 +136,7 @@ export default function Home() {
 							/>
 						</div>
 						<div>
-							<p className="text-2xl mt-3">Simplu și rapid</p>
+							<p className="text-2xl mt-3 text-black">Simplu și rapid</p>
 							<div
 								className="w-full bg-gray-400"
 								style={{ height: "1px" }}
@@ -157,7 +158,7 @@ export default function Home() {
 							/>
 						</div>
 						<div>
-							<p className="text-2xl mt-3">Oriunde și oricând</p>
+							<p className="text-2xl mt-3 text-black">Oriunde și oricând</p>
 							<div
 								className="w-full bg-gray-400"
 								style={{ height: "1px" }}
@@ -179,7 +180,7 @@ export default function Home() {
 							/>
 						</div>
 						<div>
-							<p className="text-2xl mt-3">Servicii calitative</p>
+							<p className="text-2xl mt-3 text-black">Servicii calitative</p>
 							<div
 								className="w-full bg-gray-400"
 								style={{ height: "1px" }}
@@ -204,7 +205,7 @@ export default function Home() {
 						className="moving-img"
 					/>
 					<div className="moving-text">
-						<p className="text-5xl m:text-4xl">PESTE</p>
+						<p className="text-5xl m:text-4xl text-black">PESTE</p>
 						<span
 							className="primary-color font-bold"
 							style={{
@@ -214,7 +215,7 @@ export default function Home() {
 						>
 							300
 						</span>
-						<p className="text-5xl m:text-4xl">clienți mulțumiți</p>
+						<p className="text-5xl m:text-4xl text-black">clienți mulțumiți</p>
 					</div>
 				</div>
 			</div>

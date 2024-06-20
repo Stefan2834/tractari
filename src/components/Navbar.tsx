@@ -12,6 +12,15 @@ export default function Navbar() {
 
 	const { screen } = useDefault();
 
+
+	useEffect(() => {
+		if (nav) {
+			document.body.style.overflowY = "hidden";
+		} else {
+			document.body.style.overflowY = "scroll";
+		}
+	}, [nav]);
+
 	useEffect(() => {
 		if (screen > 900) {
 			setNav(false);
@@ -116,6 +125,7 @@ export default function Navbar() {
 			</div>
 			{screen < 900 && (
 				<div
+					onClick={() => setNav(false)}
 					className="w-full h-full bg-black fixed top-0 left-0 z-20"
 					style={{
 						transition: "400ms ease",

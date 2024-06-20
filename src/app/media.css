@@ -67,7 +67,7 @@
 		top: 0;
 		width: 400px !important;
 		background-color: black;
-		height: 100vh !important;
+		height: 100dvh !important;
 		position: absolute;
 		flex-direction: column;
 		transition: 400ms ease;

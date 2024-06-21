@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useDefault } from "../contexts/useDefault";
+import { useDefault } from "@/contexts/useDefault";
 
 import { Rating, Avatar, InputAdornment, Button } from "@mui/material";
 import Navbar from "../components/Navbar";
@@ -8,7 +8,6 @@ import Link from "next/link";
 
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";

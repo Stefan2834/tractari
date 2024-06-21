@@ -15,7 +15,7 @@ export default function Footer() {
 	return (
 		<footer>
 			<div
-				className="mt-20 w-full grad-footer flex items-center justify-center flex-col"
+				className="mt-20 w-full grad-footer flex items-center justify-center flex-col xl:mt-8"
 				style={{
 					height: "600px",
 					clipPath: "polygon(0 10%, 100% 0%, 100% 100%, 0% 100%)",
@@ -30,7 +30,7 @@ export default function Footer() {
 						sx={{
 							fontSize: `${screen > 600 ? "18px" : "14px"}`,
 							color: "white",
-							p:"14px 20px",
+							p: `${screen > 900 ? "14px 20px" : "8px 16px"}`,
 							borderRadius: "4px",
 							backgroundColor: "#E3B626",
 						}}

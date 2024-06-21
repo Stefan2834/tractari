@@ -73,7 +73,7 @@ export default function Home() {
 		<div className="w-full font overflow-hidden bg-white text-black">
 			<Navbar />
 			<div className="bg-main" />
-			<div className="test-a" />
+			<div className="main-bar" />
 			<div className="main-element">
 				<div className="main-flex">
 					<p
@@ -138,7 +138,7 @@ export default function Home() {
 							</p>
 							<div
 								className="w-full bg-gray-400"
-								style={{ height: "1px" }}
+								style={{ height: "1px", marginTop:"4px" }}
 							/>
 						</div>
 					</div>
@@ -162,7 +162,7 @@ export default function Home() {
 							</p>
 							<div
 								className="w-full bg-gray-400"
-								style={{ height: "1px" }}
+								style={{ height: "1px", marginTop:"4px" }}
 							/>
 						</div>
 					</div>
@@ -186,7 +186,7 @@ export default function Home() {
 							</p>
 							<div
 								className="w-full bg-gray-400"
-								style={{ height: "1px" }}
+								style={{ height: "1px", marginTop:"4px" }}
 							/>
 						</div>
 					</div>
@@ -198,7 +198,7 @@ export default function Home() {
 			</div>
 			<div
 				style={{ height: "800px", width: "1700px" }}
-				className="mt-40 relative flex items-center justify-start"
+				className="mt-48 relative flex items-center justify-start"
 				ref={containerRef}
 			>
 				<div className="moving-element">
@@ -594,8 +594,8 @@ export default function Home() {
 					</Button>
 				</form>
 				<div
-					className="mx-8 xl:w-[calc(100%-50px)] w-2/5"
-					style={{ height: "500px" }}
+					className="mx-8 xl:w-[calc(100%-50px)] w-2/5 xl:my-4"
+					style={{ height: `${screen > 1200 ? "500px" : "auto"}` }}
 				>
 					<img
 						src="/photo/Vector.png"

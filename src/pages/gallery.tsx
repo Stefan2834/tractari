@@ -6,9 +6,10 @@ export default function Gallery() {
 	return (
 		<>
 			<Navbar />
-			<div className="w-full bg-red-400" style={{height:"200vh"}}>
-
-			</div>
+			<div
+				className="w-full"
+				style={{ height: "200vh" }}
+			></div>
 			<Footer />
 		</>
 	);

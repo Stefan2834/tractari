@@ -88,6 +88,9 @@
 		top: 10px;
 		left: 20px;
 	}
+	.bg-main {
+		background-image: url(../../public/photo/bg-main-phone.jpg);
+	}
 	.review-element {
 		margin: 40px 20px;
 	}

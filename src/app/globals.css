@@ -43,7 +43,7 @@ body {
 	padding-right: 0;
 	position: absolute;
 	overflow: hidden;
-	background-image: url(../../public/photo/test.jpg);
+	background-image: url(../../public/photo/bg-main.jpg);
 	background-size: cover;
 	background-position: center;
 	background-color: rgba(0, 0, 0, 0.6);

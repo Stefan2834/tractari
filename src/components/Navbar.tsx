@@ -110,6 +110,7 @@ export default function Navbar() {
 								color:"white",
 								position: "relative",
 								borderRadius:"4px",
+								boxShadow:"0 2px 4px rgba(0,0,0,0.15)",
 								fontWeight:"500",
 								margin:`${screen > 900 ? "0" : "0 5px"}`,
 								fontFamily: '"Monserrat", sans-serif',

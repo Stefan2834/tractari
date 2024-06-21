@@ -1,20 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useDefault } from "../contexts/useDefault";
 
-import { Button } from "@mui/material";
+import { Rating, Avatar, InputAdornment, Button } from "@mui/material";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Link from "next/link";
 
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import BoltIcon from "@mui/icons-material/Bolt";
-import TimelapseIcon from "@mui/icons-material/Timelapse";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
-import { Rating, Avatar } from "@mui/material";
+import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -26,13 +23,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
 	const containerRef = useRef<any>();
-	const [currentElement, setCurrentElement] = useState<number>(0);
+	const [currentElement, setCurrentElement] = useState<number>(2);
 	const { screen } = useDefault();
 
 	const name = useRef<any>();
 	const email = useRef<any>();
 	const message = useRef<any>();
-
 
 	useGSAP(
 		() => {
@@ -77,6 +73,7 @@ export default function Home() {
 		<div className="w-full font overflow-hidden bg-white text-black">
 			<Navbar />
 			<div className="bg-main" />
+			<div className="test-a" />
 			<div className="main-element">
 				<div className="main-flex">
 					<p
@@ -111,7 +108,7 @@ export default function Home() {
 					</Link>
 					<Link
 						href="https://wa.me/+400730222643"
-						className="mt-2 text-lg font-semibold hover:underline"
+						className="mt-2 text-lg font-normal hover:underline"
 						style={{
 							fontSize: `${screen > 600 ? "16px" : "12px"}`,
 						}}
@@ -136,14 +133,16 @@ export default function Home() {
 							/>
 						</div>
 						<div>
-							<p className="text-2xl mt-3 text-black">Simplu și rapid</p>
+							<p className="text-2xl mt-3 text-black">
+								Simplu și rapid
+							</p>
 							<div
 								className="w-full bg-gray-400"
 								style={{ height: "1px" }}
 							/>
 						</div>
 					</div>
-					<p className="mt-2 text-md text-gray-800">
+					<p className="my-6 text-md text-gray-800">
 						Sărim în ajutorul tău în cel mai scurt timp posibil. Nu
 						te îngrijora, vom fi acolo cât mai rapid.
 					</p>
@@ -158,14 +157,16 @@ export default function Home() {
 							/>
 						</div>
 						<div>
-							<p className="text-2xl mt-3 text-black">Oriunde și oricând</p>
+							<p className="text-2xl mt-3 text-black">
+								Oriunde și oricând
+							</p>
 							<div
 								className="w-full bg-gray-400"
 								style={{ height: "1px" }}
 							/>
 						</div>
 					</div>
-					<p className="mt-2 text-md text-gray-800">
+					<p className="my-6 text-md text-gray-800">
 						Venim oriunde în țară, la orice oră din zi și din
 						noapte. Nu ezita să ne contactezi.
 					</p>
@@ -180,14 +181,16 @@ export default function Home() {
 							/>
 						</div>
 						<div>
-							<p className="text-2xl mt-3 text-black">Servicii calitative</p>
+							<p className="text-2xl mt-3 text-black">
+								Servicii calitative
+							</p>
 							<div
 								className="w-full bg-gray-400"
 								style={{ height: "1px" }}
 							/>
 						</div>
 					</div>
-					<p className="mt-2 text-md text-gray-800">
+					<p className="my-6 text-md text-gray-800">
 						Oferim servicii de calitate superioară. Nu contează cât
 						de avariată este mașina, noi o vom tracta.
 					</p>
@@ -215,7 +218,9 @@ export default function Home() {
 						>
 							300
 						</span>
-						<p className="text-5xl m:text-4xl text-black">clienți mulțumiți</p>
+						<p className="text-5xl m:text-4xl text-black">
+							clienți mulțumiți
+						</p>
 					</div>
 				</div>
 			</div>
@@ -244,7 +249,7 @@ export default function Home() {
 						precision={0.5}
 						readOnly
 						size="large"
-						sx={{ marginTop: "60px" }}
+						sx={{ marginTop: "60px", color: "#E3B626" }}
 					/>
 					<p
 						className="mt-2 font-light"
@@ -295,6 +300,7 @@ export default function Home() {
 						sx={{
 							marginBottom: `${screen > 1200 ? "60px" : "0px"}`,
 							marginTop: `${screen > 1200 ? "0px" : "60px"}`,
+							color: "#E3B626",
 						}}
 					/>
 					<Avatar
@@ -334,7 +340,7 @@ export default function Home() {
 						precision={0.5}
 						readOnly
 						size="large"
-						sx={{ marginTop: "60px" }}
+						sx={{ marginTop: "60px", color: "#E3B626" }}
 					/>
 					<p
 						className="mt-2 font-light"
@@ -376,10 +382,8 @@ export default function Home() {
 				style={{ height: "800px" }}
 			>
 				<div
-					className="absolute  w-full h-full overflow-visible"
+					className="absolute w-full h-full overflow-visible grad-slider"
 					style={{
-						background:
-							"linear-gradient(90deg, rgba(0,0,0,1) 50%, rgba(38,37,0,1) 100%)",
 						clipPath: "polygon(0 30%, 100% 0, 100% 70%, 0 100%)",
 					}}
 				/>
@@ -437,8 +441,8 @@ export default function Home() {
 			</div>
 			<div className="w-full flex items-center justify-center -mt-32 relative z-10 text-white">
 				<div
-					className="w-16 h-16 primary mx-4 rounded-full flex items-center justify-center cursor-pointer"
-					style={{ boxShadow: "1px 2px 2px rgb(0,0,0,0.5)" }}
+					className="w-16 h-16 mx-4 rounded-full flex items-center justify-center cursor-pointer"
+					style={{ boxShadow: "0px 2px 4px rgb(0,0,0,0.15)", backgroundColor:"#F9CB38" }}
 					onClick={() => {
 						console.log(currentElement);
 						currentElement === 0
@@ -446,18 +450,26 @@ export default function Home() {
 							: setCurrentElement((c) => c - 1);
 					}}
 				>
-					<ArrowLeftIcon fontSize="large" />
+					<img
+						src="/photo/icons/arrow-left.png"
+						alt="Left Arrow"
+						className="h-7 w-auto"
+					/>
 				</div>
 				<div
-					className="w-16 h-16 primary mx-4 rounded-full flex items-center justify-center cursor-pointer"
-					style={{ boxShadow: "1px 2px 2px rgb(0,0,0,0.5)" }}
+					className="w-16 h-16 mx-4 rounded-full flex items-center justify-center cursor-pointer"
+					style={{ boxShadow: "0px 2px 4px rgb(0,0,0,0.15)", backgroundColor:"#F9CB38" }}
 					onClick={() =>
 						currentElement < sliders.length - 1
 							? setCurrentElement((c) => c + 1)
 							: setCurrentElement(0)
 					}
 				>
-					<ArrowRightIcon fontSize="large" />
+					<img
+						src="/photo/icons/arrow-right.png"
+						alt="Right arrow"
+						className="h-7 w-auto"
+					/>
 				</div>
 			</div>
 			<div className="mt-20 w-full flex items-center justify-center">
@@ -465,11 +477,14 @@ export default function Home() {
 					<Button
 						variant="contained"
 						sx={{
-							fontSize: `${screen > 600 ? "26px" : "18px"}`,
+							fontSize: `${screen > 600 ? "22px" : "18px"}`,
 							fontWeight: "500",
-							p: `${screen > 600 ? "10px 100px" : "8px 36px"}`,
+							p: `${screen > 600 ? "14px 110px" : "10px 40px"}`,
 							textTransform: "none",
 							color: "white",
+							borderRadius: "4px",
+							backgroundColor: "#F9CB38",
+							boxShadow: "0px 2px 3px rgba(0,0,0,0.15)",
 						}}
 					>
 						Vezi Galeria noastră foto!
@@ -510,7 +525,16 @@ export default function Home() {
 						sx={{
 							width: "100%",
 							marginBottom: "20px",
-							boxShadow: "2px 2px 3px rgba(0,0,0,0.5)",
+							boxShadow: "0px 4px 10px rgba(0,0,0,0.15)",
+							borderRadius: "8px",
+							backgroundColor: "#fcfcfc",
+						}}
+						InputProps={{
+							startAdornment: (
+								<InputAdornment position="start">
+									<PersonOutlineOutlinedIcon />
+								</InputAdornment>
+							),
 						}}
 					/>
 					<TextField
@@ -523,7 +547,16 @@ export default function Home() {
 						sx={{
 							width: "100%",
 							marginBottom: "20px",
-							boxShadow: "2px 2px 3px rgba(0,0,0,0.5)",
+							boxShadow: "0px 4px 10px rgba(0,0,0,0.15)",
+							borderRadius: "8px",
+							backgroundColor: "#fcfcfc",
+						}}
+						InputProps={{
+							startAdornment: (
+								<InputAdornment position="start">
+									<EmailOutlinedIcon />
+								</InputAdornment>
+							),
 						}}
 					/>
 					<TextField
@@ -534,7 +567,9 @@ export default function Home() {
 						onChange={(e) => (message.current = e?.target?.value)}
 						sx={{
 							width: "100%",
-							boxShadow: "2px 2px 3px rgba(0,0,0,0.5)",
+							boxShadow: "0px 4px 10px rgba(0,0,0,0.15)",
+							borderRadius: "8px",
+							backgroundColor: "#fcfcfc",
 						}}
 						rows={12}
 						variant="outlined"
@@ -543,10 +578,13 @@ export default function Home() {
 						variant="contained"
 						type="submit"
 						sx={{
+							width:"100%",
 							marginTop: "40px",
 							textTransform: "none",
 							color: "white",
+							backgroundColor:"#F9CB38",
 							fontSize: `${screen > 600 ? "24px" : "18px"}`,
+							boxShadow: "0px 4px 10px rgba(0,0,0,0.15)",
 							padding: `${
 								screen > 600 ? "10px 28px" : "8px 14px"
 							}`,
@@ -556,7 +594,7 @@ export default function Home() {
 					</Button>
 				</form>
 				<div
-					className="w-1/3 mx-8 xl:w-[calc(100%-50px)]"
+					className="mx-8 xl:w-[calc(100%-50px)] w-2/5"
 					style={{ height: "500px" }}
 				>
 					<img

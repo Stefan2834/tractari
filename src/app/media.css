@@ -1,8 +1,7 @@
 /* ----------Media queries---------- */
 
 @media screen and (max-width: 1400px) {
-	.nav-link,
-	.nav-reverse {
+	.nav-link {
 		margin: 0 5px;
 		padding: 5px 10px;
 	}

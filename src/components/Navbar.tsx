@@ -2,6 +2,8 @@ import React, { useRef, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import { Button } from "@mui/material";
+
 import { useDefault } from "../contexts/useDefault";
 
 export default function Navbar() {
@@ -11,7 +13,6 @@ export default function Navbar() {
 	const [nav, setNav] = useState<boolean>(false);
 
 	const { screen } = useDefault();
-
 
 	useEffect(() => {
 		if (nav) {
@@ -41,7 +42,7 @@ export default function Navbar() {
 		<>
 			<div
 				className={`${
-					screen > 900 ? "absolute" : "fixed"
+					screen > 900 ? "fixed" : "fixed"
 				} w-full h-32 flex items-center justify-between grad z-30 pl-16 pr-8 nav-main xl:pl-4 xl:pr-4`}
 			>
 				<Link href="/" className="logo">
@@ -99,9 +100,25 @@ export default function Navbar() {
 					</Link>
 					<Link
 						href="/"
-						className="mx-4 py-2 px-4 nav-reverse xl:mx-2 xl:px-2 xl:my-2"
+						className="mx-4 xl:mx-2"
 					>
-						Contacteaza-ne
+						<Button
+							variant="contained"
+							sx={{
+								backgroundColor: "#CCA424",
+								textTransform: "none",
+								color:"white",
+								position: "relative",
+								borderRadius:"4px",
+								fontWeight:"500",
+								margin:`${screen > 900 ? "0" : "0 5px"}`,
+								fontFamily: '"Monserrat", sans-serif',
+								fontSize:"20px",
+								padding:`${screen > 900 ? "6px 18px" : "4px 12px"}`,
+							}}
+						>
+							Contacteaza-ne
+						</Button>
 					</Link>
 					{screen < 900 && (
 						<div className="w-full h-28 absolute bottom-0 flex flex-col items-start justify-between px-6 pb-2">

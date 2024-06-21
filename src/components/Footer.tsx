@@ -15,7 +15,7 @@ export default function Footer() {
 	return (
 		<footer>
 			<div
-				className="mt-20 w-full grad-2 flex items-center justify-center flex-col"
+				className="mt-20 w-full grad-footer flex items-center justify-center flex-col"
 				style={{
 					height: "600px",
 					clipPath: "polygon(0 10%, 100% 0%, 100% 100%, 0% 100%)",
@@ -28,8 +28,11 @@ export default function Footer() {
 					<Button
 						variant="contained"
 						sx={{
-							fontSize: `${screen > 600 ? "20px" : "14px"}`,
+							fontSize: `${screen > 600 ? "18px" : "14px"}`,
 							color: "white",
+							p:"14px 20px",
+							borderRadius: "4px",
+							backgroundColor: "#E3B626",
 						}}
 						startIcon={<PhoneIcon />}
 					>

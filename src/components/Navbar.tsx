@@ -98,24 +98,23 @@ export default function Navbar() {
 					>
 						Galerie foto
 					</Link>
-					<Link
-						href="/"
-						className="mx-4 xl:mx-2"
-					>
+					<Link href="/" className="mx-4 xl:mx-2">
 						<Button
 							variant="contained"
 							sx={{
 								backgroundColor: "#CCA424",
 								textTransform: "none",
-								color:"white",
+								color: "white",
 								position: "relative",
-								borderRadius:"4px",
-								boxShadow:"0 2px 4px rgba(0,0,0,0.15)",
-								fontWeight:"500",
-								margin:`${screen > 900 ? "0" : "0 5px"}`,
+								borderRadius: "4px",
+								boxShadow: "0 2px 4px rgba(0,0,0,0.15)",
+								fontWeight: "500",
+								margin: `${screen > 900 ? "0" : "0 5px"}`,
 								fontFamily: '"Monserrat", sans-serif',
-								fontSize:"20px",
-								padding:`${screen > 900 ? "6px 18px" : "4px 12px"}`,
+								fontSize: "20px",
+								padding: `${
+									screen > 900 ? "6px 18px" : "4px 12px"
+								}`,
 							}}
 						>
 							Contacteaza-ne

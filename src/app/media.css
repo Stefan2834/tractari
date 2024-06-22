@@ -50,8 +50,8 @@
 
 @media screen and (max-width: 1000px) {
 	.main-element {
-		margin:0 18px;
-		width:100%;
+		margin: 0 18px;
+		width: 100%;
 	}
 }
 
@@ -65,7 +65,7 @@
 		right: 0;
 		top: 0;
 		width: 400px !important;
-		background-color: #0B0A0A;
+		background-color: #0b0a0a;
 		height: 100dvh !important;
 		position: absolute;
 		flex-direction: column;
@@ -104,8 +104,7 @@
 	}
 }
 
-
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
 	.nav-div {
 		width: 300px !important;
 		max-width: 100%;
@@ -114,17 +113,17 @@
 		transform: translateY(-70px);
 	}
 	.main-absolute {
-		bottom:50px;
+		bottom: 50px;
 	}
 	.main-absolute-flex {
 		margin-top: -100px;
 	}
 	.main-absolute-element {
 		padding: 20px 30px;
-		margin:0 30px;
+		margin: 0 30px;
 	}
 	.slider {
-		scale:0.7;
+		scale: 0.7;
 	}
 	.slider-inactive {
 		scale: 0.5;

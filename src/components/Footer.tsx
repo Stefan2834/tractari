@@ -1,5 +1,5 @@
 import React from "react";
-import { useDefault } from "../contexts/useDefault";
+import { useDefault } from "@/contexts/useDefault";
 
 import { Button } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -7,10 +7,17 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
+import email from "../assets/photo/icons/email.png";
+import whatsapp from "../assets/photo/icons/whatsapp.png";
+import facebook from "../assets/photo/icons/facebook.png";
+import logo from "../assets/photo/logo.png"
+
+
 import Link from "next/link";
 
 export default function Footer() {
 	const { screen } = useDefault();
+
 
 	return (
 		<footer>
@@ -22,7 +29,7 @@ export default function Footer() {
 				}}
 			>
 				<Link href="/">
-					<img src="/photo/logo.png" alt="logo" className="w-64" />
+					<img src={logo.src} alt="logo" className="w-64" />
 				</Link>
 				<Link href="tel:+40730222643">
 					<Button
@@ -53,22 +60,22 @@ export default function Footer() {
 				<div className="flex items-center justify-center text-white font-semibold text-2xl mt-8">
 					<Link href="/">
 						<img
-							src="/photo/icons/email.png"
+							src={email.src}
 							alt="Email"
 							className={`${screen > 600 ? "h-9" : "h-6"} mx-3`}
 						/>
 					</Link>
 					<Link href="/">
 						<img
-							src="/photo/icons/whatsapp.png"
-							alt="Email"
+							src={whatsapp.src}
+							alt="Whatsapp"
 							className={`${screen > 600 ? "h-9" : "h-6"} mx-3`}
 						/>
 					</Link>
 					<Link href="/">
 						<img
-							src="/photo/icons/facebook.png"
-							alt="Email"
+							src={facebook.src}
+							alt="Facebook"
 							className={`${screen > 600 ? "h-9" : "h-6"} mx-3`}
 						/>
 					</Link>

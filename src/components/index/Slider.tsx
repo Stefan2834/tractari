@@ -15,6 +15,8 @@ import photo7 from "@/assets/photo/slider/slider-7.jpg";
 import photo8 from "@/assets/photo/slider/slider-8.jpg";
 import photo9 from "@/assets/photo/slider/slider-9.jpg";
 import photo10 from "@/assets/photo/slider/slider-10.jpg";
+import photo11 from "@/assets/photo/slider/slider-11.jpg";
+
 
 import leftArrow from "@/assets/photo/icons/arrow-left.png";
 import rightArrow from "@/assets/photo/icons/arrow-right.png";
@@ -25,7 +27,7 @@ export default function Slider() {
     const [currentElement, setCurrentElement] = useState<number>(2);
 
     const sliders = [
-        photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10
+        photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11
     ];
 
 

@@ -1,8 +1,8 @@
 import React from "react";
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Main from "../components/index/Main";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Main from "@/components/index/Main";
 import Scroll from "@/components/index/Scroll";
 import Review from "@/components/index/Review";
 import Slider from "@/components/index/Slider";

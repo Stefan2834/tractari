@@ -1,53 +1,41 @@
-import React, {
-	createContext,
-	useContext,
-	ReactNode,
-	useState,
-	useEffect,
-} from "react";
+import React, { createContext, useContext, ReactNode, useState, useEffect } from "react";
 
 interface DefaultContextValue {
-	screen: number;
-	setScreen: (screen: number) => void;
+   screenWidth: number;
+   screenHeight: number;
 }
 
-export const DefaultContext = createContext<DefaultContextValue | undefined>(
-	undefined
-);
+export const DefaultContext = createContext<DefaultContextValue | undefined>(undefined);
 
 export function useDefault() {
-	const context = useContext(DefaultContext);
-	if (!context) {
-		throw new Error("useDefault must be used within an DefaultProvider");
-	}
-	return context;
+   const context = useContext(DefaultContext);
+   if (!context) {
+      throw new Error("useDefault must be used within an DefaultContextProvider");
+   }
+   return context;
 }
 
-export function DefaultProvider({ children }: { children: ReactNode }) {
+export function DefaultContextProvider({ children }: { children: ReactNode }) {
+   const [screenWidth, setScreenWidth] = useState<number>(0);
+   const [screenHeight, setScreenHeight] = useState<number>(0);
 
-    const [screen, setScreen] = useState<number>(0);
+   useEffect(() => {
+      function handleResize() {
+         setScreenWidth(window.innerWidth);
+         setScreenHeight(window.innerHeight);
+      }
 
+      window.addEventListener("resize", handleResize);
 
-	useEffect(() => {
-		function handleResize() {
-			setScreen(window.innerWidth);
-		}
+      handleResize();
 
-		window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+   }, []);
 
-		handleResize();
+   const value: DefaultContextValue = {
+      screenWidth,
+      screenHeight,
+   };
 
-		return () => window.removeEventListener("resize", handleResize);
-	}, []);
-
-	const value: DefaultContextValue = {
-		screen,
-		setScreen,
-	};
-
-	return (
-		<DefaultContext.Provider value={value}>
-			{children}
-		</DefaultContext.Provider>
-	);
+   return <DefaultContext.Provider value={value}>{children}</DefaultContext.Provider>;
 }

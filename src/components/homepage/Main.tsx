@@ -1,10 +1,16 @@
+//Utilities
 import React from "react";
 import Link from "next/link";
 import { useDefault } from "@/contexts/useDefault";
-import { Button } from "@mui/material";
 
+
+//Mui Components
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { Button } from "@mui/material";
+
+
+//Icons
 import lightning from "@/assets/icons/lightning.webp";
 import hours24 from "@/assets/icons/24.webp";
 import checked from "@/assets/icons/checked.webp";

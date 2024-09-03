@@ -1,9 +1,16 @@
+//Utilities
 import React, { useRef } from "react";
-import truck from "@/assets/truck.png";
 import { useDefault } from "@/contexts/useDefault";
+
+//GSAP
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+
+//Images
+import truck from "@/assets/truck.png";
+
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -1,16 +1,20 @@
 "use client";
+//Utilities
 import React from "react";
+import Link from "next/link";
+import { useDefault } from "@/contexts/useDefault";
 
+
+//Mui Components
 import { Button } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 
+//Images
 import email from "../assets/icons/email.webp";
 import whatsapp from "../assets/icons/whatsapp.webp";
 import facebook from "../assets/icons/facebook.webp";
 import logo from "../assets/logo.png";
 
-import Link from "next/link";
-import { useDefault } from "@/contexts/useDefault";
 
 export default function Footer() {
    const { screenWidth } = useDefault();

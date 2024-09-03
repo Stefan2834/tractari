@@ -1,9 +1,14 @@
+//Utilities
 import React from "react";
+import { useDefault } from "@/contexts/useDefault";
+
+//Mui Components
 import { Avatar, Rating } from "@mui/material";
+
+//Avatars
 import avatar1 from "@/assets/reviews-avatars/avatar-1.webp";
 import avatar2 from "@/assets/reviews-avatars/avatar-2.webp";
 import avatar3 from "@/assets/reviews-avatars/avatar-3.webp";
-import { useDefault } from "@/contexts/useDefault";
 
 export default function Review() {
    const { screenWidth } = useDefault();

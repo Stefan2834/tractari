@@ -1,9 +1,12 @@
+//Utilities
 import React, { useState } from "react";
-
 import Link from "next/link";
-import { Button } from "@mui/material";
 import { useDefault } from "@/contexts/useDefault";
 
+//Mui components
+import { Button } from "@mui/material";
+
+//Slider
 import photo1 from "@/assets/carousel/slider-1.webp";
 import photo2 from "@/assets/carousel/slider-2.webp";
 import photo3 from "@/assets/carousel/slider-3.webp";

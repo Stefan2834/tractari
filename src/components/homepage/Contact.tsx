@@ -1,11 +1,15 @@
+//Utilities
 import React, { useRef } from "react";
+import { useDefault } from "@/contexts/useDefault";
+
+//Images
+import map from "@/assets/map.png";
+
+//Mui components 
 import TextField from "@mui/material/TextField";
 import { Button, InputAdornment } from "@mui/material";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-
-import map from "@/assets/map.png";
-import { useDefault } from "@/contexts/useDefault";
 
 export default function Contact() {
    const { screenWidth } = useDefault();

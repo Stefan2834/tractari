@@ -6,7 +6,7 @@ import avatar3 from "@/assets/reviews-avatars/avatar-3.webp";
 import { useDefault } from "@/contexts/useDefault";
 
 export default function Review() {
-   const { screen } = useDefault();
+   const { screenWidth } = useDefault();
    return (
       <>
          <h2 className="w-full text-2xl text-center mb-10 m:text-lg">- RECOMANDĂRILE NOASTRE -</h2>
@@ -23,7 +23,7 @@ export default function Review() {
                      height: 110,
                      transform: "translateY(-50%)",
                      position: "absolute",
-                     scale: `${screen > 600 ? "1" : "0.8"}`,
+                     scale: `${screenWidth > 600 ? "1" : "0.8"}`,
                   }}
                />
                <Rating
@@ -37,7 +37,7 @@ export default function Review() {
                <p
                   className="mt-2 font-light"
                   style={{
-                     fontSize: `${screen > 600 ? "18px" : "14px"}`,
+                     fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
                   }}
                >
                   De fiecare dată când l-am sunat pe Alin, a venit fără ezitare, chiar și în miez de
@@ -46,7 +46,7 @@ export default function Review() {
                <p
                   className="mt-4 mb-8 font-medium uppercase text-left w-full m:mt-2 m:mb-4"
                   style={{
-                     fontSize: `${screen > 600 ? "18px" : "14px"}`,
+                     fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
                   }}
                >
                   Andrei Comșa
@@ -57,7 +57,7 @@ export default function Review() {
                   <p
                      className="mt-2 font-light"
                      style={{
-                        fontSize: `${screen > 600 ? "18px" : "14px"}`,
+                        fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
                      }}
                   >
                      Nu știu ce mă făceam fără serviciile prestate de acest băiat. A reușit să ma
@@ -66,7 +66,7 @@ export default function Review() {
                   <p
                      className="mt-4 mb-8 font-medium uppercase text-left w-full m:mt-2 m:mb-4"
                      style={{
-                        fontSize: `${screen > 600 ? "18px" : "14px"}`,
+                        fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
                      }}
                   >
                      Iosif Ștefan
@@ -79,8 +79,8 @@ export default function Review() {
                   readOnly
                   size="large"
                   sx={{
-                     marginBottom: `${screen > 1200 ? "60px" : "0px"}`,
-                     marginTop: `${screen > 1200 ? "0px" : "60px"}`,
+                     marginBottom: `${screenWidth > 1200 ? "60px" : "0px"}`,
+                     marginTop: `${screenWidth > 1200 ? "0px" : "60px"}`,
                      color: "#E3B626",
                   }}
                />
@@ -90,10 +90,10 @@ export default function Review() {
                   sx={{
                      width: 110,
                      height: 110,
-                     bottom: `${screen > 1200 ? "0" : "calc(100% - 110px)"}`,
-                     transform: `${screen > 1200 ? "translateY(50%)" : "translateY(-50%)"}`,
+                     bottom: `${screenWidth > 1200 ? "0" : "calc(100% - 110px)"}`,
+                     transform: `${screenWidth > 1200 ? "translateY(50%)" : "translateY(-50%)"}`,
                      position: "absolute",
-                     scale: `${screen > 600 ? "1" : "0.8"}`,
+                     scale: `${screenWidth > 600 ? "1" : "0.8"}`,
                   }}
                />
             </div>
@@ -106,7 +106,7 @@ export default function Review() {
                      height: 110,
                      transform: "translateY(-50%)",
                      position: "absolute",
-                     scale: `${screen > 600 ? "1" : "0.8"}`,
+                     scale: `${screenWidth > 600 ? "1" : "0.8"}`,
                   }}
                />
                <Rating
@@ -120,7 +120,7 @@ export default function Review() {
                <p
                   className="mt-2 font-light"
                   style={{
-                     fontSize: `${screen > 600 ? "18px" : "14px"}`,
+                     fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
                   }}
                >
                   Având în vedere că l-am sunat la 2 noaptea, a venit la sute de kilometri distanță
@@ -129,7 +129,7 @@ export default function Review() {
                <p
                   className="mt-4 mb-8 font-medium uppercase text-left w-full m:mt-2 m:mb-4"
                   style={{
-                     fontSize: `${screen > 600 ? "18px" : "14px"}`,
+                     fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
                   }}
                >
                   Mareș Gabriel

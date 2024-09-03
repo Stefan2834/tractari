@@ -14,6 +14,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { AppProps } from "next/app";
 import { DefaultContextProvider } from "../contexts/useDefault";
+import { ThemeProvider } from '@mui/material/styles';
 
 const roboto = Roboto({
    weight: ["100", "300", "400", "500", "700", "900"],
@@ -68,21 +69,36 @@ export const metadata: Metadata = {
    },
 };
 
+import { createTheme } from "@mui/material/styles";
+
+const theme = createTheme({
+   palette: {
+      primary: {
+         main: "#E3B626",
+      },
+      secondary: {
+         main: "#0b0a0a",
+      },
+   },
+});
+
 export default function App({ Component, pageProps: pageProps }: AppProps) {
    return (
-      <DefaultContextProvider>
-         <div className={roboto.className}>
-            <Head>
-               <title>Kot Asistență</title>
-            </Head>
-            <main>
-               <Navbar />
-               <Component {...pageProps} />
-               <Footer />
-            </main>
-            <Analytics />
-            <SpeedInsights />
-         </div>
-      </DefaultContextProvider>
+      <ThemeProvider theme={theme}>
+         <DefaultContextProvider>
+            <div className={roboto.className}>
+               <Head>
+                  <title>Kot Asistență</title>
+               </Head>
+               <main className="bg-white">
+                  <Navbar />
+                  <Component {...pageProps} />
+                  <Footer />
+               </main>
+               <Analytics />
+               <SpeedInsights />
+            </div>
+         </DefaultContextProvider>
+      </ThemeProvider>
    );
 }

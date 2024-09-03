@@ -3,9 +3,6 @@ import React from "react";
 
 import { Button } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
-import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import FacebookIcon from "@mui/icons-material/Facebook";
 
 import email from "../assets/icons/email.webp";
 import whatsapp from "../assets/icons/whatsapp.webp";
@@ -19,7 +16,7 @@ export default function Footer() {
    const { screenWidth } = useDefault();
 
    return (
-      <footer>
+      <footer className="bg-white">
          <div
             className="mt-20 w-full grad-footer flex items-center justify-center flex-col xl:mt-8"
             style={{

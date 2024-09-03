@@ -4,11 +4,11 @@ import { Button, InputAdornment } from "@mui/material";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 
-import map from "@/assets/photo/Vector.png";
+import map from "@/assets/map.png";
 import { useDefault } from "@/contexts/useDefault";
 
 export default function Contact() {
-   const { screen } = useDefault();
+   const { screenWidth } = useDefault();
 
    const name = useRef<any>();
    const email = useRef<any>();
@@ -27,7 +27,7 @@ export default function Contact() {
          </p>
          <div
             className="w-full flex items-start justify-center mt-20 xl:flex-col xl:items-center m:mt-8"
-            style={{ height: `${screen > 1200 ? "600px" : "auto"}` }}
+            style={{ height: `${screenWidth > 1200 ? "600px" : "auto"}` }}
          >
             <form
                onSubmit={(e) => {
@@ -106,9 +106,9 @@ export default function Contact() {
                      textTransform: "none",
                      color: "white",
                      backgroundColor: "#F9CB38",
-                     fontSize: `${screen > 600 ? "24px" : "18px"}`,
+                     fontSize: `${screenWidth > 600 ? "24px" : "18px"}`,
                      boxShadow: "0px 4px 10px rgba(0,0,0,0.15)",
-                     padding: `${screen > 600 ? "10px 28px" : "8px 14px"}`,
+                     padding: `${screenWidth > 600 ? "10px 28px" : "8px 14px"}`,
                   }}
                >
                   Trimite-ne mesajul tău
@@ -116,7 +116,7 @@ export default function Contact() {
             </form>
             <div
                className="mx-8 xl:w-[calc(100%-50px)] w-2/5 xl:my-4"
-               style={{ height: `${screen > 1200 ? "500px" : "auto"}` }}
+               style={{ height: `${screenWidth > 1200 ? "500px" : "auto"}` }}
             >
                <img src={map.src} alt="Map" className="w-full h-full object-contain" />
             </div>

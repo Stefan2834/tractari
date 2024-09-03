@@ -2,18 +2,15 @@
 import React from "react";
 
 //Components
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import Main from "@/components/homepage/Main";
 import Scroll from "@/components/homepage/Scroll";
 import Review from "@/components/homepage/Review";
 import Slider from "@/components/homepage/Slider";
-import Contact from "./contact";
+import Contact from "@/components/homepage/Contact";
 
 export default function Home() {
    return (
       <div className="w-full font overflow-hidden bg-white text-black">
-         <Navbar />
          <Main />
          <Scroll />
          <Review />
@@ -33,7 +30,6 @@ export default function Home() {
          </p>
          <Slider />
          <Contact />
-         <Footer />
       </div>
    );
 }

@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Scroll() {
-   const { screen } = useDefault();
+   const { screenWidth } = useDefault();
    const containerRef = useRef<any>();
 
    useGSAP(
@@ -50,7 +50,7 @@ export default function Scroll() {
                <span
                   className="primary-color font-bold"
                   style={{
-                     fontSize: `${screen > 600 ? "256px" : "196px"}`,
+                     fontSize: `${screenWidth > 600 ? "256px" : "196px"}`,
                      lineHeight: "1.1",
                   }}
                >

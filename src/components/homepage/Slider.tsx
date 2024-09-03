@@ -20,7 +20,7 @@ import leftArrow from "@/assets/icons/arrow.webp";
 import rightArrow from "@/assets/icons/arrow.webp";
 
 export default function Slider() {
-   const { screen } = useDefault();
+   const { screenWidth } = useDefault();
    const [currentElement, setCurrentElement] = useState<number>(2);
 
    const sliders = [
@@ -50,7 +50,7 @@ export default function Slider() {
                className="slider-container"
                style={{
                   transform: `translateX(${
-                     -(currentElement - 1) * 456 + (screen - 456 * 3) / 2
+                     -(currentElement - 1) * 456 + (screenWidth - 456 * 3) / 2
                   }px)`,
                }}
             >
@@ -112,7 +112,7 @@ export default function Slider() {
                      : setCurrentElement(0)
                }
             >
-               <img src={rightArrow.src} alt="Right arrow" className="h-7 w-auto" />
+               <img src={rightArrow.src} alt="Right arrow" className="h-7 w-auto rotate-180 relative" />
             </div>
          </div>
          <div className="mt-20 w-full flex items-center justify-center">
@@ -120,9 +120,9 @@ export default function Slider() {
                <Button
                   variant="contained"
                   sx={{
-                     fontSize: `${screen > 600 ? "22px" : "18px"}`,
+                     fontSize: `${screenWidth > 600 ? "22px" : "18px"}`,
                      fontWeight: "500",
-                     p: `${screen > 600 ? "14px 110px" : "10px 40px"}`,
+                     p: `${screenWidth > 600 ? "14px 110px" : "10px 40px"}`,
                      textTransform: "none",
                      color: "white",
                      borderRadius: "4px",

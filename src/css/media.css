@@ -105,6 +105,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .custom-button {
+    font-size: 16px;
+    padding:6px 12px;
+  }
   .nav-div {
     width: 300px !important;
     max-width: 100%;

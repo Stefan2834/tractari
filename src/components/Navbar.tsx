@@ -1,10 +1,12 @@
-// Components
-import Link from "next/link";
-import { Button } from "@mui/material";
-
 // Utilities
 import React, { useEffect, useState } from "react";
 import { useDefault } from "@/contexts/useDefault";
+
+
+// Components
+import Link from "next/link";
+import CustomButton from "./custom/CustomButton";
+
 
 // Assets
 import logo from "../assets/logo.png";
@@ -43,9 +45,8 @@ export default function Navbar() {
             <div
                className="text-white flex items-center justify-center text-xl nav-div font-semibold"
                style={{
-                  transform: `translateX(${
-                     screenWidth < 900 && !isMobileNavigation ? "100%" : "0"
-                  }`,
+                  transform: `translateX(${screenWidth < 900 && !isMobileNavigation ? "100%" : "0"
+                     }`,
                }}
             >
                <Link href="/" className="mx-4 py-2 px-4 nav-link xl:mx-2 xl:px-2 xl:my-2">
@@ -58,24 +59,12 @@ export default function Navbar() {
                   Galerie foto
                </Link>
                <Link href="/" className="mx-4 xl:mx-2">
-                  <Button
-                     variant="contained"
-                     sx={{
-                        backgroundColor: "#CCA424",
-                        textTransform: "none",
-                        color: "white",
-                        position: "relative",
-                        borderRadius: "4px",
-                        boxShadow: "0 2px 4px rgba(0,0,0,0.15)",
-                        fontWeight: "500",
-                        margin: `${screenWidth > 900 ? "0" : "0 5px"}`,
-                        fontFamily: '"Monserrat", sans-serif',
-                        fontSize: "20px",
-                        padding: `${screenWidth > 900 ? "6px 18px" : "4px 12px"}`,
-                     }}
+                  <CustomButton
+                     fontSize="20px"
+                     padding={`${screenWidth > 900 ? "6px 18px" : "4px 12px"}`}
                   >
                      Contacteaza-ne
-                  </Button>
+                  </CustomButton>
                </Link>
                {screenWidth < 900 && (
                   <div className="w-full h-28 absolute bottom-0 flex flex-col items-start justify-between px-6 pb-2">

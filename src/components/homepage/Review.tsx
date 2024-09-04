@@ -5,6 +5,9 @@ import { useDefault } from "@/contexts/useDefault";
 //Mui Components
 import { Avatar, Rating } from "@mui/material";
 
+//Components
+import CustomReview from "../custom/CustomReview";
+
 //Avatars
 import avatar1 from "@/assets/reviews-avatars/avatar-1.webp";
 import avatar2 from "@/assets/reviews-avatars/avatar-2.webp";
@@ -19,44 +22,10 @@ export default function Review() {
             className="w-full flex items-start justify-center mt-8 xl:flex-wrap xl:justify-around"
             style={{ height: "auto" }}
          >
-            <div className="review-element">
-               <Avatar
-                  alt="Remy Sharp"
-                  src={avatar1.src}
-                  sx={{
-                     width: 110,
-                     height: 110,
-                     transform: "translateY(-50%)",
-                     position: "absolute",
-                     scale: `${screenWidth > 600 ? "1" : "0.8"}`,
-                  }}
-               />
-               <Rating
-                  name="half-rating-read"
-                  defaultValue={5.0}
-                  precision={0.5}
-                  readOnly
-                  size="large"
-                  sx={{ marginTop: "60px", color: "#E3B626" }}
-               />
-               <p
-                  className="mt-2 font-light"
-                  style={{
-                     fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
-                  }}
-               >
-                  De fiecare dată când l-am sunat pe Alin, a venit fără ezitare, chiar și în miez de
-                  noapte. Super băiat. Nota 10!
-               </p>
-               <p
-                  className="mt-4 mb-8 font-medium uppercase text-left w-full m:mt-2 m:mb-4"
-                  style={{
-                     fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
-                  }}
-               >
-                  Andrei Comșa
-               </p>
-            </div>
+            <CustomReview avatar={avatar1.src} name="Andrei Comșa" value={5.0}>
+               De fiecare dată când l-am sunat pe Alin, a venit fără ezitare, chiar și în miez de
+               noapte. Super băiat. Nota 10!
+            </CustomReview>
             <div className="review-element">
                <div>
                   <p
@@ -102,44 +71,10 @@ export default function Review() {
                   }}
                />
             </div>
-            <div className="review-element">
-               <Avatar
-                  alt="Remy Sharp"
-                  src={avatar3.src}
-                  sx={{
-                     width: 110,
-                     height: 110,
-                     transform: "translateY(-50%)",
-                     position: "absolute",
-                     scale: `${screenWidth > 600 ? "1" : "0.8"}`,
-                  }}
-               />
-               <Rating
-                  name="half-rating-read"
-                  defaultValue={5.0}
-                  precision={0.5}
-                  readOnly
-                  size="large"
-                  sx={{ marginTop: "60px", color: "#E3B626" }}
-               />
-               <p
-                  className="mt-2 font-light"
-                  style={{
-                     fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
-                  }}
-               >
-                  Având în vedere că l-am sunat la 2 noaptea, a venit la sute de kilometri distanță
-                  ca să mă ajute. Nu știu ce mă faceam fără el. Sunați cu încredere!
-               </p>
-               <p
-                  className="mt-4 mb-8 font-medium uppercase text-left w-full m:mt-2 m:mb-4"
-                  style={{
-                     fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
-                  }}
-               >
-                  Mareș Gabriel
-               </p>
-            </div>
+            <CustomReview avatar={avatar3.src} name="Mareș Gabriel" value={5.0}>
+               Având în vedere că l-am sunat la 2 noaptea, a venit la sute de kilometri distanță
+               ca să mă ajute. Nu știu ce mă faceam fără el. Sunați cu încredere!
+            </CustomReview>
          </div>
       </>
    );

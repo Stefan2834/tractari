@@ -7,9 +7,12 @@ import map from "@/assets/map.png";
 
 //Mui components 
 import TextField from "@mui/material/TextField";
-import { Button, InputAdornment } from "@mui/material";
+import { InputAdornment } from "@mui/material";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+
+//Components
+import CustomButton from "../custom/CustomButton";
 
 export default function Contact() {
    const { screenWidth } = useDefault();
@@ -101,22 +104,15 @@ export default function Contact() {
                   rows={12}
                   variant="outlined"
                />
-               <Button
-                  variant="contained"
-                  type="submit"
-                  sx={{
-                     width: "100%",
-                     marginTop: "40px",
-                     textTransform: "none",
-                     color: "white",
-                     backgroundColor: "#F9CB38",
-                     fontSize: `${screenWidth > 600 ? "24px" : "18px"}`,
-                     boxShadow: "0px 4px 10px rgba(0,0,0,0.15)",
-                     padding: `${screenWidth > 600 ? "10px 28px" : "8px 14px"}`,
-                  }}
-               >
-                  Trimite-ne mesajul tău
-               </Button>
+               <span className="mt-10 w-full">
+                  <CustomButton
+                     fontSize={`${screenWidth > 600 ? "24px" : "18px"}`}
+                     padding={`${screenWidth > 600 ? "10px 28px" : "8px 14px"}`}
+                     width="100%"
+                  >
+                     Trimite-ne mesajul tău
+                  </CustomButton>
+               </span>
             </form>
             <div
                className="mx-8 xl:w-[calc(100%-50px)] w-2/5 xl:my-4"

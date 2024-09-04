@@ -23,6 +23,7 @@
    background-color: var(--main);
    color: white;
 }
+
 body {
    margin: 0;
    height: 100%;
@@ -51,6 +52,20 @@ body {
    clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 100px), 0% 100%);
 }
 
+
+.custom-button {
+   background-color: #CCA424;
+   color: white;
+   position: relative;
+   border-radius: 4px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+   font-weight: 500;
+   margin:0;
+   font-size: 20px;
+   padding:10px 20px;
+   font-family: "Monserrat", sans-serif;
+}
+
 .main-bar {
    position: absolute;
    top: calc(100% - 70px);
@@ -71,6 +86,7 @@ body {
    margin: 0 64px;
    color: white;
 }
+
 .main-flex {
    width: 100%;
    height: 600px;
@@ -79,6 +95,7 @@ body {
    justify-content: center;
    flex-direction: column;
 }
+
 .main-absolute {
    position: absolute;
    bottom: 100px;
@@ -92,6 +109,7 @@ body {
    background-size: contain;
    background-repeat: no-repeat;
 }
+
 .main-absolute-flex {
    display: flex;
    align-items: center;
@@ -103,6 +121,7 @@ body {
    transform: translate(-50%);
    position: absolute;
 }
+
 .main-absolute-element {
    width: auto;
    max-width: 350px;
@@ -131,6 +150,7 @@ body {
    justify-content: center;
    align-items: flex-start;
 }
+
 .logo-img {
    height: 100%;
    width: auto;
@@ -188,6 +208,7 @@ body {
    position: absolute;
    transform: translateX(-50%);
 }
+
 .moving-text {
    position: absolute;
    z-index: 1;
@@ -248,29 +269,29 @@ body {
 }
 
 /* NAV HAM */
-.nav-ham > .line:nth-of-type(1) {
+.nav-ham>.line:nth-of-type(1) {
    width: 30px;
    rotate: 0deg;
 }
 
-.nav-ham[data-is-mobile-navigation="true"] > .line:nth-of-type(1) {
+.nav-ham[data-is-mobile-navigation="true"]>.line:nth-of-type(1) {
    rotate: -45deg;
 }
 
-.nav-ham > .line:nth-of-type(2) {
+.nav-ham>.line:nth-of-type(2) {
    width: 24px;
 }
 
-.nav-ham[data-is-mobile-navigation="true"] > .line:nth-of-type(2) {
+.nav-ham[data-is-mobile-navigation="true"]>.line:nth-of-type(2) {
    width: 0px;
 }
 
-.nav-ham > .line:nth-of-type(3) {
+.nav-ham>.line:nth-of-type(3) {
    width: 18px;
    rotate: 0deg;
 }
 
-.nav-ham[data-is-mobile-navigation="true"] > .line:nth-of-type(3) {
+.nav-ham[data-is-mobile-navigation="true"]>.line:nth-of-type(3) {
    width: 30px;
    rotate: 45deg;
 }

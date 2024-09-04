@@ -6,8 +6,11 @@ import { useDefault } from "@/contexts/useDefault";
 
 
 //Mui Components
-import { Button } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
+
+//Components
+import CustomButton from "./custom/CustomButton";
+
 
 //Images
 import email from "../assets/icons/email.webp";
@@ -32,19 +35,13 @@ export default function Footer() {
                <img src={logo.src} alt="logo" className="w-64" />
             </Link>
             <Link href="tel:+40730222643">
-               <Button
-                  variant="contained"
-                  sx={{
-                     fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
-                     color: "white",
-                     p: `${screenWidth > 900 ? "14px 20px" : "8px 16px"}`,
-                     borderRadius: "4px",
-                     backgroundColor: "#E3B626",
-                  }}
-                  startIcon={<PhoneIcon />}
+               <CustomButton
+                  fontSize={`${screenWidth > 600 ? "18px" : "14px"}`}
+                  padding={`${screenWidth > 900 ? "14px 20px" : "8px 16px"}`}
                >
+                  <PhoneIcon />
                   DISPONIBILI NON STOP, SUNĂ ACUM
-               </Button>
+               </CustomButton>
             </Link>
             <div className="flex items-center justify-center text-white font-semibold text-2xl mt-16 m:text-base m:mt-8 m:flex-col">
                <Link href="/" className="mx-3 m:my-1">

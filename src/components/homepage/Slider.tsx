@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useDefault } from "@/contexts/useDefault";
 
-//Mui components
+//Components
 import { Button } from "@mui/material";
+import CustomButton from "../custom/CustomButton";
 
-//Slider
+//Carousel
 import photo1 from "@/assets/carousel/slider-1.webp";
 import photo2 from "@/assets/carousel/slider-2.webp";
 import photo3 from "@/assets/carousel/slider-3.webp";
@@ -52,9 +53,8 @@ export default function Slider() {
             <div
                className="slider-container"
                style={{
-                  transform: `translateX(${
-                     -(currentElement - 1) * 456 + (screenWidth - 456 * 3) / 2
-                  }px)`,
+                  transform: `translateX(${-(currentElement - 1) * 456 + (screenWidth - 456 * 3) / 2
+                     }px)`,
                }}
             >
                {sliders.map((img: any, index: number) => {
@@ -120,21 +120,12 @@ export default function Slider() {
          </div>
          <div className="mt-20 w-full flex items-center justify-center">
             <Link href="/gallery">
-               <Button
-                  variant="contained"
-                  sx={{
-                     fontSize: `${screenWidth > 600 ? "22px" : "18px"}`,
-                     fontWeight: "500",
-                     p: `${screenWidth > 600 ? "14px 110px" : "10px 40px"}`,
-                     textTransform: "none",
-                     color: "white",
-                     borderRadius: "4px",
-                     backgroundColor: "#F9CB38",
-                     boxShadow: "0px 2px 3px rgba(0,0,0,0.15)",
-                  }}
+               <CustomButton
+                  padding={`${screenWidth > 600 ? "14px 110px" : "10px 40px"}`}
+                  fontSize={`${screenWidth > 600 ? "22px" : "18px"}`}
                >
                   Vezi Galeria noastră foto!
-               </Button>
+               </CustomButton>
             </Link>
          </div>
       </>

@@ -6,7 +6,6 @@ import { useDefault } from "@/contexts/useDefault";
 import map from "@/assets/map.png";
 
 //Mui components 
-import TextField from "@mui/material/TextField";
 import { InputAdornment } from "@mui/material";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
@@ -18,9 +17,9 @@ import CustomInput from '../custom/CustomInput';
 export default function Contact() {
    const { screenWidth } = useDefault();
 
-   const name = useRef<any>();
-   const email = useRef<any>();
-   const message = useRef<any>();
+   const name = useRef<HTMLInputElement | null>(null);
+   const email = useRef<HTMLInputElement | null>(null);
+   const message = useRef<HTMLInputElement | null>(null);
 
    return (
       <>
@@ -40,9 +39,9 @@ export default function Contact() {
             <form
                onSubmit={(e) => {
                   e.preventDefault();
-                  console.log("name:", name?.current);
-                  console.log("email:", email?.current);
-                  console.log("message", message?.current);
+                  console.log("name:", name?.current?.value);
+                  console.log("email:", email?.current?.value);
+                  console.log("message", message?.current?.value);
                }}
                className="w-1/3 h-full mx-8 flex items-center justify-start flex-col xl:w-[calc(100%-50px)] xl:justify-center"
             >
@@ -51,12 +50,15 @@ export default function Contact() {
                      <PersonOutlineOutlinedIcon />
                   </InputAdornment>
                </CustomInput>
+
                <CustomInput id="outlined-basic" ref={email} label="Email">
                   <InputAdornment position="start">
                      <EmailOutlinedIcon />
                   </InputAdornment>
                </CustomInput>
+
                <CustomInput id="standard-multiline-static" ref={message} label="Mesajul tău..." multiline={true} rows={12} />
+               
                <span className="mt-4 w-full">
                   <CustomButton
                      fontSize={`${screenWidth > 600 ? "24px" : "18px"}`}
@@ -66,6 +68,7 @@ export default function Contact() {
                      Trimite-ne mesajul tău
                   </CustomButton>
                </span>
+
             </form>
             <div
                className="mx-8 xl:w-[calc(100%-50px)] w-2/5 xl:my-4"

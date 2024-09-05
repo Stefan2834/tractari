@@ -1,5 +1,5 @@
 //Utilities
-import React, { ReactNode } from 'react'
+import React, { ReactNode, forwardRef } from 'react'
 
 //Mui Components
 import TextField from "@mui/material/TextField";
@@ -8,14 +8,15 @@ import TextField from "@mui/material/TextField";
 type CustomInputType = {
     children?: ReactNode,
     id: string
-    ref: any,
     label: string,
     multiline?: boolean,
     rows?: number
 }
 
+const CustomInput = forwardRef(function CustomInput({
+    children, id, label, multiline, rows
+}: CustomInputType, ref: React.Ref<HTMLInputElement>) {
 
-export default function CustomInput({ children, id, ref, label, multiline, rows }: CustomInputType) {
     return (
         <TextField
             id={id}
@@ -24,8 +25,8 @@ export default function CustomInput({ children, id, ref, label, multiline, rows 
             multiline={multiline}
             rows={rows}
             variant="outlined"
+            inputRef={ref}
             required
-            onChange={(e) => { ref.current = e?.target?.value }}
             sx={{
                 width: "100%",
                 marginBottom: "20px",
@@ -35,9 +36,11 @@ export default function CustomInput({ children, id, ref, label, multiline, rows 
             }}
             InputProps={{
                 startAdornment: (
-                    children 
+                    children
                 ),
             }}
         />
     )
-}
+})
+
+export default CustomInput

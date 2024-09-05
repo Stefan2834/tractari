@@ -13,6 +13,7 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 
 //Components
 import CustomButton from "../custom/CustomButton";
+import CustomInput from '../custom/CustomInput';
 
 export default function Contact() {
    const { screenWidth } = useDefault();
@@ -45,66 +46,18 @@ export default function Contact() {
                }}
                className="w-1/3 h-full mx-8 flex items-center justify-start flex-col xl:w-[calc(100%-50px)] xl:justify-center"
             >
-               <TextField
-                  id="outlined-basic"
-                  label="Numele tău"
-                  type="text"
-                  variant="outlined"
-                  required
-                  onChange={(e) => (name.current = e?.target?.value)}
-                  sx={{
-                     width: "100%",
-                     marginBottom: "20px",
-                     boxShadow: "0px 4px 10px rgba(0,0,0,0.15)",
-                     borderRadius: "8px",
-                     backgroundColor: "#fcfcfc",
-                  }}
-                  InputProps={{
-                     startAdornment: (
-                        <InputAdornment position="start">
-                           <PersonOutlineOutlinedIcon />
-                        </InputAdornment>
-                     ),
-                  }}
-               />
-               <TextField
-                  id="outlined-basic"
-                  label="Email"
-                  type="email"
-                  required
-                  variant="outlined"
-                  onChange={(e) => (email.current = e?.target?.value)}
-                  sx={{
-                     width: "100%",
-                     marginBottom: "20px",
-                     boxShadow: "0px 4px 10px rgba(0,0,0,0.15)",
-                     borderRadius: "8px",
-                     backgroundColor: "#fcfcfc",
-                  }}
-                  InputProps={{
-                     startAdornment: (
-                        <InputAdornment position="start">
-                           <EmailOutlinedIcon />
-                        </InputAdornment>
-                     ),
-                  }}
-               />
-               <TextField
-                  id="standard-multiline-static"
-                  label="Mesajul tău..."
-                  multiline
-                  required
-                  onChange={(e) => (message.current = e?.target?.value)}
-                  sx={{
-                     width: "100%",
-                     boxShadow: "0px 4px 10px rgba(0,0,0,0.15)",
-                     borderRadius: "8px",
-                     backgroundColor: "#fcfcfc",
-                  }}
-                  rows={12}
-                  variant="outlined"
-               />
-               <span className="mt-10 w-full">
+               <CustomInput id="outlined-basic" ref={name} label="Numele tău">
+                  <InputAdornment position="start">
+                     <PersonOutlineOutlinedIcon />
+                  </InputAdornment>
+               </CustomInput>
+               <CustomInput id="outlined-basic" ref={email} label="Email">
+                  <InputAdornment position="start">
+                     <EmailOutlinedIcon />
+                  </InputAdornment>
+               </CustomInput>
+               <CustomInput id="standard-multiline-static" ref={message} label="Mesajul tău..." multiline={true} rows={12} />
+               <span className="mt-4 w-full">
                   <CustomButton
                      fontSize={`${screenWidth > 600 ? "24px" : "18px"}`}
                      padding={`${screenWidth > 600 ? "10px 28px" : "8px 14px"}`}

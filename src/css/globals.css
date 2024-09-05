@@ -227,7 +227,6 @@ body {
    align-items: center;
    position: relative;
    justify-content: flex-start;
-   flex-direction: column;
    border-radius: 4px;
    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
    margin: 0 25px;

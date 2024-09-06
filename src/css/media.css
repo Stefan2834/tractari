@@ -162,26 +162,15 @@
 /* Gallery page */
 
 
-/* @media screen and (max-width: 1000px) {
-    .gallery-column {
-        width: calc(50% - 20px);
-    }
-    .gallery-text {
-        font-size:40px;
-    }
-    .gallery-description {
-        font-size:24px;
+@media screen and (max-width: 1200px) {
+    .gallery-container {
+        columns: 2;
+        width:100%;
     }
 }
 
-@media screen and (max-width: 500px) {
-    .gallery-column {
-        width: calc(100% - 20px);
+@media screen and (max-width: 600px) {
+    .gallery-container {
+        columns: 1;
     }
-    .gallery-text {
-        font-size:30px;
-    }
-    .gallery-description {
-        font-size:18px;
-    }
-} */
+}

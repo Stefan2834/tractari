@@ -1,4 +1,7 @@
+//Utilities
 import React from "react";
+
+//Images
 import image1 from "@/assets/carousel/slider-1.webp";
 import image2 from "@/assets/carousel/slider-2.webp";
 import image3 from "@/assets/carousel/slider-3.webp";
@@ -10,6 +13,15 @@ import image8 from "@/assets/carousel/slider-8.webp";
 import image9 from "@/assets/carousel/slider-9.webp";
 import image10 from "@/assets/carousel/slider-10.webp";
 import image11 from "@/assets/carousel/slider-11.webp";
+import Contact from "@/components/homepage/Contact";
+
+
+const galleryPhotos = [
+    image1, image2, image3,
+    image4, image5, image6,
+    image7, image8, image9,
+    image10, image11
+]
 
 export default function Gallery() {
     return (
@@ -17,24 +29,17 @@ export default function Gallery() {
             <div className="gallery-main">
                 <span className="gallery-text">Galerie foto</span>
             </div>
-            <div className="w-full flex items-center justify-center flex-col px-6">
+            <div className="w-full flex items-center justify-center flex-col px-6 text-black">
                 <span className="gallery-description">
-                    Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa că... <br/>
+                    Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa că... <br />
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </span>
                 <div className="gallery-container">
-                    <img className="gallery-element" src={image1.src} />
-                    <img className="gallery-element" src={image2.src} />
-                    <img className="gallery-element" src={image3.src} />
-                    <img className="gallery-element" src={image4.src} />
-                    <img className="gallery-element" src={image5.src} />
-                    <img className="gallery-element" src={image6.src} />
-                    <img className="gallery-element" src={image7.src} />
-                    <img className="gallery-element" src={image8.src} />
-                    <img className="gallery-element" src={image9.src} />
-                    <img className="gallery-element" src={image10.src} />
-                    <img className="gallery-element" src={image11.src} />
+                    {galleryPhotos.map((image: any, index: number) => (
+                        <img className="gallery-element" key={index} src={image.src} />
+                    ))}
                 </div>
+                <Contact />
             </div>
         </>
     );

@@ -22,30 +22,14 @@ export default function Gallery() {
                     Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa că... <br/>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </span>
-                <div className="flex items-start justify-around w-full h-auto flex-wrap">
-                    <div className="gallery-column">
-                        <img src={image1.src} className="grid-img" />
-                        <img src={image2.src} className="grid-img" />
-                        <img src={image3.src} className="grid-img" />
-                        <img src={image4.src} className="grid-img" />
-                    </div>
-                    <div className="gallery-column">
-                        <img src={image5.src} className="grid-img" />
-                        <img src={image6.src} className="grid-img" />
-                        <img src={image7.src} className="grid-img" />
-                    </div>
-                    <div className="gallery-column">
-                        <img src={image8.src} className="grid-img" />
-                        <img src={image9.src} className="grid-img" />
-                        <img src={image10.src} className="grid-img" />
-                        <img src={image11.src} className="grid-img" />
-                    </div>
-                    <div className="gallery-column">
-                        <img src={image8.src} className="grid-img" />
-                        <img src={image9.src} className="grid-img" />
-                        <img src={image10.src} className="grid-img" />
-                        <img src={image11.src} className="grid-img" />
-                    </div>
+                <div className="gallery-container">
+                    <img className="gallery-element" src={image1.src} />
+                    <img className="gallery-element" src={image2.src} />
+                    <img className="gallery-element" src={image3.src} />
+                    <img className="gallery-element" src={image4.src} />
+                    <img className="gallery-element" src={image5.src} />
+                    <img className="gallery-element" src={image6.src} />
+                    <img className="gallery-element" src={image7.src} />
                 </div>
             </div>
         </>

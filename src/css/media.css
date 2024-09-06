@@ -162,7 +162,7 @@
 /* Gallery page */
 
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (max-width: 1000px) {
     .gallery-column {
         width: calc(50% - 20px);
     }
@@ -184,4 +184,4 @@
     .gallery-description {
         font-size:18px;
     }
-}
+} */

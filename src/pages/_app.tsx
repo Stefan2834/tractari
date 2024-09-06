@@ -1,5 +1,7 @@
 // Styles
 import "../css/globals.css";
+import "../css/gallery.css";
+
 import "../css/media.css";
 
 // Components

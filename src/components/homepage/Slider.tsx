@@ -119,7 +119,7 @@ export default function Slider() {
             </div>
          </div>
          <div className="mt-20 w-full flex items-center justify-center">
-            <Link href="/gallery">
+            <Link href="/galerie-foto">
                <CustomButton
                   padding={`${screenWidth > 600 ? "14px 110px" : "10px 40px"}`}
                   fontSize={`${screenWidth > 600 ? "22px" : "18px"}`}

@@ -30,6 +30,10 @@ export default function Gallery() {
                     <img className="gallery-element" src={image5.src} />
                     <img className="gallery-element" src={image6.src} />
                     <img className="gallery-element" src={image7.src} />
+                    <img className="gallery-element" src={image8.src} />
+                    <img className="gallery-element" src={image9.src} />
+                    <img className="gallery-element" src={image10.src} />
+                    <img className="gallery-element" src={image11.src} />
                 </div>
             </div>
         </>

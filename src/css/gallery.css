@@ -29,19 +29,15 @@
 
 
 .gallery-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    background-color: red;
-    grid-gap:15px;
-    width:100%;
+    columns: 3 12rem;
+    gap:15px;
+    width:1200px;
     height:auto;
-    align-items: start;
-    align-content: start;
 }
 
 .gallery-element {
-    background-color: blue;
     width:100%;
+    margin-bottom: 15px;
     height:auto;
 }
+

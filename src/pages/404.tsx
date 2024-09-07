@@ -2,6 +2,7 @@ import React from 'react'
 
 import styles from "../css/404.module.css"
 import CustomButton from '@/components/custom/CustomButton'
+import Link from 'next/link'
 
 export default function Custom404() {
     return (
@@ -19,9 +20,11 @@ export default function Custom404() {
                         Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa că...<br />
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </span>
-                    <CustomButton>
-                        Click aici ca să te tractăm acasa
-                    </CustomButton>
+                    <Link href="/">
+                        <CustomButton>
+                            Click aici ca să te tractăm acasa
+                        </CustomButton>
+                    </Link>
                 </div>
             </div>
         </>

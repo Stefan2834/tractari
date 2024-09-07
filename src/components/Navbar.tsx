@@ -55,7 +55,7 @@ export default function Navbar() {
                <Link href="/" className="mx-4 py-2 px-4 nav-link xl:mx-2 xl:px-2 xl:my-2">
                   Cine suntem?
                </Link>
-               <Link href="/gallery" className="mx-4 py-2 px-4 nav-link xl:mx-2 xl:px-2 xl:my-2">
+               <Link href="/galerie-foto" className="mx-4 py-2 px-4 nav-link xl:mx-2 xl:px-2 xl:my-2">
                   Galerie foto
                </Link>
                <Link href="/" className="mx-4 xl:mx-2">

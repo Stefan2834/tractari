@@ -1,9 +1,17 @@
-import React, { createContext, useContext, ReactNode, useState, useEffect } from "react";
+import React, { createContext, useContext, ReactNode, useState, useEffect, useRef } from "react";
+
+type ContactRefType = any;
+
+
 
 interface DefaultContextValue {
 	screenWidth: number;
 	screenHeight: number;
+	contactNameRef: ContactRefType
+	contactEmailRef: ContactRefType
+	contactMessageRef: ContactRefType
 }
+
 
 export const DefaultContext = createContext<DefaultContextValue | undefined>(undefined);
 
@@ -18,6 +26,11 @@ export function useDefault() {
 export function DefaultContextProvider({ children }: { children: ReactNode }) {
 	const [screenWidth, setScreenWidth] = useState<number>(0);
 	const [screenHeight, setScreenHeight] = useState<number>(0);
+
+
+	const contactNameRef = useRef<ContactRefType>(null);
+	const contactEmailRef = useRef<ContactRefType>(null);
+	const contactMessageRef = useRef<ContactRefType>(null);
 
 	useEffect(() => {
 		function handleResize() {
@@ -35,6 +48,9 @@ export function DefaultContextProvider({ children }: { children: ReactNode }) {
 	const value: DefaultContextValue = {
 		screenWidth,
 		screenHeight,
+		contactNameRef,
+		contactEmailRef,
+		contactMessageRef
 	};
 
 	return <DefaultContext.Provider value={value}>{children}</DefaultContext.Provider>;

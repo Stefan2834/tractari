@@ -58,7 +58,7 @@ export default function Navbar() {
                <Link href="/galerie-foto" className="mx-4 py-2 px-4 nav-link xl:mx-2 xl:px-2 xl:my-2">
                   Galerie foto
                </Link>
-               <Link href="/" className="mx-4 xl:mx-2">
+               <Link href="/contact" className="mx-4 xl:mx-2">
                   <CustomButton
                      fontSize="20px"
                      padding={`${screenWidth > 900 ? "6px 18px" : "4px 12px"}`}

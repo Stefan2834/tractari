@@ -47,13 +47,13 @@ export default function Scroll() {
    return (
       <div
          style={{ height: "800px", width: "1700px" }}
-         className="mt-48 relative flex items-center justify-start"
+         className="scroll-container"
          ref={containerRef}
       >
          <div className="moving-element">
             <img src={truck.src} alt="truck" className="moving-img" />
             <div className="moving-text">
-               <p className="text-5xl m:text-4xl text-black">PESTE</p>
+               <p className="scroll-text">PESTE</p>
                <span
                   className="primary-color font-bold"
                   style={{
@@ -63,7 +63,7 @@ export default function Scroll() {
                >
                   300
                </span>
-               <p className="text-5xl m:text-4xl text-black">clienți mulțumiți</p>
+               <p className="scroll-text">clienți mulțumiți</p>
             </div>
          </div>
       </div>

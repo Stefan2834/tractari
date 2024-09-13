@@ -60,10 +60,37 @@ body {
    border-radius: 4px;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
    font-weight: 500;
-   margin:0;
+   margin: 0;
    font-size: 20px;
-   padding:10px 20px;
+   padding: 10px 20px;
    font-family: "Monserrat", sans-serif;
+}
+
+.main-container {
+   width: 100%;
+   font-family: "Monserrat", sans-serif;
+   overflow: hidden;
+   background-color: white;
+   color: black;
+}
+
+.main-text {
+   width: 100%;
+   text-align: center;
+   font-size: 60px;
+   line-height: 60px;
+   margin-top: 160px;
+   font-weight: 600;
+}
+
+.main-paragraph {
+   width: 100%;
+   text-align: center;
+   font-weight: 300;
+   font-size: 30px;
+   line-height: 36px;
+   line-height:36px;
+   margin-top: 40px;
 }
 
 .main-bar {
@@ -94,6 +121,35 @@ body {
    align-items: flex-start;
    justify-content: center;
    flex-direction: column;
+}
+
+.main-paragraph-second {
+   margin-bottom: 16px;
+   font-weight: 600;
+}
+
+.main-title {
+   margin-top: 16px;
+   font-size: 96px;
+   font-weight: 700;
+   line-height:96px;
+}
+
+.main-subtitle {
+   font-size: 30px;
+   line-height: 36px;
+   font-weight: 400;
+}
+
+.main-button {
+   margin-top: 8px;
+   font-size: 20px;
+   line-height: 28px;
+   font-weight: 400;
+}
+
+.main-button:hover {
+   text-decoration: underline;
 }
 
 .main-absolute {
@@ -142,6 +198,7 @@ body {
    object-fit: contain;
    object-position: center;
 }
+
 
 .logo {
    width: auto;
@@ -293,4 +350,102 @@ body {
 .nav-ham[data-is-mobile-navigation="true"]>.line:nth-of-type(3) {
    width: 30px;
    rotate: 45deg;
+}
+
+
+
+/* Review */
+
+.review-name {
+   margin-top: 16px;
+   margin-bottom: 32px;
+   font-weight: 500;
+   text-transform: uppercase;
+   text-align: left;
+   width: 100%;
+}
+
+.review-description {
+   margin-top: 8px;
+   font-weight: 300;
+}
+
+.review-title {
+   width: 100%;
+   font-size: 24px;
+   text-align: center;
+   margin-bottom: 40px;
+}
+
+.review-container {
+   width: 100%;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+   margin-top: 32px;
+}
+
+
+/* CustomForm */
+
+
+.form {
+   width: 33.3333%;
+   height: 100%;
+   margin: 0 32px;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   flex-direction: column;
+}
+
+.form-span {
+   margin-top: 16px;
+   width: 100%;
+}
+
+
+/* CustomCard */
+
+.card-title {
+   font-size: 24px;
+   margin-top: 12px;
+   color: black;
+}
+
+
+.card-element {
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+}
+
+.card-img {
+   width: 40px;
+   height: 100%;
+   margin-right: 12px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.card-text {
+   margin: 24px 0;
+   color: #1f2937;
+}
+
+/* Scroll */
+
+.scroll-container {
+   margin-top: 192px;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.scroll-text {
+   font-size: 48px;
+   line-height: 48px;
+   color: black;
 }

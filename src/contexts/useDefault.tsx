@@ -38,6 +38,7 @@ export function DefaultContextProvider({ children }: { children: ReactNode }) {
 			setScreenHeight(window.innerHeight);
 		}
 
+
 		window.addEventListener("resize", handleResize);
 
 		handleResize();

@@ -47,7 +47,7 @@ export default function CustomReview({ children, avatar, name, value, reverse }:
             />
             <div>
                 <p
-                    className="mt-2 font-light"
+                    className="review-description"
                     style={{
                         fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
                     }}
@@ -55,7 +55,7 @@ export default function CustomReview({ children, avatar, name, value, reverse }:
                     {children}
                 </p>
                 <p
-                    className="mt-4 mb-8 font-medium uppercase text-left w-full m:mt-2 m:mb-4"
+                    className="review-name"
                     style={{
                         fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
                     }}

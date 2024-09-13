@@ -1,9 +1,5 @@
 //Utilities
 import React from "react";
-import { useDefault } from "@/contexts/useDefault";
-
-//Mui Components
-import { Avatar, Rating } from "@mui/material";
 
 //Components
 import CustomReview from "../custom/CustomReview";
@@ -16,9 +12,9 @@ import avatar3 from "@/assets/reviews-avatars/avatar-3.webp";
 export default function Review() {
    return (
       <>
-         <h2 className="w-full text-2xl text-center mb-10 m:text-lg">- RECOMANDĂRILE NOASTRE -</h2>
+         <h2 className="review-title">- RECOMANDĂRILE NOASTRE -</h2>
          <div
-            className="w-full flex items-start justify-center mt-8 xl:flex-wrap xl:justify-around"
+            className="review-container"
             style={{ height: "auto" }}
          >
             <CustomReview avatar={avatar1.src} name="Andrei Comșa" value={5.0} reverse={false}>

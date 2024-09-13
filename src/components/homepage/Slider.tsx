@@ -23,6 +23,9 @@ import photo11 from "@/assets/carousel/slider-11.webp";
 import leftArrow from "@/assets/icons/arrow.webp";
 import rightArrow from "@/assets/icons/arrow.webp";
 
+//Style
+import styles from "../../css/slider.module.css"
+
 export default function Slider() {
    const { screenWidth } = useDefault();
    const [currentElement, setCurrentElement] = useState<number>(2);
@@ -43,18 +46,14 @@ export default function Slider() {
 
    return (
       <>
-         <div className="mt-32 w-screen relative" style={{ height: "800px" }}>
+         <div className={styles.container}>
             <div
-               className="absolute w-full h-full overflow-visible grad-slider"
-               style={{
-                  clipPath: "polygon(0 30%, 100% 0, 100% 70%, 0 100%)",
-               }}
+               className={`${styles.containerClipPath} grad-slider`}
             />
             <div
                className="slider-container"
                style={{
-                  transform: `translateX(${-(currentElement - 1) * 456 + (screenWidth - 456 * 3) / 2
-                     }px)`,
+                  transform: `translateX(${-(currentElement - 1) * 456 + (screenWidth - 456 * 3) / 2}px)`,
                }}
             >
                {sliders.map((img: any, index: number) => {
@@ -87,13 +86,9 @@ export default function Slider() {
                })}
             </div>
          </div>
-         <div className="w-full flex items-center justify-center -mt-32 relative z-10 text-white">
+         <div className={styles.buttonContainer}>
             <div
-               className="w-16 h-16 mx-4 rounded-full flex items-center justify-center cursor-pointer"
-               style={{
-                  boxShadow: "0px 2px 4px rgb(0,0,0,0.15)",
-                  backgroundColor: "#F9CB38",
-               }}
+               className={styles.sliderButton}
                onClick={() => {
                   console.log(currentElement);
                   currentElement === 0
@@ -104,11 +99,7 @@ export default function Slider() {
                <img src={leftArrow.src} alt="Left Arrow" className="h-7 w-auto" />
             </div>
             <div
-               className="w-16 h-16 mx-4 rounded-full flex items-center justify-center cursor-pointer"
-               style={{
-                  boxShadow: "0px 2px 4px rgb(0,0,0,0.15)",
-                  backgroundColor: "#F9CB38",
-               }}
+               className={styles.sliderButton}
                onClick={() =>
                   currentElement < sliders.length - 1
                      ? setCurrentElement((c) => c + 1)
@@ -118,7 +109,7 @@ export default function Slider() {
                <img src={rightArrow.src} alt="Right arrow" className="h-7 w-auto rotate-180 relative" />
             </div>
          </div>
-         <div className="mt-20 w-full flex items-center justify-center">
+         <div className={styles.buttonMore}>
             <Link href="/galerie-foto">
                <CustomButton
                   padding={`${screenWidth > 600 ? "14px 110px" : "10px 40px"}`}

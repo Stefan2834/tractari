@@ -29,7 +29,7 @@ export default function Gallery() {
             <div className="gallery-main">
                 <span className="gallery-text">Galerie foto</span>
             </div>
-            <div className="w-full flex items-center justify-center flex-col px-6 text-black">
+            <div className="gallery-div">
                 <span className="gallery-description">
                     Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa că... <br />
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.

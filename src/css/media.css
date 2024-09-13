@@ -120,6 +120,30 @@
 }
 
 @media screen and (max-width: 600px) {
+    .main-text {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .main-paragraph {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .main-paragraph-second {
+        margin-bottom: 8px;
+    }
+
+    .main-title {
+        font-size: 48px;
+        line-height:48px;
+    }
+
+    .main-subtitle {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
     .custom-button {
         font-size: 16px;
         padding: 6px 12px;
@@ -165,12 +189,51 @@
 @media screen and (max-width: 1200px) {
     .gallery-container {
         columns: 2;
-        width:100%;
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 600px) {
     .gallery-container {
         columns: 1;
+    }
+}
+
+/* Review */
+
+@media screen and (max-width:1200px) {
+    .review-container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .review-name {
+        margin-top: 8px;
+        margin-bottom: 16px;
+    }
+
+    .review-title {
+        font-size: 18px;
+    }
+}
+
+
+/* CustomForm */
+
+@media screen and(max-width: 1200px) {
+    .form {
+        width: calc(100% - 50px);
+        justify-content: center;
+    }
+}
+
+/* Scroll */
+
+@media screen and (max-width:600px) {
+    .scroll-text {
+        font-size: 36px;
+        line-height: 40px;
     }
 }

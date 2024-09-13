@@ -13,7 +13,7 @@ export default function Custom404() {
                     Te tractăm noi?
                 </span>
             </div>
-            <div className='flex items-center justify-center'>
+            <div className={styles.element}>
                 <div className={styles.photo}>
                     <span className={styles.errorCode}>404</span>
                     <span className={styles.description}>

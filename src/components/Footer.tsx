@@ -1,4 +1,3 @@
-"use client";
 //Utilities
 import React from "react";
 import Link from "next/link";
@@ -18,19 +17,16 @@ import whatsapp from "../assets/icons/whatsapp.webp";
 import facebook from "../assets/icons/facebook.webp";
 import logo from "../assets/logo.png";
 
+//Style
+import styles from "../css/footer.module.css"
+
 
 export default function Footer() {
    const { screenWidth } = useDefault();
 
    return (
       <footer className="bg-white">
-         <div
-            className="mt-20 w-full grad-footer flex items-center justify-center flex-col xl:mt-8"
-            style={{
-               height: "600px",
-               clipPath: "polygon(0 10%, 100% 0%, 100% 100%, 0% 100%)",
-            }}
-         >
+         <div className={`${styles.footer} grad-footer`}>
             <Link href="/">
                <img src={logo.src} alt="logo" className="w-64" />
             </Link>
@@ -43,18 +39,19 @@ export default function Footer() {
                   DISPONIBILI NON STOP, SUNĂ ACUM
                </CustomButton>
             </Link>
-            <div className="flex items-center justify-center text-white font-semibold text-2xl mt-16 m:text-base m:mt-8 m:flex-col">
-               <Link href="/" className="mx-3 m:my-1">
+            <div className={styles.containerLink}>
+               <Link href="/" className={styles.link}>
+
                   Serviciile noastre
                </Link>
-               <Link href="/" className="mx-3 m:my-1">
+               <Link href="/" className={styles.link}>
                   Cine suntem?
                </Link>
-               <Link href="/gallery" className="mx-3 m:my-1">
+               <Link href="/gallery" className={styles.link}>
                   Galerie foto
                </Link>
             </div>
-            <div className="flex items-center justify-center text-white font-semibold text-2xl mt-8">
+            <div className={styles.containerMedia}>
                <Link href="/">
                   <img
                      src={email.src}
@@ -78,9 +75,9 @@ export default function Footer() {
                </Link>
             </div>
          </div>
-         <div className="w-full h-20 bg-black flex items-center justify-between font-light px-24 -mt-1 xl:flex-col xl:items-start xl:justify-center xl:h-auto xl:py-6 m:px-8">
-            <p className="text-white font-light text-lg m:text-base">@2024 - All rights reserved</p>
-            <p className="text-white font-light text-lg m:text-base">
+         <div className={styles.bottomContainer}>
+            <p className={styles.bottomText}>@2024 - All rights reserved</p>
+            <p className={styles.bottomText}>
                Designed and Developed by <span className="underline">Iosif Ștefan</span> &{" "}
                <span className="underline">Mareș Gabriel</span>
             </p>

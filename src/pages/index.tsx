@@ -10,15 +10,15 @@ import Contact from "@/components/homepage/Contact";
 
 export default function Home() {
    return (
-      <div className="w-full font overflow-hidden bg-white text-black">
+      <div className="main-container">
          <Main />
          <Scroll />
          <Review />
-         <h1 className="w-full text-center text-6xl mt-40 font-semibold m:text-3xl">
+         <h1 className="main-text">
             Nu suntem unica firmă de tractaj
             <br /> 24/7 din România, însă...
          </h1>
-         <p className="w-full text-center font-light text-3xl mt-10 m:text-xl">
+         <p className="main-paragraph">
             Ne pasă de clienții noștri, și apreciem o muncă de calitate. Tractăm orice tip de
             autoturisme,
             <br />

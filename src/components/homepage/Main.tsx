@@ -29,15 +29,15 @@ export default function Main() {
          <div className="main-element">
             <div className="main-flex">
                <p
-                  className="mb-4 font-semibold m:mb-2"
+                  className="main-paragraph-second"
                   style={{
                      fontSize: `${screenWidth > 600 ? "20px" : "16px"}`,
                   }}
                >
                   TRACTĂRI AUTO ȘI ASISTENȚĂ RUTIERĂ
                </p>
-               <h1 className="mt-4 text-8xl font-bold m:text-5xl">KOT ASISTENȚĂ RUTIERĂ</h1>
-               <h3 className="font-second text-3xl font-normal m:text-lg">
+               <h1 className="main-title">KOT ASISTENȚĂ RUTIERĂ</h1>
+               <h3 className="main-subtitle font-second">
                   Probleme pe drum? Sună-ne acum!
                </h3>
                <Link href="tel:+40730222643" className="mt-10">
@@ -50,7 +50,7 @@ export default function Main() {
                </Link>
                <Link
                   href="https://wa.me/+400730222643"
-                  className="mt-2 text-lg font-normal hover:underline"
+                  className="main-button"
                   style={{
                      fontSize: `${screenWidth > 600 ? "16px" : "12px"}`,
                   }}

@@ -2,14 +2,16 @@
 import React, { useEffect, useState } from "react";
 import { useDefault } from "@/contexts/useDefault";
 
-
 // Components
 import Link from "next/link";
 import CustomButton from "./custom/CustomButton";
 
-
 // Assets
 import logo from "../assets/logo.png";
+
+//Style 
+
+import styles from "../css/navbar.module.css"
 
 export default function Navbar() {
    const [isMobileNavigation, setIsMobileNavigation] = useState<boolean>(false);
@@ -28,7 +30,7 @@ export default function Navbar() {
    return (
       <>
          <div
-            className={`fixed w-full h-32 flex items-center justify-between grad z-30 pl-16 pr-8 nav-main xl:pl-4 xl:pr-4`}
+            className={`${styles.container} grad nav-main`}
          >
             <Link href="/" className="logo">
                <img src={logo.src} alt="logo" className="logo-img" />
@@ -43,22 +45,21 @@ export default function Navbar() {
                <div className="line" />
             </div>
             <div
-               className="text-white flex items-center justify-center text-xl nav-div font-semibold"
+               className={`${styles.linkContainer} nav-div`}
                style={{
-                  transform: `translateX(${screenWidth < 900 && !isMobileNavigation ? "100%" : "0"
-                     }`,
+                  transform: `translateX(${screenWidth < 900 && !isMobileNavigation ? "100%" : "0"}`,
                }}
             >
-               <Link href="/" className="mx-4 py-2 px-4 nav-link xl:mx-2 xl:px-2 xl:my-2">
+               <Link href="/" className={`${styles.link} nav-link`}>
                   Servicile noastre
                </Link>
-               <Link href="/" className="mx-4 py-2 px-4 nav-link xl:mx-2 xl:px-2 xl:my-2">
+               <Link href="/" className={`${styles.link} nav-link`}>
                   Cine suntem?
                </Link>
-               <Link href="/galerie-foto" className="mx-4 py-2 px-4 nav-link xl:mx-2 xl:px-2 xl:my-2">
+               <Link href="/galerie-foto" className={`${styles.link} nav-link`}>
                   Galerie foto
                </Link>
-               <Link href="/contact" className="mx-4 xl:mx-2">
+               <Link href="/contact" className={styles.linkButton}>
                   <CustomButton
                      fontSize="20px"
                      padding={`${screenWidth > 900 ? "6px 18px" : "4px 12px"}`}
@@ -67,7 +68,7 @@ export default function Navbar() {
                   </CustomButton>
                </Link>
                {screenWidth < 900 && (
-                  <div className="w-full h-28 absolute bottom-0 flex flex-col items-start justify-between px-6 pb-2">
+                  <div className={styles.phoneNav}>
                      <div>
                         <Link href="/" className="logo">
                            <img src={logo.src} alt="logo" className="logo-img" />
@@ -83,7 +84,7 @@ export default function Navbar() {
          {screenWidth < 900 && (
             <div
                onClick={() => setIsMobileNavigation(false)}
-               className="w-full h-full bg-black fixed top-0 left-0 z-20"
+               className={styles.hamburger}
                style={{
                   transition: "400ms ease",
                   visibility: `${isMobileNavigation ? "visible" : "hidden"}`,

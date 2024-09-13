@@ -28,7 +28,7 @@ export default function CustomForm() {
     return (
         <form
             onSubmit={handleFormSubmit}
-            className="w-1/3 h-full mx-8 flex items-center justify-start flex-col xl:w-[calc(100%-50px)] xl:justify-center"
+            className="form"
         >
             <CustomInput id="outlined-basic" ref={contactNameRef} label="Numele tău">
                 <InputAdornment position="start">
@@ -44,7 +44,7 @@ export default function CustomForm() {
 
             <CustomInput id="standard-multiline-static" ref={contactMessageRef} label="Mesajul tău..." multiline={true} rows={12} />
 
-            <span className="mt-4 w-full">
+            <span className="form-span">
                 <CustomButton
                     fontSize={`${screenWidth > 600 ? "24px" : "18px"}`}
                     padding={`${screenWidth > 600 ? "10px 28px" : "8px 14px"}`}

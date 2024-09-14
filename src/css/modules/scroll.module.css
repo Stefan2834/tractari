@@ -1,0 +1,30 @@
+.scrollContainer {
+    margin-top: 192px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.scrollElement {
+    width: 1700px;
+    height: 800px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    position: relative;
+}
+
+.scrollText {
+    font-size: 48px;
+    line-height: 48px;
+    color: black;
+}
+
+
+@media screen and (max-width:600px) {
+    .scrollText {
+        font-size: 36px;
+        line-height: 40px;
+    }
+}

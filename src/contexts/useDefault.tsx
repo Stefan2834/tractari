@@ -2,8 +2,6 @@ import React, { createContext, useContext, ReactNode, useState, useEffect, useRe
 
 type ContactRefType = any;
 
-
-
 interface DefaultContextValue {
 	screenWidth: number;
 	screenHeight: number;
@@ -37,7 +35,6 @@ export function DefaultContextProvider({ children }: { children: ReactNode }) {
 			setScreenWidth(window.innerWidth);
 			setScreenHeight(window.innerHeight);
 		}
-
 
 		window.addEventListener("resize", handleResize);
 

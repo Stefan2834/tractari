@@ -18,7 +18,7 @@ import facebook from "../assets/icons/facebook.webp";
 import logo from "../assets/logo.png";
 
 //Style
-import styles from "../css/footer.module.css"
+import styles from "../css/modules/footer.module.css"
 
 
 export default function Footer() {

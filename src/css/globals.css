@@ -36,22 +36,6 @@ body {
    font-family: "Monserrat", sans-serif;
 }
 
-.bg-main {
-   width: 100%;
-   height: calc(100svh + 100px);
-   top: 0;
-   left: 0;
-   padding-right: 0;
-   position: absolute;
-   overflow: hidden;
-   background-image: url(../assets/bg-main.jpg);
-   background-size: cover;
-   background-position: center;
-   background-color: rgba(0, 0, 0, 0.6);
-   background-blend-mode: darken;
-   clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 100px), 0% 100%);
-}
-
 
 .custom-button {
    background-color: #CCA424;
@@ -89,148 +73,11 @@ body {
    font-weight: 300;
    font-size: 30px;
    line-height: 36px;
-   line-height:36px;
+   line-height: 36px;
    margin-top: 40px;
 }
 
-.main-bar {
-   position: absolute;
-   top: calc(100% - 70px);
-   background: linear-gradient(67.61deg, rgba(0, 0, 0, 0.8) 15.91%, rgba(40, 37, 27, 0.8) 104.86%);
-   height: 170px;
-   width: 100%;
-   clip-path: polygon(0 120px, 100% 0, 100% 70px, 0% 100%);
-}
 
-.main-element {
-   width: 800px;
-   height: 100vh;
-   position: relative;
-   z-index: 1;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin: 0 64px;
-   color: white;
-}
-
-.main-flex {
-   width: 100%;
-   height: 600px;
-   display: flex;
-   align-items: flex-start;
-   justify-content: center;
-   flex-direction: column;
-}
-
-.main-paragraph-second {
-   margin-bottom: 16px;
-   font-weight: 600;
-}
-
-.main-title {
-   margin-top: 16px;
-   font-size: 96px;
-   font-weight: 700;
-   line-height:96px;
-}
-
-.main-subtitle {
-   font-size: 30px;
-   line-height: 36px;
-   font-weight: 400;
-}
-
-.main-button {
-   margin-top: 8px;
-   font-size: 20px;
-   line-height: 28px;
-   font-weight: 400;
-}
-
-.main-button:hover {
-   text-decoration: underline;
-}
-
-.main-absolute {
-   position: absolute;
-   bottom: 100px;
-   cursor: pointer;
-   left: 50%;
-   transform: translate(-50%);
-   width: 200px;
-   height: 150px;
-   /* background-image: url(../assets/photo/absolute.png); */
-   background-position: center;
-   background-size: contain;
-   background-repeat: no-repeat;
-}
-
-.main-absolute-flex {
-   display: flex;
-   align-items: center;
-   justify-content: space-around;
-   width: 1400px;
-   height: auto;
-   top: calc(100vh - 100px);
-   left: 50%;
-   transform: translate(-50%);
-   position: absolute;
-}
-
-.main-absolute-element {
-   width: auto;
-   max-width: 350px;
-   height: 100%;
-   background-color: #fcfcfc;
-   border-radius: 8px;
-   display: flex;
-   align-items: flex-start;
-   justify-content: flex-start;
-   flex-direction: column;
-   padding: 30px 40px;
-   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.main-absolute-img {
-   height: 50px;
-   width: auto;
-   object-fit: contain;
-   object-position: center;
-}
-
-
-.logo {
-   width: auto;
-   height: 128px;
-   display: flex;
-   justify-content: center;
-   align-items: flex-start;
-}
-
-.logo-img {
-   height: 100%;
-   width: auto;
-}
-
-.nav-link {
-   position: relative;
-}
-
-.nav-link::before {
-   content: "";
-   position: absolute;
-   width: 0;
-   height: 2px;
-   bottom: 0;
-   left: 0;
-   transition: 400ms ease;
-   background-color: white;
-}
-
-.nav-link:hover::before {
-   width: 100%;
-}
 
 .grad {
    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
@@ -245,18 +92,9 @@ body {
    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Test */
+/* Scroll animation */
 
-.moving-element {
-   width: 1700px;
-   height: 800px;
-   display: flex;
-   align-items: start;
-   justify-content: start;
-   position: relative;
-}
-
-.moving-img {
+.scrollImg {
    width: 100%;
    height: auto;
    left: 0;
@@ -266,7 +104,7 @@ body {
    transform: translateX(-50%);
 }
 
-.moving-text {
+.scrollTextContainer {
    position: absolute;
    z-index: 1;
    top: 0;
@@ -274,54 +112,6 @@ body {
    left: 0;
    font-size: 20px;
    text-align: center;
-}
-
-.review-element {
-   width: 400px;
-   height: auto;
-   background-color: #fcfcfc;
-   display: flex;
-   align-items: center;
-   position: relative;
-   justify-content: flex-start;
-   border-radius: 4px;
-   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-   margin: 0 25px;
-   padding: 0 20px;
-}
-
-.slider-container {
-   width: 5000vw;
-   height: 600px;
-   display: flex;
-   position: relative;
-   align-items: center;
-   justify-content: flex;
-   transition: 400ms ease;
-   top: 100px;
-}
-
-.slider {
-   width: 400px;
-   position: relative;
-   margin: 0 28px;
-   height: 100%;
-   position: relative;
-   transition: 400ms ease;
-   overflow: hidden;
-}
-
-.slider-inactive {
-   scale: 0.8;
-}
-
-.slider-img {
-   object-position: center;
-   overflow: hidden;
-   object-fit: cover;
-   width: 100%;
-   height: 100%;
-   border-radius: 4px;
 }
 
 /* NAV HAM */
@@ -352,40 +142,6 @@ body {
    rotate: 45deg;
 }
 
-
-
-/* Review */
-
-.review-name {
-   margin-top: 16px;
-   margin-bottom: 32px;
-   font-weight: 500;
-   text-transform: uppercase;
-   text-align: left;
-   width: 100%;
-}
-
-.review-description {
-   margin-top: 8px;
-   font-weight: 300;
-}
-
-.review-title {
-   width: 100%;
-   font-size: 24px;
-   text-align: center;
-   margin-bottom: 40px;
-}
-
-.review-container {
-   width: 100%;
-   display: flex;
-   align-items: flex-start;
-   justify-content: center;
-   margin-top: 32px;
-}
-
-
 /* CustomForm */
 
 
@@ -406,6 +162,27 @@ body {
 
 
 /* CustomCard */
+
+.card-absolute-element {
+   width: auto;
+   max-width: 350px;
+   height: 100%;
+   background-color: #fcfcfc;
+   border-radius: 8px;
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+   flex-direction: column;
+   padding: 30px 40px;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-absolute-element image {
+   height: 50px;
+   width: auto;
+   object-fit: contain;
+   object-position: center;
+}
 
 .card-title {
    font-size: 24px;
@@ -432,20 +209,4 @@ body {
 .card-text {
    margin: 24px 0;
    color: #1f2937;
-}
-
-/* Scroll */
-
-.scroll-container {
-   margin-top: 192px;
-   position: relative;
-   display: flex;
-   align-items: center;
-   justify-content: flex-start;
-}
-
-.scroll-text {
-   font-size: 48px;
-   line-height: 48px;
-   color: black;
 }

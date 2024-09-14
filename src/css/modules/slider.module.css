@@ -13,6 +13,40 @@
     clip-path: polygon(0 30%, 100% 0, 100% 70%, 0 100%) !important;
 }
 
+.containerMap {
+    width: 5000vw;
+    height: 600px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex;
+    transition: 400ms ease;
+    top: 100px;
+}
+
+.containerMap div {
+    width: 400px;
+    position: relative;
+    margin: 0 28px;
+    height: 100%;
+    position: relative;
+    transition: 400ms ease;
+    overflow: hidden;
+}
+
+.sliderInactive {
+    scale: 0.8;
+}
+
+.containerMap img {
+    object-position: center;
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
 .sliderButton {
     width: 64px;
     height: 64px;
@@ -26,6 +60,19 @@
     box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.15);
     background-color: #F9CB38;
 }
+
+.sliderLeft {
+    height: 28px;
+    width: auto
+}
+
+.sliderRight {
+    height: 28px;
+    width: auto;
+    transform: rotate(180deg);
+    position: relative;
+}
+
 
 .buttonContainer {
     width: 100%;
@@ -44,4 +91,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+
+/* Media Queries */
+
+
+@media screen and (max-width:600px) {
+    .containerMap div {
+        scale: 0.7;
+    }
+
+    .sliderInactive {
+        scale: 0.5;
+    }
 }

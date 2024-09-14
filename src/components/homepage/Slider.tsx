@@ -24,7 +24,7 @@ import leftArrow from "@/assets/icons/arrow.webp";
 import rightArrow from "@/assets/icons/arrow.webp";
 
 //Style
-import styles from "../../css/slider.module.css"
+import styles from "../../css/modules/slider.module.css"
 
 export default function Slider() {
    const { screenWidth } = useDefault();
@@ -51,7 +51,7 @@ export default function Slider() {
                className={`${styles.containerClipPath} grad-slider`}
             />
             <div
-               className="slider-container"
+               className={styles.containerMap}
                style={{
                   transform: `translateX(${-(currentElement - 1) * 456 + (screenWidth - 456 * 3) / 2}px)`,
                }}
@@ -61,25 +61,24 @@ export default function Slider() {
                   if (rotate === 0) {
                      return (
                         <div
-                           className="slider slider-active"
                            style={{
                               transform: `translateY(${rotate * 150}px)`,
                            }}
                         >
-                           <img src={img.src} alt="avatar" className="slider-img" />
+                           <img src={img.src} alt="avatar" />
                         </div>
                      );
                   } else {
                      return (
                         <div
                            onClick={() => setCurrentElement(index)}
-                           className="slider slider-inactive"
+                           className={styles.sliderInactive}
                            style={{
                               transform: `translateY(${rotate * 150}px)`,
                               filter: `brightness(${1 / Math.abs(rotate / 0.6)}`,
                            }}
                         >
-                           <img src={img.src} alt="avatar" className="slider-img" />
+                           <img src={img.src} alt="avatar" />
                         </div>
                      );
                   }
@@ -96,7 +95,7 @@ export default function Slider() {
                      : setCurrentElement((c) => c - 1);
                }}
             >
-               <img src={leftArrow.src} alt="Left Arrow" className="h-7 w-auto" />
+               <img src={leftArrow.src} alt="Left Arrow" className={styles.sliderLeft} />
             </div>
             <div
                className={styles.sliderButton}
@@ -106,7 +105,7 @@ export default function Slider() {
                      : setCurrentElement(0)
                }
             >
-               <img src={rightArrow.src} alt="Right arrow" className="h-7 w-auto rotate-180 relative" />
+               <img src={rightArrow.src} alt="Right arrow" className={styles.sliderRight} />
             </div>
          </div>
          <div className={styles.buttonMore}>

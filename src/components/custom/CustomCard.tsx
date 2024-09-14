@@ -8,10 +8,10 @@ type CardProps = {
 
 export default function CustomCard({ children, title, icon }: CardProps) {
     return (
-        <div className="main-absolute-element">
+        <div className="card-absolute-element">
             <div className="card-element">
                 <div className="card-img">
-                    <img src={icon} alt="lightning" className="main-absolute-img" />
+                    <img src={icon} alt="lightning" />
                 </div>
                 <div>
                     <p className="card-title">

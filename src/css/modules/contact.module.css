@@ -2,7 +2,7 @@
     width: 100%;
     height: 70vh;
     background-color: rgba(0, 0, 0, 0.6);
-    background-image: url("../assets/contact.jpg");
+    background-image: url("../../assets/contact.jpg");
     background-position: center;
     background-size: cover;
     background-blend-mode: darken;
@@ -27,7 +27,7 @@
     justify-content: center;
     width: 100%;
     margin-top: 100px;
-    background-image: url(../assets/404-map.png);
+    background-image: url("../../assets/404-map.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

@@ -19,25 +19,27 @@ import checked from "@/assets/icons/checked.webp";
 import CustomButton from "../custom/CustomButton";
 import CustomCard from "../custom/CustomCard";
 
+//Style
+import styles from "../../css/modules/main.module.css"
+
 export default function Main() {
    const { screenWidth } = useDefault();
 
    return (
       <>
-         <div className="bg-main" />
-         <div className="main-bar" />
-         <div className="main-element">
-            <div className="main-flex">
+         <div className={styles.background} />
+         <div className={styles.bar} />
+         <div className={styles.element}>
+            <div className={styles.flex}>
                <p
-                  className="main-paragraph-second"
                   style={{
                      fontSize: `${screenWidth > 600 ? "20px" : "16px"}`,
                   }}
                >
                   TRACTĂRI AUTO ȘI ASISTENȚĂ RUTIERĂ
                </p>
-               <h1 className="main-title">KOT ASISTENȚĂ RUTIERĂ</h1>
-               <h3 className="main-subtitle font-second">
+               <h1>KOT ASISTENȚĂ RUTIERĂ</h1>
+               <h3 className="font-second">
                   Probleme pe drum? Sună-ne acum!
                </h3>
                <Link href="tel:+40730222643" className="mt-10">
@@ -50,7 +52,7 @@ export default function Main() {
                </Link>
                <Link
                   href="https://wa.me/+400730222643"
-                  className="main-button"
+                  className={styles.linkButton}
                   style={{
                      fontSize: `${screenWidth > 600 ? "16px" : "12px"}`,
                   }}
@@ -61,10 +63,10 @@ export default function Main() {
                </Link>
             </div>
          </div>
-         <Link href="/">
-            <div className="main-absolute" />
+         <Link href="/" className={styles.showMore}>
+            <div />
          </Link>
-         <div className="main-absolute-flex">
+         <div className={styles.cardContainer}>
             <CustomCard
                icon={lightning.src}
                title="Simplu și rapid"

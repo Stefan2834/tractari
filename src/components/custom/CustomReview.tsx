@@ -6,7 +6,6 @@ import { useDefault } from '@/contexts/useDefault'
 import { Avatar, Rating } from "@mui/material";
 
 //Types
-
 type CustomReviewProps = {
     children: React.ReactNode,
     avatar: string,
@@ -15,12 +14,15 @@ type CustomReviewProps = {
     reverse: boolean;
 }
 
+//Style
+import styles from "../../css/modules/review.module.css"
+
 export default function CustomReview({ children, avatar, name, value, reverse }: CustomReviewProps) {
 
     const { screenWidth } = useDefault()
 
     return (
-        <div className={`review-element ${reverse && screenWidth > 1200 ? "flex-col-reverse" : "flex-col"}`}>
+        <div className={`${styles.reviewElement} ${reverse && screenWidth > 1200 ? "flex-col-reverse" : "flex-col"}`}>
             <Avatar
                 alt="Avatar"
                 src={avatar}
@@ -47,7 +49,7 @@ export default function CustomReview({ children, avatar, name, value, reverse }:
             />
             <div>
                 <p
-                    className="review-description"
+                    className={styles.reviewDescription}
                     style={{
                         fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
                     }}
@@ -55,7 +57,7 @@ export default function CustomReview({ children, avatar, name, value, reverse }:
                     {children}
                 </p>
                 <p
-                    className="review-name"
+                    className={styles.reviewName}
                     style={{
                         fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
                     }}

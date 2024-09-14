@@ -9,7 +9,7 @@ import map from "@/assets/map.png";
 import CustomForm from "../custom/CustomForm";
 
 //Styles
-import styles from "../../css/contact.module.css"
+import styles from "../../css/modules/contact.module.css"
 
 export default function Contact() {
    const { screenWidth } = useDefault();

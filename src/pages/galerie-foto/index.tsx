@@ -13,7 +13,13 @@ import image8 from "@/assets/carousel/slider-8.webp";
 import image9 from "@/assets/carousel/slider-9.webp";
 import image10 from "@/assets/carousel/slider-10.webp";
 import image11 from "@/assets/carousel/slider-11.webp";
+
+//Components
 import Contact from "@/components/homepage/Contact";
+
+
+//Style
+import styles from "../../css/gallery.module.css"
 
 
 const galleryPhotos = [
@@ -26,17 +32,17 @@ const galleryPhotos = [
 export default function Gallery() {
     return (
         <>
-            <div className="gallery-main">
-                <span className="gallery-text">Galerie foto</span>
+            <div className={styles.galleryMain}>
+                <span className={styles.galleryText}>Galerie foto</span>
             </div>
-            <div className="gallery-div">
-                <span className="gallery-description">
+            <div className={styles.galleryDiv}>
+                <span className={styles.galleryDescription}>
                     Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa că... <br />
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </span>
-                <div className="gallery-container">
+                <div className={styles.galleryContainer}>
                     {galleryPhotos.map((image: any, index: number) => (
-                        <img className="gallery-element" key={index} src={image.src} />
+                        <img className={styles.galleryElement} key={index} src={image.src} />
                     ))}
                 </div>
                 <Contact />
@@ -44,4 +50,3 @@ export default function Gallery() {
         </>
     );
 }
-

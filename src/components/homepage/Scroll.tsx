@@ -11,6 +11,10 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 //Images
 import truck from "@/assets/truck.png";
 
+//Style
+
+import styles from "../../css/modules/scroll.module.css"
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,9 +24,9 @@ export default function Scroll() {
 
    useGSAP(
       () => {
-         gsap.to(".moving-img", {
+         gsap.to(".scrollImg", {
             scrollTrigger: {
-               trigger: ".moving-img",
+               trigger: ".scrollImg",
                scrub: 3,
                start: "top 99%",
                end: "bottom 30%",
@@ -30,9 +34,9 @@ export default function Scroll() {
             x: "100vw",
             duration: 3,
          });
-         gsap.to(".moving-text", {
+         gsap.to(".scrollTextContainer", {
             scrollTrigger: {
-               trigger: ".moving-text",
+               trigger: ".scrollTextContainer",
                scrub: 3,
                start: "top 80%",
                end: "bottom 80%",
@@ -47,13 +51,13 @@ export default function Scroll() {
    return (
       <div
          style={{ height: "800px", width: "1700px" }}
-         className="scroll-container"
+         className={styles.scrollContainer}
          ref={containerRef}
       >
-         <div className="moving-element">
-            <img src={truck.src} alt="truck" className="moving-img" />
-            <div className="moving-text">
-               <p className="scroll-text">PESTE</p>
+         <div className={styles.scrollElement}>
+            <img src={truck.src} alt="truck" className="scrollImg" />
+            <div className="scrollTextContainer">
+               <p className={styles.scrollText}>PESTE</p>
                <span
                   className="primary-color font-bold"
                   style={{
@@ -63,7 +67,7 @@ export default function Scroll() {
                >
                   300
                </span>
-               <p className="scroll-text">clienți mulțumiți</p>
+               <p className={styles.scrollText}>clienți mulțumiți</p>
             </div>
          </div>
       </div>

@@ -9,12 +9,15 @@ import avatar1 from "@/assets/reviews-avatars/avatar-1.webp";
 import avatar2 from "@/assets/reviews-avatars/avatar-2.webp";
 import avatar3 from "@/assets/reviews-avatars/avatar-3.webp";
 
+//Style
+import styles from "../../css/modules/review.module.css"
+
 export default function Review() {
    return (
       <>
-         <h2 className="review-title">- RECOMANDĂRILE NOASTRE -</h2>
+         <h2 className={styles.reviewTitle}>- RECOMANDĂRILE NOASTRE -</h2>
          <div
-            className="review-container"
+            className={styles.reviewContainer}
             style={{ height: "auto" }}
          >
             <CustomReview avatar={avatar1.src} name="Andrei Comșa" value={5.0} reverse={false}>

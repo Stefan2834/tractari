@@ -11,7 +11,7 @@ import logo from "../assets/logo.png";
 
 //Style 
 
-import styles from "../css/navbar.module.css"
+import styles from "../css/modules/navbar.module.css"
 
 export default function Navbar() {
    const [isMobileNavigation, setIsMobileNavigation] = useState<boolean>(false);
@@ -30,10 +30,10 @@ export default function Navbar() {
    return (
       <>
          <div
-            className={`${styles.container} grad nav-main`}
+            className={`${styles.container} grad`}
          >
-            <Link href="/" className="logo">
-               <img src={logo.src} alt="logo" className="logo-img" />
+            <Link href="/" className={styles.logo}>
+               <img src={logo.src} alt="logo" />
             </Link>
             <div
                className="nav-ham"
@@ -45,18 +45,18 @@ export default function Navbar() {
                <div className="line" />
             </div>
             <div
-               className={`${styles.linkContainer} nav-div`}
+               className={styles.linkContainer}
                style={{
                   transform: `translateX(${screenWidth < 900 && !isMobileNavigation ? "100%" : "0"}`,
                }}
             >
-               <Link href="/" className={`${styles.link} nav-link`}>
+               <Link href="/" className={`${styles.link}`}>
                   Servicile noastre
                </Link>
-               <Link href="/" className={`${styles.link} nav-link`}>
+               <Link href="/" className={`${styles.link}`}>
                   Cine suntem?
                </Link>
-               <Link href="/galerie-foto" className={`${styles.link} nav-link`}>
+               <Link href="/galerie-foto" className={`${styles.link}`}>
                   Galerie foto
                </Link>
                <Link href="/contact" className={styles.linkButton}>
@@ -70,8 +70,8 @@ export default function Navbar() {
                {screenWidth < 900 && (
                   <div className={styles.phoneNav}>
                      <div>
-                        <Link href="/" className="logo">
-                           <img src={logo.src} alt="logo" className="logo-img" />
+                        <Link href="/" className={styles.logo}>
+                           <img src={logo.src} alt="logo" />
                         </Link>
                      </div>
                      <div>

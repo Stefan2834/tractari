@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from "../css/404.module.css"
+import styles from "../css/modules/404.module.css"
 import CustomButton from '@/components/custom/CustomButton'
 import Link from 'next/link'
 

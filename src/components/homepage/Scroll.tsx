@@ -19,7 +19,7 @@ import styles from "../../css/modules/scroll.module.css"
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Scroll() {
-   const { screenWidth } = useDefault();
+   const { screenWidth, clientsNumber} = useDefault();
    const containerRef = useRef<any>();
 
    useGSAP(
@@ -65,7 +65,7 @@ export default function Scroll() {
                      lineHeight: "1.1",
                   }}
                >
-                  300
+                  {clientsNumber}
                </span>
                <p className={styles.scrollText}>clienți mulțumiți</p>
             </div>

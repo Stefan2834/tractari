@@ -19,7 +19,7 @@ import Contact from "@/components/homepage/Contact";
 
 
 //Style
-import styles from "../../css/gallery.module.css"
+import styles from "../../css/modules/gallery.module.css"
 
 
 const galleryPhotos = [

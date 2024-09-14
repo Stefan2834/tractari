@@ -5,6 +5,8 @@ type ContactRefType = any;
 interface DefaultContextValue {
 	screenWidth: number;
 	screenHeight: number;
+	clientsNumber: number;
+	setClientsNumber: (clientsNumber: number) => void;
 	contactNameRef: ContactRefType
 	contactEmailRef: ContactRefType
 	contactMessageRef: ContactRefType
@@ -24,6 +26,8 @@ export function useDefault() {
 export function DefaultContextProvider({ children }: { children: ReactNode }) {
 	const [screenWidth, setScreenWidth] = useState<number>(0);
 	const [screenHeight, setScreenHeight] = useState<number>(0);
+
+	const [clientsNumber, setClientsNumber] = useState<number>(300);
 
 
 	const contactNameRef = useRef<ContactRefType>(null);
@@ -46,6 +50,7 @@ export function DefaultContextProvider({ children }: { children: ReactNode }) {
 	const value: DefaultContextValue = {
 		screenWidth,
 		screenHeight,
+		clientsNumber, setClientsNumber,
 		contactNameRef,
 		contactEmailRef,
 		contactMessageRef

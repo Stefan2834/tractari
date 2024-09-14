@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 
 //Styles
-import styles from "../../css/contact.module.css"
+import styles from "../../css/modules/contact.module.css"
 
 //Custom
 import CustomForm from '@/components/custom/CustomForm'

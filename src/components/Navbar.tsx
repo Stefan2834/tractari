@@ -10,7 +10,6 @@ import CustomButton from "./custom/CustomButton";
 import logo from "../assets/logo.png";
 
 //Style 
-
 import styles from "../css/modules/navbar.module.css"
 
 export default function Navbar() {
@@ -51,10 +50,7 @@ export default function Navbar() {
                }}
             >
                <Link href="/" className={`${styles.link}`}>
-                  Servicile noastre
-               </Link>
-               <Link href="/" className={`${styles.link}`}>
-                  Cine suntem?
+                  Tarife
                </Link>
                <Link href="/galerie-foto" className={`${styles.link}`}>
                   Galerie foto

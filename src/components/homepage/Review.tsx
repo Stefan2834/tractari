@@ -26,15 +26,15 @@ export default function Review() {
             className={styles.reviewContainer}
             style={{ height: "auto" }}
          >
-            <CustomReview avatar={avatar1.src} name="Andrei Comșa" value={5.0} reverse={false}>
+            <CustomReview avatar={avatar1.src} name="Andrei Comșa" value={5.0}>
                De fiecare dată când l-am sunat pe Alin, a venit fără ezitare, chiar și în miez de
                noapte. Super băiat. Nota 10!
             </CustomReview>
-            <CustomReview avatar={avatar2.src} name="Iosif Ștefan" value={4.5} reverse={true}>
+            <CustomReview avatar={avatar2.src} name="Iosif Ștefan" value={4.5}>
                Nu știu ce mă făceam fără serviciile prestate de acest băiat. A reușit să ma
                salveze dintr-o situație inimaginabilă. Recomand!
             </CustomReview>
-            <CustomReview avatar={avatar3.src} name="Mareș Gabriel" value={5.0} reverse={false}>
+            <CustomReview avatar={avatar3.src} name="Mareș Gabriel" value={5.0}>
                Având în vedere că l-am sunat la 2 noaptea, a venit la sute de kilometri distanță
                ca să mă ajute. Nu știu ce mă faceam fără el. Sunați cu încredere!
             </CustomReview>

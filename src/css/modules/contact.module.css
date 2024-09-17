@@ -36,19 +36,10 @@
 .contactFlex {
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: flex;
     flex-direction: column;
     color: black;
     max-width: 600px;
-}
-
-.description {
-    font-size: 28px;
-    line-height: 32px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
-    color: #241D1D;
-    margin-bottom: 15px;
 }
 
 .containerFlex {
@@ -81,36 +72,45 @@
     object-position: center;
 }
 
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
 .text {
-    width: 100%;
-    text-align: center;
-    font-size: 60px;
+    width: 70%;
+    text-align: left;
     margin-top: 160px;
-    font-weight: 600;
-    line-height: 60px;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 58px;
+    color: #241D1D;
 }
 
 .paragraph {
-    width: 100%;
-    text-align: center;
-    font-weight: 300;
-    font-size: 30px;
-    line-height: 36px;
+    width: 70%;
+    text-align: left;
     margin-top: 40px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #241D1D;
 }
 
 .form {
-    width: 100%;
+    width: 70%;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 80px;
 }
 
 .image {
-    margin:0 32px;
-    width:40%;
+    margin: 0 32px;
+    width: 60%;
 }
 
 /* Media Queries */
@@ -123,8 +123,8 @@
     }
 
     .image {
-        width:calc(100% - 50px);
-        margin:16px 32px;
+        width: calc(100% - 50px);
+        margin: 16px 32px;
     }
 }
 
@@ -149,12 +149,6 @@
     .mainText {
         font-size: 32px;
         line-height: 36px;
-    }
-
-    .description {
-        font-size: 24px;
-        line-height: 26px;
-        width: 100%;
     }
 
     .circle {

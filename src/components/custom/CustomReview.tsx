@@ -11,30 +11,36 @@ type CustomReviewProps = {
     avatar: string,
     name: string,
     value: number,
-    reverse: boolean;
 }
 
 //Style
 import styles from "../../css/modules/review.module.css"
 
-export default function CustomReview({ children, avatar, name, value, reverse }: CustomReviewProps) {
+export default function CustomReview({ children, avatar, name, value }: CustomReviewProps) {
 
     const { screenWidth } = useDefault()
 
     return (
-        <div className={`${styles.reviewElement} ${reverse && screenWidth > 1200 ? "flex-col-reverse" : "flex-col"}`}>
+        <div className={styles.reviewElement}>
             <Avatar
                 alt="Avatar"
                 src={avatar}
                 sx={{
                     width: 110,
                     height: 110,
-                    bottom: `${reverse && screenWidth > 1200 ? "0" : "calc(100% - 110px)"}`,
-                    transform: `${reverse && screenWidth > 1200 ? "translateY(50%)" : "translateY(-50%)"}`,
                     position: "absolute",
+                    top: "-50px",
                     scale: `${screenWidth > 600 ? "1" : "0.8"}`,
                 }}
             />
+            <p
+                className={styles.reviewName}
+                style={{
+                    fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
+                }}
+            >
+                {name}
+            </p>
             <Rating
                 name="half-rating-read"
                 defaultValue={value}
@@ -42,29 +48,18 @@ export default function CustomReview({ children, avatar, name, value, reverse }:
                 readOnly
                 size="large"
                 sx={{
-                    marginBottom: `${reverse && screenWidth > 1200 ? "60px" : "0px"}`,
-                    marginTop: `${reverse && screenWidth > 1200 ? "0px" : "60px"}`,
+                    marginTop:"8px",
                     color: "#E3B626"
                 }}
             />
-            <div>
-                <p
-                    className={styles.reviewDescription}
-                    style={{
-                        fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
-                    }}
-                >
-                    {children}
-                </p>
-                <p
-                    className={styles.reviewName}
-                    style={{
-                        fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
-                    }}
-                >
-                    {name}
-                </p>
-            </div>
+            <p
+                className={styles.reviewDescription}
+                style={{
+                    fontSize: `${screenWidth > 600 ? "18px" : "14px"}`,
+                }}
+            >
+                {children}
+            </p>
         </div>
     )
 }

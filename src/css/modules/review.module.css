@@ -1,29 +1,55 @@
+.reviewTitleFlex h1 {
+    width: 70%;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 68px;
+    color: #241D1D;
+    margin-top: -50px;
+}
+
+
+.reviewTitleFlex h2 {
+    margin-top: 20px;
+    width: 70%;
+    font-size: 24px;
+    color: #241D1D;
+    font-weight: 300;
+    line-height: 29px;
+}
 .reviewElement {
     width: 400px;
     height: auto;
     background-color: #fcfcfc;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     justify-content: flex-start;
     border-radius: 4px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     margin: 0 25px;
-    padding: 0 20px;
+    padding: 0 20px 80px 20px;
+    flex-direction: column;
 }
 
 .reviewName {
-    margin-top: 16px;
-    margin-bottom: 32px;
-    font-weight: 500;
     text-transform: uppercase;
     text-align: left;
     width: 100%;
+    font-weight: 600;
+    font-size: 16px;
+    color: #B6B6B6;
+    line-height: 20px;
+    margin-top: 76px;
 }
+
+
 
 .reviewDescription {
     margin-top: 8px;
     font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #241D1D;
 }
 
 .reviewTitleFlex {
@@ -34,21 +60,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom:100px;
+    margin-bottom: 100px;
     flex-direction: column;
 }
 
-.reviewTitleFlex h1 {
-    width: 1300px;
-    font-size: 56px;
-    font-weight: 600;
-}
 
-.reviewTitleFlex h2 {
-    width:1300px;
-    font-size:24px;
-    font-weight: 300;
-}
+
+
+
+
 
 .reviewContainer {
     width: 100%;

@@ -36,14 +36,10 @@ export default function Footer() {
                   padding={`${screenWidth > 900 ? "14px 20px" : "8px 16px"}`}
                >
                   <PhoneIcon />
-                  DISPONIBILI NON STOP, SUNĂ ACUM
+                  DISPONIBILI NON STOP, SUNĂ ACUM - 0712 345 678
                </CustomButton>
             </Link>
             <div className={styles.containerLink}>
-               <Link href="/" className={styles.link}>
-
-                  Serviciile noastre
-               </Link>
                <Link href="/" className={styles.link}>
                   Cine suntem?
                </Link>
@@ -54,15 +50,15 @@ export default function Footer() {
             <div className={styles.containerMedia}>
                <Link href="/">
                   <img
-                     src={email.src}
-                     alt="Email"
+                     src={whatsapp.src}
+                     alt="Whatsapp"
                      className={`${screenWidth > 600 ? "h-9" : "h-6"} mx-3`}
                   />
                </Link>
                <Link href="/">
                   <img
-                     src={whatsapp.src}
-                     alt="Whatsapp"
+                     src={email.src}
+                     alt="Email"
                      className={`${screenWidth > 600 ? "h-9" : "h-6"} mx-3`}
                   />
                </Link>
@@ -78,8 +74,9 @@ export default function Footer() {
          <div className={styles.bottomContainer}>
             <p className={styles.bottomText}>@2024 - All rights reserved</p>
             <p className={styles.bottomText}>
-               Designed and Developed by <span className="underline">Iosif Ștefan</span> &{" "}
-               <span className="underline">Mareș Gabriel</span>
+               Designed and Developed by {" "}
+               <Link href="/" className="underline">Iosif Ștefan</Link> &{" "}
+               <Link href="/" className="underline">Mareș Gabriel</Link>
             </p>
          </div>
       </footer>

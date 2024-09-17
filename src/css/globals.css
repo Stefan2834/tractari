@@ -33,7 +33,7 @@ body {
 }
 
 .font {
-   font-family: "Monserrat", sans-serif;
+   font-family: "Montserrat", sans-serif;
 }
 
 
@@ -46,34 +46,46 @@ body {
    font-weight: 500;
    margin: 0;
    font-size: 20px;
-   padding: 10px 20px;
-   font-family: "Monserrat", sans-serif;
+   padding: 16px 26px;
+   font-family: "Montserrat", sans-serif;
 }
 
 .main-container {
    width: 100%;
-   font-family: "Monserrat", sans-serif;
+   font-family: "Montserrat", sans-serif;
    overflow: hidden;
    background-color: white;
    color: black;
 }
 
-.main-text {
+
+.main-slider-content {
    width: 100%;
-   text-align: center;
-   font-size: 60px;
-   line-height: 60px;
-   margin-top: 160px;
-   font-weight: 600;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: auto;
+   flex-direction: column;
 }
 
-.main-paragraph {
-   width: 100%;
-   text-align: center;
+.main-slider-content h1 {
+   font-weight: 700;
+   font-size: 56px;
+   line-height: 58px;
+   letter-spacing: -0.01em;
+   color: #241D1D;
+   width: 70%;
+   text-align: left;
+   margin-top: 160px;
+}
+
+.main-slider-content p {
    font-weight: 300;
-   font-size: 30px;
-   line-height: 36px;
-   line-height: 36px;
+   font-size: 24px;
+   line-height: 29px;
+   color: #241D1D;
+   width: 70%;
+   text-align: left;
    margin-top: 40px;
 }
 

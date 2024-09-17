@@ -13,6 +13,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import lightning from "@/assets/icons/lightning.webp";
 import hours24 from "@/assets/icons/24.webp";
 import checked from "@/assets/icons/checked.webp";
+import arrow from "@/assets/icons/arrow.webp"
 
 
 //Custom Components
@@ -31,11 +32,7 @@ export default function Main() {
          <div className={styles.bar} />
          <div className={styles.element}>
             <div className={styles.flex}>
-               <p
-                  style={{
-                     fontSize: `${screenWidth > 600 ? "20px" : "16px"}`,
-                  }}
-               >
+               <p>
                   TRACTĂRI AUTO ȘI ASISTENȚĂ RUTIERĂ
                </p>
                <h1>KOT ASISTENȚĂ RUTIERĂ</h1>
@@ -47,7 +44,7 @@ export default function Main() {
                      fontSize={`${screenWidth > 600 ? "20px" : "16px"}`}
                      padding={`${screenWidth > 600 ? "10px 20px" : "6px 12px"}`}
                   >
-                     DISPONIBILI NON STOP, SUNĂ ACUM
+                     DISPONIBILI NON STOP, SUNĂ ACUM - 0712 345 678
                   </CustomButton>
                </Link>
                <Link
@@ -61,11 +58,12 @@ export default function Main() {
                   <ArrowRightAltIcon />
                   <WhatsAppIcon />
                </Link>
+               <Link href="/" className={styles.more}>
+                  <p>Află mai multe</p>
+                  <img src={arrow.src} alt="Săgeată" />
+               </Link>
             </div>
          </div>
-         <Link href="/" className={styles.showMore}>
-            <div />
-         </Link>
          <div className={styles.cardContainer}>
             <CustomCard
                icon={lightning.src}

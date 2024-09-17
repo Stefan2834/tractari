@@ -60,11 +60,7 @@ export default function Slider() {
                   const rotate: number = currentElement - index;
                   if (rotate === 0) {
                      return (
-                        <div
-                           style={{
-                              transform: `translateY(${rotate * 150}px)`,
-                           }}
-                        >
+                        <div>
                            <img src={img.src} alt="avatar" />
                         </div>
                      );
@@ -74,7 +70,6 @@ export default function Slider() {
                            onClick={() => setCurrentElement(index)}
                            className={styles.sliderInactive}
                            style={{
-                              transform: `translateY(${rotate * 150}px)`,
                               filter: `brightness(${1 / Math.abs(rotate / 0.6)}`,
                            }}
                         >
@@ -114,7 +109,9 @@ export default function Slider() {
                   padding={`${screenWidth > 600 ? "14px 110px" : "10px 40px"}`}
                   fontSize={`${screenWidth > 600 ? "22px" : "18px"}`}
                >
-                  Vezi Galeria noastră foto!
+                  <h1>
+                     Vezi întreaga galerie foto!
+                  </h1>
                </CustomButton>
             </Link>
          </div>

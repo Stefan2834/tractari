@@ -14,20 +14,22 @@ export default function Home() {
          <Main />
          <Scroll />
          <Review />
-         <h1 className="main-text">
-            Nu suntem unica firmă de tractaj
-            <br /> 24/7 din România, însă...
-         </h1>
-         <p className="main-paragraph">
-            Ne pasă de clienții noștri, și apreciem o muncă de calitate. Tractăm orice tip de
-            autoturisme,
-            <br />
-            chiar dacă sistemul de direcție este grav avariat. Sărim în ajutorul tău în cel mai
-            scurt timp posibil,
-            <br />
-            oriunde în țară și la orice oră. Nu ezita să ne contactezi dacă întâmpini probleme.
-            <br />
-         </p>
+         <div className="main-slider-content">
+            <h1>
+               Nu suntem unica firmă de tractaj
+               <br /> 24/7 din România, însă...
+            </h1>
+            <p>
+               Ne pasă de clienții noștri, și apreciem o muncă de calitate. Tractăm orice tip de
+               autoturisme,
+               <br />
+               chiar dacă sistemul de direcție este grav avariat. Sărim în ajutorul tău în cel mai
+               scurt timp posibil,
+               <br />
+               oriunde în țară și la orice oră. Nu ezita să ne contactezi dacă întâmpini probleme.
+               <br />
+            </p>
+         </div>
          <Slider />
          <Contact />
       </div>

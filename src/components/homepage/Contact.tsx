@@ -24,57 +24,54 @@ export default function Contact() {
 
    return (
       <>
-         <h2 className={styles.text}>
-            Probleme pe drum? <br />
-            Contactează-ne acum!
-         </h2>
-         <p className={styles.paragraph}>
-            Nu ezita să ne contactezi dacă ai probleme cu mașina sau dacă ai vreo
-            <br />
-            curiozitate legată de noi. Răspundem la orice oră în cel mai scurt timp posibil.
-         </p>
-         <div
-            className={styles.form}
-            style={{ height: `${screenWidth > 1200 ? "600px" : "auto"}` }}
-         >
-            {/* <CustomForm /> */}
-            <div className={styles.contactFlex}>
-               <div className={styles.description}>
-                  Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa că...
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-               </div>
-               <div className={styles.containerFlex}>
-                  <Link href="/" className={styles.circle}>
-                     <img className={styles.img} src={phoneImage.src} />
-                  </Link>
-                  <span className={styles.span}>+4 075 475 4215</span>
-               </div>
-               <div className={styles.containerFlex}>
-                  <Link href="/" className={styles.circle}>
-                     <img className={styles.img} src={mailImage.src} />
-                  </Link>
-                  <span className={styles.span}>contact@kotasistenta.ro</span>
-               </div>
-               <div className={styles.containerFlex}>
-                  <Link href="/" className={styles.circle}>
-                     <img className={styles.img} src={facebookImage.src} />
-                  </Link>
-                  <span className={styles.span}>kotasistenta</span>
-               </div>
-               <div className={styles.containerFlex}>
-                  <Link href="/" className={styles.circle}>
-                     <img className={styles.img} src={whatsappImage.src} />
-                  </Link>
-                  <span className={styles.span}>Whatsapp</span>
-               </div>
-            </div>
+         <div className={styles.container}>
+            <h2 className={styles.text}>
+               Probleme pe drum? <br />
+               Contactează-ne acum!
+            </h2>
+            <p className={styles.paragraph}>
+               Nu ezita să ne contactezi dacă ai probleme cu mașina sau dacă ai vreo
+               <br />
+               curiozitate legată de noi. Răspundem la orice oră în cel mai scurt timp posibil.
+            </p>
             <div
-               className={styles.image}
-               style={{ height: `${screenWidth > 1200 ? "500px" : "auto"}` }}
+               className={styles.form}
+               style={{ height: `${screenWidth > 1200 ? "600px" : "auto"}` }}
             >
-               <img src={map.src} alt="Map" className="w-full h-full object-contain" />
+               <div className={styles.contactFlex}>
+                  <div className={styles.containerFlex}>
+                     <Link href="/" className={styles.circle}>
+                        <img className={styles.img} src={phoneImage.src} />
+                     </Link>
+                     <span className={styles.span}>+4 075 475 4215</span>
+                  </div>
+                  <div className={styles.containerFlex}>
+                     <Link href="/" className={styles.circle}>
+                        <img className={styles.img} src={mailImage.src} />
+                     </Link>
+                     <span className={styles.span}>contact@kotasistenta.ro</span>
+                  </div>
+                  <div className={styles.containerFlex}>
+                     <Link href="/" className={styles.circle}>
+                        <img className={styles.img} src={facebookImage.src} />
+                     </Link>
+                     <span className={styles.span}>kotasistenta</span>
+                  </div>
+                  <div className={styles.containerFlex}>
+                     <Link href="/" className={styles.circle}>
+                        <img className={styles.img} src={whatsappImage.src} />
+                     </Link>
+                     <span className={styles.span}>Whatsapp</span>
+                  </div>
+               </div>
+               <div
+                  className={styles.image}
+                  style={{ height: `${screenWidth > 1200 ? "500px" : "auto"}` }}
+               >
+                  <img src={map.src} alt="Map" className="w-full h-full object-contain" />
+               </div>
+            </div >
          </div>
-      </div >
       </>
    );
 }

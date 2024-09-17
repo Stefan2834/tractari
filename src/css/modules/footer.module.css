@@ -6,7 +6,7 @@
     justify-content: center;
     clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
     flex-direction: column;
-    height: 600px;
+    height: 500px;
 }
 
 .containerLink {
@@ -16,7 +16,7 @@
     color: white;
     font-weight: 600;
     font-size: 24px;
-    margin-top: 64px;
+    margin-top: 32px;
 }
 
 .containerMedia {
@@ -26,7 +26,13 @@
     color:white;
     font-weight: 600;
     font-size: 24px;
-    margin-top: 32px;
+    margin-top: 16px;
+}
+.containerMedia a {
+    width:60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .link {

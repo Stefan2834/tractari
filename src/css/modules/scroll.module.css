@@ -24,10 +24,10 @@
     object-fit: cover;
     position: absolute;
     object-position: center;
-    transition: 3000ms ease-in;
+    transition: 1500ms ease-in-out;
 }
 .scrollTextContainer {
-    transition: 2000ms ease-in;
+    transition: 1000ms ease-in-out;
     z-index: 1;
     top: 0; 
     position: absolute;

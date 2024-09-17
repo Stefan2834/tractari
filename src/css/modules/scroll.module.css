@@ -15,7 +15,6 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
-    transition: 1000ms ease;
 }
 
 .scrollImg {
@@ -25,8 +24,10 @@
     object-fit: cover;
     position: absolute;
     object-position: center;
+    transition: 1500ms ease;
 }
 .scrollTextContainer {
+    transition: 1000ms ease;
     z-index: 1;
     top: 0;
     position: absolute;

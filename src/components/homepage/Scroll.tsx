@@ -36,9 +36,9 @@ export default function Scroll() {
          className={styles.scrollContainer}
          ref={containerRef}
       >
-         <div className={styles.scrollElement} style={{transform:`translate(${activateAnimation ? "0px" : "-50%"})`}} >
-            <img src={truck.src} alt="truck" className={styles.scrollImg} />
-            <div className={styles.scrollTextContainer}>
+         <div className={styles.scrollElement} >
+            <img src={truck.src} alt="truck" className={styles.scrollImg} style={{transform:`translate(${activateAnimation ? "100%" : "-100%"})`}} />
+            <div className={styles.scrollTextContainer} style={{transform:`translate(${activateAnimation ? "0px" : "-100%"})`}}>
                <p className={styles.scrollText}>PESTE</p>
                <span
                   className="primary-color font-bold"

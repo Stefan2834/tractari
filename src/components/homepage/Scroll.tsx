@@ -1,12 +1,6 @@
 //Utilities
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useDefault } from "@/contexts/useDefault";
-
-//GSAP
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
 
 //Images
 import truck from "@/assets/truck.png";
@@ -16,47 +10,35 @@ import truck from "@/assets/truck.png";
 import styles from "../../css/modules/scroll.module.css"
 
 
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Scroll() {
-   const { screenWidth, clientsNumber} = useDefault();
+   const { screenWidth, clientsNumber } = useDefault();
    const containerRef = useRef<any>();
+   const [activateAnimation ,setActivateAnimation] = useState<boolean>(false);
 
-   useGSAP(
-      () => {
-         gsap.to(".scrollImg", {
-            scrollTrigger: {
-               trigger: ".scrollImg",
-               scrub: 3,
-               start: "top 99%",
-               end: "bottom 30%",
-            },
-            x: "100vw",
-            duration: 3,
-         });
-         gsap.to(".scrollTextContainer", {
-            scrollTrigger: {
-               trigger: ".scrollTextContainer",
-               scrub: 3,
-               start: "top 80%",
-               end: "bottom 80%",
-            },
-            x: "50vw",
-            duration: 3,
-         });
-      },
-      { scope: containerRef }
-   );
+   useEffect(() => {
+      const handleScroll = () => {
+         if(window.scrollY >= 700) {
+            setActivateAnimation(true);
+         }
+      };
+
+
+      window.addEventListener('scroll', handleScroll);
+
+      return () => window.removeEventListener('scroll', handleScroll);
+
+   }, []);
 
    return (
       <div
-         style={{ height: "800px", width: "1700px" }}
+         style={{ height: "800px" }}
          className={styles.scrollContainer}
          ref={containerRef}
       >
-         <div className={styles.scrollElement}>
-            <img src={truck.src} alt="truck" className="scrollImg" />
-            <div className="scrollTextContainer">
+         <div className={styles.scrollElement} style={{transform:`translate(${activateAnimation ? "0px" : "-50%"})`}} >
+            <img src={truck.src} alt="truck" className={styles.scrollImg} />
+            <div className={styles.scrollTextContainer}>
                <p className={styles.scrollText}>PESTE</p>
                <span
                   className="primary-color font-bold"

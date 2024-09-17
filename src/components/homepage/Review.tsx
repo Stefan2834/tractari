@@ -15,7 +15,13 @@ import styles from "../../css/modules/review.module.css"
 export default function Review() {
    return (
       <>
-         <h2 className={styles.reviewTitle}>- RECOMANDĂRILE NOASTRE -</h2>
+         <div className={styles.reviewTitleFlex}>
+            <h1>Ce spun clientii nostri?</h1>
+            <h2>Ne pasă de clienții noștri, și apreciem o muncă de calitate,
+               așa că... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
+               Aliquam in hendrerit urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
+            </h2>
+         </div>
          <div
             className={styles.reviewContainer}
             style={{ height: "auto" }}

@@ -92,28 +92,6 @@ body {
    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Scroll animation */
-
-.scrollImg {
-   width: 100%;
-   height: auto;
-   left: 0;
-   object-fit: cover;
-   object-position: center;
-   position: absolute;
-   transform: translateX(-50%);
-}
-
-.scrollTextContainer {
-   position: absolute;
-   z-index: 1;
-   top: 0;
-   transform: translate(-50%);
-   left: 0;
-   font-size: 20px;
-   text-align: center;
-}
-
 /* NAV HAM */
 .nav-ham>.line:nth-of-type(1) {
    width: 30px;

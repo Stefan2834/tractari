@@ -26,11 +26,28 @@
     font-weight: 300;
 }
 
-.reviewTitle {
+.reviewTitleFlex {
     width: 100%;
     font-size: 24px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:100px;
+    flex-direction: column;
+}
+
+.reviewTitleFlex h1 {
+    width: 1300px;
+    font-size: 56px;
+    font-weight: 600;
+}
+
+.reviewTitleFlex h2 {
+    width:1300px;
+    font-size:24px;
+    font-weight: 300;
 }
 
 .reviewContainer {

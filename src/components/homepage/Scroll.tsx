@@ -14,11 +14,11 @@ import styles from "../../css/modules/scroll.module.css"
 export default function Scroll() {
    const { screenWidth, clientsNumber } = useDefault();
    const containerRef = useRef<any>();
-   const [activateAnimation ,setActivateAnimation] = useState<boolean>(false);
+   const [activateAnimation, setActivateAnimation] = useState<boolean>(false);
 
    useEffect(() => {
       const handleScroll = () => {
-         if(window.scrollY >= 700) {
+         if (window.scrollY >= 700) {
             setActivateAnimation(true);
          }
       };
@@ -37,8 +37,12 @@ export default function Scroll() {
          ref={containerRef}
       >
          <div className={styles.scrollElement} >
-            <img src={truck.src} alt="truck" className={styles.scrollImg} style={{transform:`translate(${activateAnimation ? "100%" : "-100%"})`}} />
-            <div className={styles.scrollTextContainer} style={{transform:`translate(${activateAnimation ? "0px" : "-100%"})`}}>
+            <img src={truck.src} alt="truck" className={styles.scrollImg}
+               style={{ transform: `translate(${activateAnimation ? "calc(100vh + 55%)" : "calc(-100vh - 55%)"})` }}
+            />
+            <div className={styles.scrollTextContainer}
+               style={{ transform: `translate(${activateAnimation ? "0px" : "calc(-100vh - 55%)"})` }}
+            >
                <p className={styles.scrollText}>PESTE</p>
                <span
                   className="primary-color font-bold"

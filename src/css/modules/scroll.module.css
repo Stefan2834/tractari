@@ -17,19 +17,19 @@
     position: relative;
 }
 
-.scrollImg {
+.scrollElement .scrollImg {
     width: 1700px;
     height: 800px;
     left: 0;
     object-fit: cover;
     position: absolute;
     object-position: center;
-    transition: 1500ms ease;
+    transition: 3000ms ease-in;
 }
 .scrollTextContainer {
-    transition: 1000ms ease;
+    transition: 2000ms ease-in;
     z-index: 1;
-    top: 0;
+    top: 0; 
     position: absolute;
     left: 0;
     font-size: 20px;
@@ -40,8 +40,6 @@
     width: 100%;
     flex-direction: column;
 }
-
-
 
 .scrollText {
     font-size: 48px;

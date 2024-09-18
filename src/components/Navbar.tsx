@@ -49,7 +49,7 @@ export default function Navbar() {
                   transform: `translateX(${screenWidth < 900 && !isMobileNavigation ? "100%" : "0"}`,
                }}
             >
-               <Link href="/" className={`${styles.link}`}>
+               <Link href="/tarife" className={`${styles.link}`}>
                   Tarife
                </Link>
                <Link href="/galerie-foto" className={`${styles.link}`}>

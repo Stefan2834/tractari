@@ -37,8 +37,10 @@ export default function Gallery() {
             </div>
             <div className={styles.galleryDiv}>
                 <span className={styles.galleryDescription}>
-                    Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa că... <br />
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Ne pasă de clienții noștri, și apreciem o muncă de calitate, 
+                    așa că... Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Ut et massa mi. Aliquam in hendrerit urna.Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Ut et massa mi.
                 </span>
                 <div className={styles.galleryContainer}>
                     {galleryPhotos.map((image: any, index: number) => (

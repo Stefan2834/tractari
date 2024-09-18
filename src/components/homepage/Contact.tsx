@@ -24,7 +24,7 @@ export default function Contact() {
 
    return (
       <>
-         <div className={styles.container}>
+         <div className={styles.container} id="contact">
             <h2 className={styles.text}>
                Probleme pe drum? <br />
                Contactează-ne acum!

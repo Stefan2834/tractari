@@ -17,12 +17,14 @@ export default function Custom404() {
                 <div className={styles.photo}>
                     <span className={styles.errorCode}>404</span>
                     <span className={styles.description}>
-                        Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa că...<br />
+                        Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa că...
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </span>
                     <Link href="/">
                         <CustomButton>
-                            Click aici ca să te tractăm acasa
+                            <span className={styles.buttonText}>
+                                Haide să te tractăm acasă
+                            </span>
                         </CustomButton>
                     </Link>
                 </div>

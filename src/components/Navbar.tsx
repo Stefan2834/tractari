@@ -55,7 +55,7 @@ export default function Navbar() {
                <Link href="/galerie-foto" className={`${styles.link}`}>
                   Galerie foto
                </Link>
-               <Link href="/contact" className={styles.linkButton}>
+               <Link href="/#contact" className={styles.linkButton}>
                   <CustomButton
                      fontSize="20px"
                      padding={`${screenWidth > 900 ? "6px 18px" : "4px 12px"}`}

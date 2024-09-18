@@ -1,6 +1,6 @@
 .main {
     width: 100%;
-    height: 70vh;
+    height: 50vh;
     background-color: rgba(0, 0, 0, 0.6);
     background-image: url("../../assets/404.jpg");
     background-position: center;
@@ -13,15 +13,23 @@
 }
 
 .mainText {
-    font-family: "Montserrat", sans-serif;
-    font-size: 40px;
+    font-family: 'Montserrat';
+    font-weight: 900;
     text-align: center;
-    font-weight: 400;
+    font-style: normal;
+    font-size: 64px;
+    line-height: 78px;
+}
+
+.element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .photo {
-    width: calc(100% - 400px);
-    height: 800px;
+    width: 1000px;
+    height: 600px;
     background-image: url("../../assets/404-map.png");
     background-position: center;
     background-size: contain;
@@ -33,27 +41,37 @@
 }
 
 .errorCode {
-    font-size: 480px;
-    line-height: 480px;
+    font-size: 308px;
+    line-height: 308px;
     color: #373737;
     font-weight: 800;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 
 .description {
-    color: #241D1D;
     text-align: center;
-    font-weight: 300;
-    font-size: 28px;
     margin-bottom: 40px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #241D1D;
+    width:700px;
+    max-width: 100%;
 }
 
-.element {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.buttonText {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FCFBFA;
+    margin: 0 50px;
 }
-
 
 
 /*Media Queries */
@@ -77,9 +95,15 @@
 }
 
 @media screen and (max-width:700px) {
+    .mainText {
+        font-size: 32px;
+        line-height: 38px;
+    }
     .main {
+        height:30vh;
         background-image: url("../../assets/404-phone.jpg");
     }
+
     .errorCode {
         font-size: 200px;
         line-height: 200px;
@@ -98,5 +122,9 @@
 
     .description {
         font-size: 14px;
+        width:80%;
+    }
+    .buttonText {
+        margin:0 20px;
     }
 }

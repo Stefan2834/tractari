@@ -38,7 +38,7 @@
 .galleryContainer {
     columns: 3;
     gap: 15px;
-    width: 1400px;
+    width: 1380px;
     height: auto;
 }
 
@@ -57,4 +57,45 @@
     flex-direction: column;
     padding: 0 24px;
     color: black;
+}
+
+@media screen and (max-width:1400px) {
+    .galleryContainer {
+        width:100%;
+        max-width: 800px;
+        columns: 2;
+    }
+    .galleryDescription {
+        width:calc(100% - 100px);
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .galleryDescription {
+        width:calc(100% - 20px);
+        font-size:20px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .galleryText {
+        font-size:40px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .galleryContainer {
+        columns: 1;
+    }
+    .galleryDescription {
+        width:100%;
+        font-size:16px;
+        line-height: 20px;
+    }
+    .galleryText {
+        font-size:32px;
+        line-height: 32px;
+    }
 }

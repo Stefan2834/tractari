@@ -130,8 +130,22 @@
 }
 
 @media screen and (max-width:800px) {
+    .main {
+        background-image: url("../../assets/tarife-phone.jpg");
+    }
     .description {
         font-size:20px;
         line-height: 24px;
+    }
+    .mainText {
+        font-size:40px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .mainText {
+        font-size:32px;
+        line-height: 32px;
     }
 }

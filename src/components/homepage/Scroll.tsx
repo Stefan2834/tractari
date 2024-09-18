@@ -44,10 +44,10 @@ export default function Scroll() {
       >
          <div className={styles.scrollElement} >
             <img src={truck.src} alt="truck" className={styles.scrollImg}
-               style={{ transform: `translate(${activateAnimation ? "calc(100vh + 55%)" : "calc(-100vh - 55%)"})` }}
+               style={{ transform: `translate(${activateAnimation ? "calc(100vh + 60% + 100px)" : "calc(-100vh - 60% - 100px)"})` }}
             />
             <div className={styles.scrollTextContainer}
-               style={{ transform: `translate(${activateAnimation ? "0px" : "calc(-100vh - 55%)"})` }}
+               style={{ transform: `translate(${activateAnimation ? "0px" : "calc(-100vh - 60% - 100px)"})` }}
             >
                <p className={styles.scrollText}>PESTE</p>
                <span

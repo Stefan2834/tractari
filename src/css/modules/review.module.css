@@ -16,6 +16,7 @@
     font-weight: 300;
     line-height: 29px;
 }
+
 .reviewElement {
     width: 400px;
     height: auto;
@@ -26,7 +27,7 @@
     justify-content: flex-start;
     border-radius: 4px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-    margin: 0 25px;
+    margin: 25px;
     padding: 0 20px 80px 20px;
     flex-direction: column;
 }
@@ -65,11 +66,6 @@
 }
 
 
-
-
-
-
-
 .reviewContainer {
     width: 100%;
     display: flex;
@@ -79,6 +75,17 @@
 }
 
 
+@media screen and (max-width:1400px) {
+    .reviewTitleFlex h1 {
+        margin-top: -100px;
+        width: calc(100% - 100px);
+    }
+
+    .reviewTitleFlex h2 {
+        width: calc(100% - 100px);
+    }
+}
+
 @media screen and (max-width:1200px) {
     .reviewContainer {
         flex-wrap: wrap;
@@ -86,10 +93,27 @@
     }
 }
 
+@media screen and (max-width:800px) {
+    .reviewTitleFlex h1 {
+        font-size: 40px;
+        line-height: 48px;
+        width: calc(100% - 40px);
+    }
+    .reviewTitleFlex h2 {
+        width: calc(100% - 40px);
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+
 @media screen and (max-width:600px) {
     .reviewName {
-        margin-top: 8px;
-        margin-bottom: 16px;
+        margin-top: 68px;
+        margin-bottom: 0px;
+    }
+
+    .reviewElement {
+        padding: 0 16px 40px 16px;
     }
 
     .reviewTitle {

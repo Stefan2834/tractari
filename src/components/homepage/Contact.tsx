@@ -39,30 +39,30 @@ export default function Contact() {
                style={{ height: `${screenWidth > 1200 ? "600px" : "auto"}` }}
             >
                <div className={styles.contactFlex}>
-                  <div className={styles.containerFlex}>
-                     <Link href="/" className={styles.circle}>
+                  <Link href="/" className={styles.containerFlex}>
+                     <div className={styles.circle}>
                         <img className={styles.img} src={phoneImage.src} />
-                     </Link>
+                     </div>
                      <span className={styles.span}>+4 075 475 4215</span>
-                  </div>
-                  <div className={styles.containerFlex}>
-                     <Link href="/" className={styles.circle}>
+                  </Link>
+                  <Link href="/" className={styles.containerFlex}>
+                     <div className={styles.circle}>
                         <img className={styles.img} src={mailImage.src} />
-                     </Link>
+                     </div>
                      <span className={styles.span}>contact@kotasistenta.ro</span>
-                  </div>
-                  <div className={styles.containerFlex}>
-                     <Link href="/" className={styles.circle}>
+                  </Link>
+                  <Link href="/" className={styles.containerFlex}>
+                     <div className={styles.circle}>
                         <img className={styles.img} src={facebookImage.src} />
-                     </Link>
+                     </div>
                      <span className={styles.span}>kotasistenta</span>
-                  </div>
-                  <div className={styles.containerFlex}>
-                     <Link href="/" className={styles.circle}>
+                  </Link>
+                  <Link href="/" className={styles.containerFlex}>
+                     <div className={styles.circle}>
                         <img className={styles.img} src={whatsappImage.src} />
-                     </Link>
+                     </div>
                      <span className={styles.span}>Whatsapp</span>
-                  </div>
+                  </Link>
                </div>
                <div
                   className={styles.image}

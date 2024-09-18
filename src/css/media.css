@@ -1,6 +1,16 @@
 /* ----------Media queries---------- */
 
 /* Main page */
+@media screen and (max-width:1400px) {
+    .main-slider-content h1 {
+        width: calc(100% - 100px);
+        margin-top: 50px;
+    }
+
+    .main-slider-content p {
+        width: calc(100% - 100px);
+    }
+}
 
 @media screen and (max-width: 1200px) {
     .card-absolute-element {
@@ -22,6 +32,7 @@
         transition: 400ms ease;
         transform-origin: right;
     }
+
     .nav-ham {
         position: absolute;
         top: 34px;
@@ -33,6 +44,20 @@
         align-items: flex-end;
         justify-content: space-around;
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .main-slider-content h1 {
+        font-size: 40px;
+        line-height: 48px;
+        width: calc(100% - 40px);
+    }
+
+    .main-slider-content p {
+        width: calc(100% - 40px);
+        font-size: 16px;
+        line-height: 18px;
     }
 }
 

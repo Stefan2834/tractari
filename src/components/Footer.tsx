@@ -35,15 +35,15 @@ export default function Footer() {
                   fontSize={`${screenWidth > 600 ? "18px" : "14px"}`}
                   padding={`${screenWidth > 900 ? "14px 20px" : "8px 16px"}`}
                >
-                  <PhoneIcon />
-                  DISPONIBILI NON STOP, SUNĂ ACUM - 0712 345 678
+                  <PhoneIcon sx={{marginRight:"10px"}} />
+                  SUNĂ ACUM - 0712 345 678
                </CustomButton>
             </Link>
             <div className={styles.containerLink}>
-               <Link href="/" className={styles.link}>
-                  Cine suntem?
+               <Link href="/tarife" className={styles.link}>
+                  Tarife?
                </Link>
-               <Link href="/gallery" className={styles.link}>
+               <Link href="/galerie-foto" className={styles.link}>
                   Galerie foto
                </Link>
             </div>
@@ -68,6 +68,14 @@ export default function Footer() {
                      alt="Facebook"
                      className={`${screenWidth > 600 ? "h-9" : "h-6"} mx-3`}
                   />
+               </Link>
+            </div>
+            <div className={styles.anpcContainer}>
+               <Link href={"/"}>
+                  <img src="https://cityprintshop.ro/wp-content/uploads/sal-sol/sal.webp" width="201" height="50" alt="Soluționarea alternativă a litigiilor" />
+               </Link>
+               <Link href={"/"}>
+                  <img src="https://cityprintshop.ro/wp-content/uploads/sal-sol/sol.webp" width="201" height="50" alt="Soluționarea online a litigiilor" />
                </Link>
             </div>
          </div>

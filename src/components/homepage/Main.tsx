@@ -44,7 +44,9 @@ export default function Main() {
                      fontSize={`${screenWidth > 600 ? "20px" : "16px"}`}
                      padding={`${screenWidth > 600 ? "10px 20px" : "6px 12px"}`}
                   >
-                     DISPONIBILI NON STOP, SUNĂ ACUM - 0712 345 678
+                     <span>
+                        SUNĂ ACUM - 0712 345 678
+                     </span>
                   </CustomButton>
                </Link>
                <Link

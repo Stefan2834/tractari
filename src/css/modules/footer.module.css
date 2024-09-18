@@ -57,6 +57,17 @@
     font-size:18px;
 }
 
+.anpcContainer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.anpcContainer img {
+    margin:20px 10px;
+}
+
 
 @media screen and (max-width:1200px) {
     .footer {
@@ -84,5 +95,17 @@
 
     .bottomText {
         font-size:16px;
+    }
+
+    .containerMedia {
+        margin-bottom: 10px;
+    }
+
+    .containerMedia a {
+        width:40px;
+    }
+
+    .anpcContainer img {
+        margin:5px 10px;
     }
 }

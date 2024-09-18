@@ -22,10 +22,8 @@ export default function Home() {
             <p>
                Ne pasă de clienții noștri, și apreciem o muncă de calitate. Tractăm orice tip de
                autoturisme,
-               <br />
                chiar dacă sistemul de direcție este grav avariat. Sărim în ajutorul tău în cel mai
                scurt timp posibil,
-               <br />
                oriunde în țară și la orice oră. Nu ezita să ne contactezi dacă întâmpini probleme.
                <br />
             </p>

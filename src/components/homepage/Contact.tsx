@@ -5,9 +5,6 @@ import { useDefault } from "@/contexts/useDefault";
 //Images
 import map from "@/assets/map.png";
 
-//Components
-import CustomForm from "../custom/CustomForm";
-
 //Styles
 import styles from "../../css/modules/contact.module.css"
 
@@ -31,7 +28,6 @@ export default function Contact() {
             </h2>
             <p className={styles.paragraph}>
                Nu ezita să ne contactezi dacă ai probleme cu mașina sau dacă ai vreo
-               <br />
                curiozitate legată de noi. Răspundem la orice oră în cel mai scurt timp posibil.
             </p>
             <div

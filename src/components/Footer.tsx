@@ -83,8 +83,8 @@ export default function Footer() {
             <p className={styles.bottomText}>@2024 - All rights reserved</p>
             <p className={styles.bottomText}>
                Designed and Developed by {" "}
-               <Link href="/" className="underline">Iosif Ștefan</Link> &{" "}
-               <Link href="/" className="underline">Mareș Gabriel</Link>
+               <Link href="https://anpc.ro/ce-este-sal/" className="underline">Iosif Ștefan</Link> &{" "}
+               <Link href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO" className="underline">Mareș Gabriel</Link>
             </p>
          </div>
       </footer>

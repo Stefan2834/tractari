@@ -1,6 +1,7 @@
 // Utilities
 import React, { useEffect, useState } from "react";
 import { useDefault } from "@/contexts/useDefault";
+import { useRouter } from "next/router";
 
 // Components
 import Link from "next/link";
@@ -15,6 +16,8 @@ import styles from "../css/modules/navbar.module.css"
 export default function Navbar() {
    const [isMobileNavigation, setIsMobileNavigation] = useState<boolean>(false);
    const { screenWidth } = useDefault();
+
+   const router = useRouter();
 
    useEffect(() => {
       document.body.style.overflowY = isMobileNavigation ? "hidden" : "scroll";
@@ -55,7 +58,7 @@ export default function Navbar() {
                <Link href="/galerie-foto" className={`${styles.link}`}>
                   Galerie foto
                </Link>
-               <Link href="/#contact" className={styles.linkButton}>
+               <Link href={`${router.asPath}#contact`} className={styles.linkButton}>
                   <CustomButton
                      fontSize="20px"
                      padding={`${screenWidth > 900 ? "6px 18px" : "4px 12px"}`}

@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { useDefault } from "@/contexts/useDefault";
+import { useRouter } from "next/router";
 
 
 //Mui Components
@@ -23,6 +24,8 @@ import styles from "../css/modules/footer.module.css"
 
 export default function Footer() {
    const { screenWidth } = useDefault();
+
+   const router = useRouter();
 
    return (
       <footer className="bg-white">

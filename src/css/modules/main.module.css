@@ -83,7 +83,7 @@
     font-weight: 700;
     line-height: 30px;
     font-style: normal;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     opacity: 0.8;
     margin-top: 30px;
     display: flex;

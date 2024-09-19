@@ -14,7 +14,7 @@
 
 
 .mainText {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     text-align: center;
     font-style: normal;
@@ -24,7 +24,7 @@
 
 .description {
     width: 70%;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
@@ -57,7 +57,7 @@
 }
 
 .table tr:nth-child(1) {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
 }
 
@@ -69,7 +69,7 @@
     padding-left: 40px;
     text-align: left;
     background: #F5F5F5;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 22.5px;
     line-height: 27px;
@@ -78,7 +78,7 @@
 
 .table thead tr:nth-child(1) th:nth-child(1) {
     color: #241D1D;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 26px;
@@ -87,14 +87,14 @@
 
 .table thead tr:nth-child(1) td {
     background-color: #F9CB38;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     color: #FFFFFF;
 }
 
 .table td {
     background-color: #FFF3CE;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     color: #241D1D;
 }

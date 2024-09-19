@@ -62,7 +62,7 @@
 
 .span {
     font-weight: 300;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-size: 26px;
     line-height: 32px;

@@ -24,7 +24,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
    title: "Tractari",
    description: "Tractari auto alin cotoban srl",
-   authors: [
+   authors: [  
       { name: "Iosif Stefan Alexandru", url: "TODO: linkedin" },
       { name: "Mareș Gabriel", url: "https://www.linkedin.com/in/mares-gabriel/" },
    ],
@@ -88,6 +88,7 @@ export default function App({ Component, pageProps: pageProps }: AppProps) {
          <DefaultContextProvider>
             <div className={roboto.className}>
                <Head>
+                  <meta name="description" content="Firmă de tractări prahova" />
                   <title>Kot Asistență</title>
                </Head>
                <main className="bg-white">

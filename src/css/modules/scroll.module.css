@@ -2,9 +2,10 @@
     margin-top: 192px;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 1700px;
 }
 
 .scrollElement {
@@ -15,10 +16,10 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
+    overflow: visible;
 }
 
 .scrollElement .scrollImg {
-    /* overflow: visible; */
     width: 1700px;
     height: 800px;
     left: 0;

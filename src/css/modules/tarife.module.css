@@ -23,7 +23,8 @@
 }
 
 .description {
-    width: 70%;
+    max-width: 1400px;
+    width: calc(100% - 20px);
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -35,15 +36,16 @@
 }
 
 .tableContainer {
-    width:1200px;
+    width:1400px;
 }
 
 .table {
     border-spacing: 30px;
     color: black;
+    margin:-5px;
     border-spacing: 5px;
     border-collapse: inherit;
-    width: 1200px;
+    width: 1400px;
     height: 360px;
     font-size: 26px;
     line-height: 32px;
@@ -112,19 +114,10 @@
 }
 
 
-@media screen and (max-width:1400px) {
-    .description {
-        width:calc(100% - 100px);
-    }
-}
-
 @media screen and (max-width:1200px) {
     .tableContainer {
         width:100%;
         overflow-x: scroll;
-    }
-    .description {
-        width:calc(100% - 20px);
     }
 }
 

@@ -35,25 +35,25 @@ export default function Contact() {
                <div className={styles.contactFlex}>
                   <Link href="/" className={styles.containerFlex}>
                      <div className={styles.circle}>
-                        <Image className={styles.img} src={phoneImage} alt="Telefon" />
+                        <Image className={styles.img} src={phoneImage} alt="Logo telefon" />
                      </div>
                      <span className={styles.span}>+4 075 475 4215</span>
                   </Link>
                   <Link href="/" className={styles.containerFlex}>
                      <div className={styles.circle}>
-                        <Image className={styles.img} src={mailImage} alt="Gmail" />
+                        <Image className={styles.img} src={mailImage} alt="Logo email" />
                      </div>
                      <span className={styles.span}>contact@kotasistenta.ro</span>
                   </Link>
                   <Link href="/" className={styles.containerFlex}>
                      <div className={styles.circle}>
-                        <Image className={styles.img} src={facebookImage} alt="Facebook" />
+                        <Image className={styles.img} src={facebookImage} alt="Logo facebook" />
                      </div>
                      <span className={styles.span}>kotasistenta</span>
                   </Link>
                   <Link href="/" className={styles.containerFlex}>
                      <div className={styles.circle}>
-                        <Image className={styles.img} src={whatsappImage} alt="Whatsapp" />
+                        <Image className={styles.img} src={whatsappImage} alt="Logo whatsapp" />
                      </div>
                      <span className={styles.span}>Whatsapp</span>
                   </Link>

@@ -3,12 +3,7 @@
 /* Main page */
 @media screen and (max-width:1400px) {
     .main-slider-content h1 {
-        width: calc(100% - 100px);
         margin-top: 50px;
-    }
-
-    .main-slider-content p {
-        width: calc(100% - 100px);
     }
 }
 
@@ -51,11 +46,9 @@
     .main-slider-content h1 {
         font-size: 40px;
         line-height: 48px;
-        width: calc(100% - 40px);
     }
 
     .main-slider-content p {
-        width: calc(100% - 40px);
         font-size: 16px;
         line-height: 18px;
     }

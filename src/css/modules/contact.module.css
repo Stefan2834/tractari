@@ -83,7 +83,8 @@
 }
 
 .text {
-    width: 70%;
+    max-width: 1400px;
+    width:calc(100% - 20px);
     text-align: left;
     margin-top: 160px;
     font-weight: 700;
@@ -93,7 +94,8 @@
 }
 
 .paragraph {
-    width: 70%;
+    width: calc(100% - 20px);
+    max-width: 1400px;
     text-align: left;
     margin-top: 40px;
     font-weight: 300;
@@ -103,7 +105,8 @@
 }
 
 .form {
-    width: 70%;
+    max-width: 100%;
+    width:1400px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -120,14 +123,8 @@
 
 @media screen and (max-width:1400px) {
     .text {
-        width: calc(100% - 100px);
         margin-top: 50px;
     }
-
-    .paragraph {
-        width: calc(100% - 100px);
-    }
-
     .form {
         width: calc(100% - 100px);
     }
@@ -168,15 +165,12 @@
 }
 
 @media screen and (max-width:800px) {
-
     .text {
         font-size: 40px;
         line-height: 40px;
-        width: calc(100% - 40px);
     }
 
     .paragraph {
-        width: calc(100% - 40px);
         font-size: 16px;
         line-height: 20px;
     }

@@ -13,7 +13,7 @@ export default function CustomCard({ children, title, icon }: CardProps) {
         <div className="card-absolute-element">
             <div className="card-element">
                 <div className="card-img">
-                    <Image src={icon} alt="Card Icon" />
+                    <Image src={icon} alt="Icon card" />
                 </div>
                 <div>
                     <p className="card-title">

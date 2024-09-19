@@ -37,9 +37,9 @@ export default function Main() {
                   TRACTĂRI AUTO ȘI ASISTENȚĂ RUTIERĂ
                </p>
                <h1>KOT ASISTENȚĂ RUTIERĂ</h1>
-               <h3 className="font-second">
+               <h2 className="font-second">
                   Probleme pe drum? Sună-ne acum!
-               </h3>
+               </h2>
                <Link href="tel:+40730222643" className="mt-10">
                   <CustomButton
                      fontSize={`${screenWidth > 600 ? "20px" : "16px"}`}

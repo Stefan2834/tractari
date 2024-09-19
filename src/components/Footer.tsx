@@ -55,21 +55,21 @@ export default function Footer() {
                <Link href="/">
                   <Image
                      src={whatsapp}
-                     alt="Whatsapp"
+                     alt="Logo whatsapp"
                      className={`${screenWidth > 600 ? "h-9" : "h-6"} mx-3`}
                   />
                </Link>
                <Link href="/">
                   <Image
                      src={email}
-                     alt="Email"
+                     alt="Logo email"
                      className={`${screenWidth > 600 ? "h-9" : "h-6"} mx-3`}
                   />
                </Link>
                <Link href="/">
                   <Image
                      src={facebook}
-                     alt="Facebook"
+                     alt="Logo facebook"
                      className={`${screenWidth > 600 ? "h-9" : "h-6"} mx-3`}
                   />
                </Link>

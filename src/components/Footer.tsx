@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { useDefault } from "@/contexts/useDefault";
 import { useRouter } from "next/router";
+import Image from "next/image"
 
 
 //Mui Components
@@ -31,7 +32,7 @@ export default function Footer() {
       <footer className="bg-white">
          <div className={`${styles.footer} grad-footer`}>
             <Link href="/">
-               <img src={logo.src} alt="logo" className="w-64" />
+               <Image src={logo.src} alt="Logo" className="w-64" />
             </Link>
             <Link href="tel:+40730222643">
                <CustomButton
@@ -52,21 +53,21 @@ export default function Footer() {
             </div>
             <div className={styles.containerMedia}>
                <Link href="/">
-                  <img
+                  <Image
                      src={whatsapp.src}
                      alt="Whatsapp"
                      className={`${screenWidth > 600 ? "h-9" : "h-6"} mx-3`}
                   />
                </Link>
                <Link href="/">
-                  <img
+                  <Image
                      src={email.src}
                      alt="Email"
                      className={`${screenWidth > 600 ? "h-9" : "h-6"} mx-3`}
                   />
                </Link>
                <Link href="/">
-                  <img
+                  <Image
                      src={facebook.src}
                      alt="Facebook"
                      className={`${screenWidth > 600 ? "h-9" : "h-6"} mx-3`}
@@ -75,10 +76,10 @@ export default function Footer() {
             </div>
             <div className={styles.anpcContainer}>
                <Link href={"/"}>
-                  <img src="https://cityprintshop.ro/wp-content/uploads/sal-sol/sal.webp" width="201" height="50" alt="Soluționarea alternativă a litigiilor" />
+                  <Image src="https://cityprintshop.ro/wp-content/uploads/sal-sol/sal.webp" width="201" height="50" alt="Soluționarea alternativă a litigiilor" />
                </Link>
                <Link href={"/"}>
-                  <img src="https://cityprintshop.ro/wp-content/uploads/sal-sol/sol.webp" width="201" height="50" alt="Soluționarea online a litigiilor" />
+                  <Image src="https://cityprintshop.ro/wp-content/uploads/sal-sol/sol.webp" width="201" height="50" alt="Soluționarea online a litigiilor" />
                </Link>
             </div>
          </div>

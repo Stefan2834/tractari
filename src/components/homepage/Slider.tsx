@@ -1,10 +1,10 @@
 //Utilities
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image"
 import { useDefault } from "@/contexts/useDefault";
 
 //Components
-import { Button } from "@mui/material";
 import CustomButton from "../custom/CustomButton";
 
 //Carousel
@@ -61,7 +61,7 @@ export default function Slider() {
                   if (rotate === 0) {
                      return (
                         <div>
-                           <img src={img.src} alt="avatar" />
+                           <Image src={img.src} alt="Poză cu mașina de tractare" />
                         </div>
                      );
                   } else {
@@ -73,7 +73,7 @@ export default function Slider() {
                               filter: `brightness(${1 / Math.abs(rotate / 0.6)}`,
                            }}
                         >
-                           <img src={img.src} alt="avatar" />
+                           <Image src={img.src} alt="Poză cu mașina de tractare" />
                         </div>
                      );
                   }
@@ -90,7 +90,7 @@ export default function Slider() {
                      : setCurrentElement((c) => c - 1);
                }}
             >
-               <img src={leftArrow.src} alt="Left Arrow" className={styles.sliderLeft} />
+               <Image src={leftArrow.src} alt="Săgeată stânga" className={styles.sliderLeft} />
             </div>
             <div
                className={styles.sliderButton}
@@ -100,7 +100,7 @@ export default function Slider() {
                      : setCurrentElement(0)
                }
             >
-               <img src={rightArrow.src} alt="Right arrow" className={styles.sliderRight} />
+               <Image src={rightArrow.src} alt="Săgeată dreapta" className={styles.sliderRight} />
             </div>
          </div>
          <div className={styles.buttonMore}>

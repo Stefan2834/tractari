@@ -1,6 +1,7 @@
 //Utilities
 import React, { useRef, useEffect, useState } from "react";
 import { useDefault } from "@/contexts/useDefault";
+import Image from "next/image"
 
 //Images
 import truck from "@/assets/truck.png";
@@ -43,7 +44,7 @@ export default function Scroll() {
          ref={containerRef}
       >
          <div className={styles.scrollElement} >
-            <img src={truck.src} alt="truck" className={styles.scrollImg}
+            <Image src={truck.src} alt="Mașină de tractare" className={styles.scrollImg}
                style={{ transform: `translate(${activateAnimation ? "calc(100vh + 60% + 100px)" : "calc(-100vh - 60% - 100px)"})` }}
             />
             <div className={styles.scrollTextContainer}

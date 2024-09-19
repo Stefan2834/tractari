@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useDefault } from "@/contexts/useDefault";
 import { useRouter } from "next/router";
+import Image from "next/image"
 
 // Components
 import Link from "next/link";
@@ -35,7 +36,7 @@ export default function Navbar() {
             className={`${styles.container} grad`}
          >
             <Link href="/" className={styles.logo}>
-               <img src={logo.src} alt="logo" />
+               <Image src={logo.src} alt="Logo" />
             </Link>
             <div
                className="nav-ham"
@@ -70,7 +71,7 @@ export default function Navbar() {
                   <div className={styles.phoneNav}>
                      <div>
                         <Link href="/" className={styles.logo}>
-                           <img src={logo.src} alt="logo" />
+                           <Image src={logo.src} alt="Logo" />
                         </Link>
                      </div>
                      <div>

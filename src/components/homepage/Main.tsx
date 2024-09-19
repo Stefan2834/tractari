@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { useDefault } from "@/contexts/useDefault";
+import Image from "next/image"
 
 
 //Mui Components
@@ -62,7 +63,7 @@ export default function Main() {
                </Link>
                <Link href="/" className={styles.more}>
                   <p>Află mai multe</p>
-                  <img src={arrow.src} alt="Săgeată" />
+                  <Image src={arrow.src} alt="Săgeată jos" />
                </Link>
             </div>
          </div>

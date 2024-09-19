@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Image from "next/image"
+
 type CardProps = {
     children: string;
     title: string;
@@ -11,7 +13,7 @@ export default function CustomCard({ children, title, icon }: CardProps) {
         <div className="card-absolute-element">
             <div className="card-element">
                 <div className="card-img">
-                    <img src={icon} alt="lightning" />
+                    <Image src={icon} alt="Card Icon"  />
                 </div>
                 <div>
                     <p className="card-title">

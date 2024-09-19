@@ -1,5 +1,6 @@
 //Utilities
 import React from "react";
+import Image from "next/image"
 
 //Images
 import image1 from "@/assets/carousel/slider-1.webp";
@@ -44,7 +45,7 @@ export default function Gallery() {
                 </span>
                 <div className={styles.galleryContainer}>
                     {galleryPhotos.map((image: any, index: number) => (
-                        <img className={styles.galleryElement} key={index} src={image.src} />
+                        <Image className={styles.galleryElement} key={index} src={image.src} alt="Poză cu mașina de tractare" />
                     ))}
                 </div>
                 <Contact />

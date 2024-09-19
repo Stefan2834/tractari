@@ -44,7 +44,7 @@ export default function Scroll() {
          ref={containerRef}
       >
          <div className={styles.scrollElement} >
-            <Image src={truck.src} alt="Mașină de tractare" className={styles.scrollImg}
+            <Image src={truck} alt="Mașină de tractare" className={styles.scrollImg} 
                style={{ transform: `translate(${activateAnimation ? "calc(100vh + 60% + 100px)" : "calc(-100vh - 60% - 100px)"})` }}
             />
             <div className={styles.scrollTextContainer}

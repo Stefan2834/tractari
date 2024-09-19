@@ -18,7 +18,7 @@
 }
 
 .scrollElement .scrollImg {
-    overflow: visible;
+    /* overflow: visible; */
     width: 1700px;
     height: 800px;
     left: 0;

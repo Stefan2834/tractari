@@ -61,7 +61,7 @@ export default function Slider() {
                   if (rotate === 0) {
                      return (
                         <div>
-                           <Image src={img.src} alt="Poză cu mașina de tractare" />
+                           <Image src={img} alt="Poză cu mașina de tractare" />
                         </div>
                      );
                   } else {
@@ -73,7 +73,7 @@ export default function Slider() {
                               filter: `brightness(${1 / Math.abs(rotate / 0.6)}`,
                            }}
                         >
-                           <Image src={img.src} alt="Poză cu mașina de tractare" />
+                           <Image src={img} alt="Poză cu mașina de tractare" />
                         </div>
                      );
                   }
@@ -90,7 +90,7 @@ export default function Slider() {
                      : setCurrentElement((c) => c - 1);
                }}
             >
-               <Image src={leftArrow.src} alt="Săgeată stânga" className={styles.sliderLeft} />
+               <Image src={leftArrow} alt="Săgeată stânga" className={styles.sliderLeft} />
             </div>
             <div
                className={styles.sliderButton}
@@ -100,7 +100,7 @@ export default function Slider() {
                      : setCurrentElement(0)
                }
             >
-               <Image src={rightArrow.src} alt="Săgeată dreapta" className={styles.sliderRight} />
+               <Image src={rightArrow} alt="Săgeată dreapta" className={styles.sliderRight} />
             </div>
          </div>
          <div className={styles.buttonMore}>

@@ -32,7 +32,7 @@ export default function Footer() {
       <footer className="bg-white">
          <div className={`${styles.footer} grad-footer`}>
             <Link href="/">
-               <Image src={logo.src} alt="Logo" className="w-64" />
+               <Image src={logo} alt="Logo"  className="w-64" />
             </Link>
             <Link href="tel:+40730222643">
                <CustomButton
@@ -54,21 +54,21 @@ export default function Footer() {
             <div className={styles.containerMedia}>
                <Link href="/">
                   <Image
-                     src={whatsapp.src}
+                     src={whatsapp}
                      alt="Whatsapp"
                      className={`${screenWidth > 600 ? "h-9" : "h-6"} mx-3`}
                   />
                </Link>
                <Link href="/">
                   <Image
-                     src={email.src}
+                     src={email}
                      alt="Email"
                      className={`${screenWidth > 600 ? "h-9" : "h-6"} mx-3`}
                   />
                </Link>
                <Link href="/">
                   <Image
-                     src={facebook.src}
+                     src={facebook}
                      alt="Facebook"
                      className={`${screenWidth > 600 ? "h-9" : "h-6"} mx-3`}
                   />

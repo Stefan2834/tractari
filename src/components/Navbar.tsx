@@ -36,7 +36,7 @@ export default function Navbar() {
             className={`${styles.container} grad`}
          >
             <Link href="/" className={styles.logo}>
-               <Image src={logo.src} alt="Logo" />
+               <Image src={logo} alt="Logo" />
             </Link>
             <div
                className="nav-ham"
@@ -71,7 +71,7 @@ export default function Navbar() {
                   <div className={styles.phoneNav}>
                      <div>
                         <Link href="/" className={styles.logo}>
-                           <Image src={logo.src} alt="Logo" />
+                           <Image src={logo} alt="Logo" />
                         </Link>
                      </div>
                      <div>

@@ -35,25 +35,25 @@ export default function Contact() {
                <div className={styles.contactFlex}>
                   <Link href="/" className={styles.containerFlex}>
                      <div className={styles.circle}>
-                        <Image className={styles.img} src={phoneImage.src} alt="Telefon" />
+                        <Image className={styles.img} src={phoneImage} alt="Telefon" />
                      </div>
                      <span className={styles.span}>+4 075 475 4215</span>
                   </Link>
                   <Link href="/" className={styles.containerFlex}>
                      <div className={styles.circle}>
-                        <Image className={styles.img} src={mailImage.src} alt="Gmail" />
+                        <Image className={styles.img} src={mailImage} alt="Gmail" />
                      </div>
                      <span className={styles.span}>contact@kotasistenta.ro</span>
                   </Link>
                   <Link href="/" className={styles.containerFlex}>
                      <div className={styles.circle}>
-                        <Image className={styles.img} src={facebookImage.src} alt="Facebook" />
+                        <Image className={styles.img} src={facebookImage} alt="Facebook" />
                      </div>
                      <span className={styles.span}>kotasistenta</span>
                   </Link>
                   <Link href="/" className={styles.containerFlex}>
                      <div className={styles.circle}>
-                        <Image className={styles.img} src={whatsappImage.src} alt="Whatsapp" />
+                        <Image className={styles.img} src={whatsappImage} alt="Whatsapp" />
                      </div>
                      <span className={styles.span}>Whatsapp</span>
                   </Link>
@@ -62,7 +62,7 @@ export default function Contact() {
                   className={styles.image}
                   style={{ height: `${screenWidth > 1200 ? "500px" : "auto"}` }}
                >
-                  <Image src={map.src} alt="Mapă" className="w-full h-full object-contain" />
+                  <Image src={map} alt="Mapă" className="w-full h-full object-contain" />
                </div>
             </div >
          </div>

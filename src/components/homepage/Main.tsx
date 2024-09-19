@@ -63,25 +63,25 @@ export default function Main() {
                </Link>
                <Link href="/" className={styles.more}>
                   <p>Află mai multe</p>
-                  <Image src={arrow.src} alt="Săgeată jos" />
+                  <Image src={arrow} alt="Săgeată jos" />
                </Link>
             </div>
          </div>
          <div className={styles.cardContainer}>
             <CustomCard
-               icon={lightning.src}
+               icon={lightning}
                title="Simplu și rapid"
             >
                Sărim în ajutorul tău în cel mai scurt timp posibil. Nu te îngrijora, vom fi acolo cât mai rapid.
             </CustomCard>
             <CustomCard
-               icon={hours24.src}
+               icon={hours24}
                title="Oriunde și oricând"
             >
                Venim oriunde în țară, la orice oră din zi și din noapte. Nu ezita să ne contactezi.
             </CustomCard>
             <CustomCard
-               icon={checked.src}
+               icon={checked}
                title="Servicii calitative"
             >
                Oferim servicii de calitate superioară. Nu contează cât de avariată este mașina, noi o vom tracta.

@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 
 type CardProps = {
     children: string;
     title: string;
-    icon: string;
+    icon: StaticImageData;
 }
 
 export default function CustomCard({ children, title, icon }: CardProps) {
@@ -13,7 +13,7 @@ export default function CustomCard({ children, title, icon }: CardProps) {
         <div className="card-absolute-element">
             <div className="card-element">
                 <div className="card-img">
-                    <Image src={icon} alt="Card Icon"  />
+                    <Image src={icon} alt="Card Icon" />
                 </div>
                 <div>
                     <p className="card-title">

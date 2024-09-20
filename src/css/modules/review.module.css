@@ -32,7 +32,7 @@
     position: relative;
     justify-content: flex-start;
     border-radius: 4px;
-    box-shadow: 2px 4px 4px  rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 2px 3px  rgba(0, 0, 0, 0.2);
     margin: 25px 0;
     padding: 0 38px 0px 38px;
     flex-direction: column;

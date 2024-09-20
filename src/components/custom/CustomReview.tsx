@@ -16,7 +16,7 @@ import styles from "../../css/modules/review.module.css"
 
 //Images 
 import star from "../../assets/icons/star.svg"
-// import emptyStar from "../../assets/icons/star.svg"
+import emptyStar from "../../assets/icons/empty-star.svg"
 
 export default function CustomReview({ children, avatar, name, value }: CustomReviewProps) {
 
@@ -41,9 +41,9 @@ export default function CustomReview({ children, avatar, name, value }: CustomRe
                 {Array.from({ length: value }).map((_, index) => (
                     <Image alt="Stea" src={star} key={index} />
                 ))}
-                {/* {Array.from({ length: 5 - value }).map((_, index) => (
+                {Array.from({ length: 5 - value }).map((_, index) => (
                     <Image alt="Stea" src={emptyStar} key={index} />
-                ))} */}
+                ))}
             </div>
             <p
                 className={styles.reviewDescription}

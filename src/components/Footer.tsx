@@ -4,10 +4,6 @@ import Link from "next/link";
 import { useDefault } from "@/contexts/useDefault";
 import Image from "next/image"
 
-
-//Mui Components
-import PhoneIcon from "@mui/icons-material/Phone";
-
 //Components
 import CustomButton from "./custom/CustomButton";
 
@@ -17,6 +13,7 @@ import email from "../assets/icons/email.webp";
 import whatsapp from "../assets/icons/whatsapp.webp";
 import facebook from "../assets/icons/facebook.webp";
 import logo from "../assets/logo.png";
+import phone from "../assets/icons/phone.svg"
 
 //Style
 import styles from "../css/modules/footer.module.css"
@@ -36,10 +33,12 @@ export default function Footer() {
                   fontSize={`${screenWidth > 600 ? "18px" : "14px"}`}
                   padding={`${screenWidth > 900 ? "14px 20px" : "8px 16px"}`}
                >
-                  <PhoneIcon sx={{ marginRight: "10px" }} />
-                  <span>
-                     DISPONIBILI NON STOP, SUNĂ ACUM - {data.phone}
-                  </span>
+                  <div className={styles.buttonFlex}>
+                     <Image alt="Telefon" src={phone} />
+                     <span>
+                        DISPONIBILI NON STOP, SUNĂ ACUM - {data.phone}
+                     </span>
+                  </div>
                </CustomButton>
             </Link>
             <div className={styles.containerLink}>

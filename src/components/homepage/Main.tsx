@@ -15,6 +15,7 @@ import lightning from "@/assets/icons/lightning.webp";
 import hours24 from "@/assets/icons/24.webp";
 import checked from "@/assets/icons/checked.webp";
 import arrow from "@/assets/icons/arrow.webp"
+import phone from "@/assets/icons/phone.svg"
 
 
 //Custom Components
@@ -45,9 +46,12 @@ export default function Main() {
                      fontSize={`${screenWidth > 600 ? "20px" : "16px"}`}
                      padding={`${screenWidth > 600 ? "10px 20px" : "6px 12px"}`}
                   >
-                     <span>
-                        DISPONIBILI ORICAND, SUNĂ ACUM - {data.phone}
-                     </span>
+                     <div className={styles.buttonFlex}>
+                        <Image alt="Telefon" src={phone} />
+                        <span>
+                           DISPONIBILI ORICAND, SUNĂ ACUM - {data.phone}
+                        </span>
+                     </div>
                   </CustomButton>
                </Link>
                <Link

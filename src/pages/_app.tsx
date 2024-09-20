@@ -14,7 +14,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { AppProps } from "next/app";
 import { DefaultContextProvider } from "../contexts/useDefault";
-import { ThemeProvider } from '@mui/material/styles';
+
 
 const montserrat = Montserrat({
    weight: ["100", "300", "400", "500", "700", "900"],
@@ -84,7 +84,6 @@ const theme = createTheme({
 
 export default function App({ Component, pageProps: pageProps }: AppProps) {
    return (
-      <ThemeProvider theme={theme}>
          <DefaultContextProvider>
             <div className={montserrat.className}>
                <Head>
@@ -100,6 +99,5 @@ export default function App({ Component, pageProps: pageProps }: AppProps) {
                <SpeedInsights />
             </div>
          </DefaultContextProvider>
-      </ThemeProvider>
    );
 }

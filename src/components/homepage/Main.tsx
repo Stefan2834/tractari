@@ -40,12 +40,12 @@ export default function Main() {
                <h2>
                   Probleme pe drum? Sună-ne acum!
                </h2>
-               <Link href={`tel:+4${data.phoneLink}`} className="mt-10">
+               <Link href={`tel:+4${data.phoneLink}`} className={styles.buttonFlex}>
                   <CustomButton
                      fontSize={`${screenWidth > 600 ? "20px" : "16px"}`}
                      padding={`${screenWidth > 600 ? "10px 20px" : "6px 12px"}`}
                   >
-                     <div className={styles.buttonFlex}>
+                     <div>
                         <Image alt="Telefon" src={phone} />
                         <span>
                            DISPONIBILI ORICAND, SUNĂ ACUM - {data.phone}

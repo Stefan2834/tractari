@@ -54,9 +54,9 @@
 
 .flex h1 {
     margin-top: 20px;
-    font-size: 120px;
+    font-size: 100px;
     font-weight: 700;
-    line-height: 110px;
+    line-height: 90px;
 }
 
 .flex h2 {
@@ -91,28 +91,6 @@
 
 .linkButton:hover {
     text-decoration: underline;
-}
-
-.more {
-    line-height: 20px;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 30px;
-    font-style: normal;
-    opacity: 0.8;
-    margin-top: 30px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.more img {
-    transform: rotate(-90deg);
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    object-position: center;
 }
 
 

@@ -14,7 +14,6 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import lightning from "@/assets/icons/lightning.webp";
 import hours24 from "@/assets/icons/24.webp";
 import checked from "@/assets/icons/checked.webp";
-import arrow from "@/assets/icons/arrow.webp"
 import phone from "@/assets/icons/phone.svg"
 
 
@@ -64,10 +63,6 @@ export default function Main() {
                   * sau lasă-ne un mesaj pe whatsapp
                   <ArrowRightAltIcon />
                   <WhatsAppIcon />
-               </Link>
-               <Link href="/" className={styles.more}>
-                  <p>Află mai multe</p>
-                  <Image src={arrow} alt="Săgeată jos" />
                </Link>
             </div>
          </div>

@@ -76,13 +76,13 @@ export default function Navbar() {
                   transform: `translateX(${screenWidth < 900 && !isMobileNavigation ? "100%" : "0"}`,
                }}
             >
-               <Link href={data.tarifePage} className={`${styles.link}`}>
+               <Link onClick={() => setIsMobileNavigation(false)} href={data.tarifePage} className={`${styles.link}`}>
                   Tarife
                </Link>
-               <Link href={data.galleryPage} className={`${styles.link}`}>
+               <Link onClick={() => setIsMobileNavigation(false)} href={data.galleryPage} className={`${styles.link}`}>
                   Galerie foto
                </Link>
-               <Link href={`${router.pathname}#contact`} className={styles.linkButton}>
+               <Link onClick={() => setIsMobileNavigation(false)} href={`${router.pathname}#contact`} className={styles.linkButton}>
                   <CustomButton
                      fontSize="20px"
                      padding={`${screenWidth > 900 ? "6px 18px" : "4px 12px"}`}

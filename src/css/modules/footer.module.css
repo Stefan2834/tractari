@@ -9,11 +9,16 @@
     height: 500px;
 }
 
+.footer a:nth-child(2) {
+    margin:0 5px;
+}
+
 .buttonFlex {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .buttonFlex img {
     margin-right: 10px;
 }

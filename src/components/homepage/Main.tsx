@@ -48,7 +48,7 @@ export default function Main() {
                      <div>
                         <Image alt="Telefon" src={phone} />
                         <span>
-                           DISPONIBILI ORICAND, SUNĂ ACUM - {data.phone}
+                           {screenWidth > 600 && "DISPONIBILI ORICAND"}, SUNĂ ACUM - {data.phone}
                         </span>
                      </div>
                   </CustomButton>

@@ -36,7 +36,7 @@ export default function Footer() {
                   <div className={styles.buttonFlex}>
                      <Image alt="Telefon" src={phone} />
                      <span>
-                        DISPONIBILI NON STOP, SUNĂ ACUM - {data.phone}
+                        {screenWidth > 600 && "DISPONIBILI NON STOP"}, SUNĂ ACUM - {data.phone}
                      </span>
                   </div>
                </CustomButton>

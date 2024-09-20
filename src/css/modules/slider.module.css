@@ -2,7 +2,7 @@
     margin-top: 64px;
     width: 100vw;
     position: relative;
-    height:900px;
+    height: 900px;
 }
 
 .containerClipPath {
@@ -33,13 +33,6 @@
     overflow: hidden;
 }
 
-.buttonMore h1 {   
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 37px;
-    color: #FCFBFA;
-}
-
 .sliderInactive {
     scale: 0.8;
 }
@@ -53,11 +46,21 @@
     border-radius: 4px;
 }
 
+.buttonContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -200px;
+    position: relative;
+    z-index: 10;
+    color: white;
+}
+
 .sliderButton {
-    width: 64px;
-    height: 64px;
-    margin-left: 16px;
-    margin-right: 16px;
+    width: 96px;
+    height: 96px;
+    margin: 0 8px;
     border-radius: 9999px;
     display: flex;
     align-items: center;
@@ -68,27 +71,15 @@
 }
 
 .sliderLeft {
-    height: 28px;
+    height: 45px;
     width: auto
 }
 
 .sliderRight {
-    height: 28px;
+    height: 45px;
     width: auto;
     transform: rotate(180deg);
     position: relative;
-}
-
-
-.buttonContainer {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -164px;
-    position: relative;
-    z-index: 10;
-    color: white;
 }
 
 .buttonMore {
@@ -99,6 +90,14 @@
     justify-content: center;
 }
 
+.buttonMore h1 {
+    font-weight: 600;
+    font-size: 28px;
+    color: #FCFBFA;
+    margin:4px 0;
+}
+
+
 
 
 /* Media Queries */
@@ -106,7 +105,7 @@
 
 @media screen and (max-width:1000px) {
     .buttonMore h1 {
-        font-size:24px;
+        font-size: 24px;
         line-height: 26px;
     }
 }
@@ -114,11 +113,11 @@
 @media screen and (max-width:600px) {
     .containerMap div {
         scale: 0.8;
-        top:-20%;
+        top: -20%;
     }
 
     .container {
-        height:700px;
+        height: 700px;
     }
 
     .sliderInactive {
@@ -126,7 +125,7 @@
     }
 
     .buttonMore h1 {
-        font-size:20px;
+        font-size: 20px;
         line-height: 24px;
         font-weight: 600;
     }

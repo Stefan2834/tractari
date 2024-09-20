@@ -2,7 +2,6 @@
 import React from "react";
 import Link from "next/link";
 import { useDefault } from "@/contexts/useDefault";
-import { useRouter } from "next/router";
 import Image from "next/image"
 
 
@@ -30,15 +29,17 @@ export default function Footer() {
       <footer className="bg-white">
          <div className={`${styles.footer} grad-footer`}>
             <Link href="/">
-               <Image src={logo} alt="Logo"  className="w-64" />
+               <Image src={logo} alt="Logo" className="w-64" />
             </Link>
             <Link href={`tel:+4${data.phoneLink}`}>
                <CustomButton
                   fontSize={`${screenWidth > 600 ? "18px" : "14px"}`}
                   padding={`${screenWidth > 900 ? "14px 20px" : "8px 16px"}`}
                >
-                  <PhoneIcon sx={{marginRight:"10px"}} />
-                  SUNĂ ACUM - {data.phone}
+                  <PhoneIcon sx={{ marginRight: "10px" }} />
+                  <span>
+                     DISPONIBILI NON STOP, SUNĂ ACUM - {data.phone}
+                  </span>
                </CustomButton>
             </Link>
             <div className={styles.containerLink}>

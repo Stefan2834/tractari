@@ -3,9 +3,6 @@ import React from 'react'
 import { useDefault } from '@/contexts/useDefault'
 import Image from 'next/image';
 
-//Mui Components
-import { Rating } from "@mui/material";
-
 //Types
 type CustomReviewProps = {
     children: React.ReactNode,
@@ -17,6 +14,10 @@ type CustomReviewProps = {
 //Style
 import styles from "../../css/modules/review.module.css"
 
+//Images 
+import star from "../../assets/icons/star.svg"
+// import emptyStar from "../../assets/icons/star.svg"
+
 export default function CustomReview({ children, avatar, name, value }: CustomReviewProps) {
 
     const { screenWidth } = useDefault()
@@ -27,9 +28,6 @@ export default function CustomReview({ children, avatar, name, value }: CustomRe
                 alt="Avatar"
                 src={avatar}
                 width={90} height={90}
-                style={{
-                    scale: `${screenWidth > 600 ? "1" : "0.8"}`,
-                }}
             />
             <p
                 className={styles.reviewName}
@@ -39,17 +37,14 @@ export default function CustomReview({ children, avatar, name, value }: CustomRe
             >
                 {name}
             </p>
-            <Rating
-                name="half-rating-read"
-                defaultValue={value}
-                precision={0.5}
-                readOnly
-                size="large"
-                sx={{
-                    marginTop:"8px",
-                    color: "#E3B626"
-                }}
-            />
+            <div className={styles.starContainer}>
+                {Array.from({ length: value }).map((_, index) => (
+                    <Image alt="Stea" src={star} key={index} />
+                ))}
+                {/* {Array.from({ length: 5 - value }).map((_, index) => (
+                    <Image alt="Stea" src={emptyStar} key={index} />
+                ))} */}
+            </div>
             <p
                 className={styles.reviewDescription}
                 style={{

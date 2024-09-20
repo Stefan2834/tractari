@@ -112,7 +112,7 @@
     justify-content: space-around;
     width: 1400px;
     height: auto;
-    top: calc(100vh - 100px);
+    top: calc(100vh - 50px);
     left: 50%;
     transform: translate(-50%);
     position: absolute;
@@ -132,7 +132,7 @@
     .cardContainer {
         flex-direction: column;
         height: 800px;
-        margin-top: -150px;
+        margin-top: -100px;
         justify-content: space-around;
         position: relative;
         top: 0;
@@ -223,7 +223,7 @@
 
 .cardElement {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-start;
 }
 
@@ -254,14 +254,17 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .card-absolute-element {
+    .cardAbsoluteElement {
         height: auto;
+    }
+    .cardContainer {
+        align-items: center;
     }
 }
 
 
 @media screen and (max-width: 600px) {
-    .card-absolute-element {
+    .cardAbsoluteElement {
         padding: 20px 30px;
         margin: 0 30px;
     }

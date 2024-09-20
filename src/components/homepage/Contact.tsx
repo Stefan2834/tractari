@@ -22,7 +22,7 @@ export default function Contact() {
          <div className={styles.container} id="contact">
             <h2 className="title">
                Probleme pe drum? <br />
-               Contactează-ne acum!
+               Sună-ne acum!
             </h2>
             <p className="description">
                Nu ezita să ne contactezi dacă ai probleme cu mașina sau dacă ai vreo

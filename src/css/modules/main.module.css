@@ -68,7 +68,7 @@
 
 .buttonFlex {
     margin-top: 40px;
-    margin-right:18px;
+    margin-right:36px;
 }
 
 .buttonFlex div {
@@ -177,10 +177,6 @@
 }
 
 @media screen and (max-width:600px) {
-    .flex {
-        transform: translateY(-70px);
-    }
-
     .flex p {
         margin-bottom: 8px;
         font-size: 16px;

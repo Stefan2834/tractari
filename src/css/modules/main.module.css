@@ -45,18 +45,18 @@
     flex-direction: column;
 }
 
-.flex > p {
+.flex>p {
     margin-bottom: 20px;
     font-weight: 600;
     font-size: 20px;
-    opacity: 0.8    ;
+    opacity: 0.8;
 }
 
 .flex h1 {
     margin-top: 20px;
     font-size: 120px;
     font-weight: 700;
-    line-height: 120px;
+    line-height: 110px;
 }
 
 .flex h2 {
@@ -64,6 +64,12 @@
     font-weight: 400;
     line-height: 29px;
     opacity: 0.8;
+}
+
+.flex span {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .linkButton {
@@ -83,7 +89,6 @@
     font-weight: 700;
     line-height: 30px;
     font-style: normal;
-    font-family: 'Montserrat', sans-serif;
     opacity: 0.8;
     margin-top: 30px;
     display: flex;
@@ -95,7 +100,7 @@
 .more img {
     transform: rotate(-90deg);
     width: 30px;
-    height:30px;
+    height: 30px;
     object-fit: contain;
     object-position: center;
 }
@@ -103,7 +108,7 @@
 
 .cardContainer {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
     width: 1400px;
     height: auto;
@@ -112,6 +117,7 @@
     transform: translate(-50%);
     position: absolute;
 }
+
 
 
 /* Media Queries */
@@ -136,9 +142,10 @@
 
 @media screen and (max-width: 1000px) {
     .flex h1 {
-        font-size:80px;
+        font-size: 80px;
         line-height: 80px;
     }
+
     .element {
         margin: 0 18px;
         width: 100%;
@@ -154,7 +161,7 @@
 
 @media screen and (max-width: 700px) {
     .flex h1 {
-        font-size:60px;
+        font-size: 60px;
         line-height: 60px;
     }
 }
@@ -188,9 +195,74 @@
     }
 
     .flex span {
-        font-size:16px;
+        font-size: 16px;
         line-height: 16px;
         text-align: left;
         width: 100%;
+    }
+}
+
+
+
+/* Card Element */
+
+
+.cardAbsoluteElement {
+    width: auto;
+    max-width: 400px;
+    height: 100%;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 30px 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cardElement {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.cardAbsoluteElement img {
+    height: 40px;
+    margin-right:12px;
+    width: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+.cardAbsoluteElement h1 {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    margin-top: 12px;
+    color: black;
+    color: #241D1D;
+    letter-spacing: -0.2px;
+}
+
+.cardAbsoluteElement p {
+    margin: 24px 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #241D1D;
+}
+
+@media screen and (max-width: 1200px) {
+    .card-absolute-element {
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .card-absolute-element {
+        padding: 20px 30px;
+        margin: 0 30px;
     }
 }

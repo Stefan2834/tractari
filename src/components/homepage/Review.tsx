@@ -16,8 +16,8 @@ export default function Review() {
    return (
       <>
          <div className={styles.reviewTitleFlex}>
-            <h1>Ce spun clientii nostri?</h1>
-            <h2>Ne pasă de clienții noștri, și apreciem o muncă de calitate,
+            <h1 className="title">Ce spun clientii nostri?</h1>
+            <h2 className="description">Ne pasă de clienții noștri, și apreciem o muncă de calitate,
                așa că... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
                Aliquam in hendrerit urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
             </h2>

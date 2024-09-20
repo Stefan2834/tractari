@@ -13,7 +13,6 @@
 }
 
 .galleryText {
-    font-family: 'Montserrat', sans-serif;
     font-size: 64px;
     font-weight: 800;
     line-height: 78px;
@@ -23,7 +22,6 @@
 .galleryDescription {
     color: #241D1D;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     margin: 100px 0;
     width: 70%;

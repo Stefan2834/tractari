@@ -15,8 +15,8 @@ import logo from "../assets/logo.png";
 import styles from "../css/modules/navbar.module.css"
 
 export default function Navbar() {
+   const { screenWidth, data } = useDefault();
    const [isMobileNavigation, setIsMobileNavigation] = useState<boolean>(false);
-   const { screenWidth } = useDefault();
    const [isScroll, setIsScroll] = useState<boolean>(false);
 
    const router = useRouter();
@@ -56,16 +56,13 @@ export default function Navbar() {
    return (
       <>
          <div
-            className={`${styles.container} grad`}
-            style={{
-               backgroundColor: `${isScroll ? "red" : "blue"}`,
-            }}
+            className={isScroll ? styles.containerScrolled : styles.container}
          >
             <Link href="/" className={styles.logo}>
                <Image src={logo} alt="Logo" />
             </Link>
             <div
-               className="nav-ham"
+               className={styles.hamburger}
                onClick={() => setIsMobileNavigation((prevState) => !prevState)}
                data-is-mobile-navigation={isMobileNavigation ? "true" : "false"}
             >
@@ -79,10 +76,10 @@ export default function Navbar() {
                   transform: `translateX(${screenWidth < 900 && !isMobileNavigation ? "100%" : "0"}`,
                }}
             >
-               <Link href="/tarife" className={`${styles.link}`}>
+               <Link href={data.tarifePage} className={`${styles.link}`}>
                   Tarife
                </Link>
-               <Link href="/galerie-foto" className={`${styles.link}`}>
+               <Link href={data.galleryPage} className={`${styles.link}`}>
                   Galerie foto
                </Link>
                <Link href={`${router.asPath}#contact`} className={styles.linkButton}>
@@ -90,7 +87,9 @@ export default function Navbar() {
                      fontSize="20px"
                      padding={`${screenWidth > 900 ? "6px 18px" : "4px 12px"}`}
                   >
-                     Contacteaza-ne
+                     <span>
+                        Contacteaza-ne!
+                     </span>
                   </CustomButton>
                </Link>
                {screenWidth < 900 && (
@@ -110,7 +109,7 @@ export default function Navbar() {
          {screenWidth < 900 && (
             <div
                onClick={() => setIsMobileNavigation(false)}
-               className={styles.hamburger}
+               className={styles.backgroundContainer}
                style={{
                   transition: "400ms ease",
                   visibility: `${isMobileNavigation ? "visible" : "hidden"}`,

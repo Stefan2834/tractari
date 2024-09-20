@@ -7,13 +7,12 @@ import Image from "next/image"
 import truck from "@/assets/truck.png";
 
 //Style
-
 import styles from "../../css/modules/scroll.module.css"
 
 
 
 export default function Scroll() {
-   const { screenWidth, clientsNumber } = useDefault();
+   const { screenWidth, data } = useDefault();
    const containerRef = useRef<any>();
    const [activateAnimation, setActivateAnimation] = useState<boolean>(false);
 
@@ -58,9 +57,9 @@ export default function Scroll() {
                      lineHeight: "1.1",
                   }}
                >
-                  {clientsNumber}
+                  {data.clientsNumber}
                </span>
-               <p className={styles.scrollText}>clienți mulțumiți</p>
+               <p className={styles.scrollText}>de clienți mulțumiți</p>
             </div>
          </div>
       </div>

@@ -15,11 +15,11 @@ export default function Home() {
          <Scroll />
          <Review />
          <div className="main-slider-content">
-            <h1>
+            <h1 className="title">
                Nu suntem unica firmă de tractaj
                <br /> 24/7 din România, însă...
             </h1>
-            <p>
+            <p className="description">
                Ne pasă de clienții noștri, și apreciem o muncă de calitate. Tractăm orice tip de
                autoturisme,
                chiar dacă sistemul de direcție este grav avariat. Sărim în ajutorul tău în cel mai

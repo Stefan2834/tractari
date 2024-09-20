@@ -1,6 +1,9 @@
+//Utilities
 import React from 'react'
-
 import Image, { StaticImageData } from "next/image"
+
+//Style
+import styles from "../../css/modules/main.module.css"
 
 type CardProps = {
     children: string;
@@ -10,19 +13,17 @@ type CardProps = {
 
 export default function CustomCard({ children, title, icon }: CardProps) {
     return (
-        <div className="card-absolute-element">
-            <div className="card-element">
-                <div className="card-img">
-                    <Image src={icon} alt="Icon card" />
-                </div>
+        <div className={styles.cardAbsoluteElement}>
+            <div className={styles.cardElement}>
+                <Image src={icon} alt="Icon card" />
                 <div>
-                    <p className="card-title">
+                    <h1>
                         {title}
-                    </p>
+                    </h1>
                     <div style={{ height: "1px", marginTop: "4px", width: "100%", backgroundColor: "#9ca3af" }} />
                 </div>
             </div>
-            <p className="card-text">
+            <p>
                 {children}
             </p>
         </div>

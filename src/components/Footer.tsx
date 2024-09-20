@@ -24,9 +24,7 @@ import styles from "../css/modules/footer.module.css"
 
 
 export default function Footer() {
-   const { screenWidth } = useDefault();
-
-   const router = useRouter();
+   const { screenWidth, data } = useDefault();
 
    return (
       <footer className="bg-white">
@@ -34,39 +32,39 @@ export default function Footer() {
             <Link href="/">
                <Image src={logo} alt="Logo"  className="w-64" />
             </Link>
-            <Link href="tel:+40730222643">
+            <Link href={`tel:+4${data.phoneLink}`}>
                <CustomButton
                   fontSize={`${screenWidth > 600 ? "18px" : "14px"}`}
                   padding={`${screenWidth > 900 ? "14px 20px" : "8px 16px"}`}
                >
                   <PhoneIcon sx={{marginRight:"10px"}} />
-                  SUNĂ ACUM - 0712 345 678
+                  SUNĂ ACUM - {data.phone}
                </CustomButton>
             </Link>
             <div className={styles.containerLink}>
-               <Link href="/tarife" className={styles.link}>
+               <Link href={data.tarifePage} className={styles.link}>
                   Tarife?
                </Link>
-               <Link href="/galerie-foto" className={styles.link}>
+               <Link href={data.galleryPage} className={styles.link}>
                   Galerie foto
                </Link>
             </div>
             <div className={styles.containerMedia}>
-               <Link href="/">
+               <Link href={`https://wa.me/+4${data.phoneLink}`}>
                   <Image
                      src={whatsapp}
                      alt="Logo whatsapp"
                      className={`${screenWidth > 600 ? "h-9" : "h-6"} mx-3`}
                   />
                </Link>
-               <Link href="/">
+               <Link href={data.emailLink}>
                   <Image
                      src={email}
                      alt="Logo email"
                      className={`${screenWidth > 600 ? "h-9" : "h-6"} mx-3`}
                   />
                </Link>
-               <Link href="/">
+               <Link href={data.facebookLink}>
                   <Image
                      src={facebook}
                      alt="Logo facebook"
@@ -75,10 +73,10 @@ export default function Footer() {
                </Link>
             </div>
             <div className={styles.anpcContainer}>
-               <Link href={"/"}>
+               <Link href="https://anpc.ro/ce-este-sal/">
                   <Image src="https://cityprintshop.ro/wp-content/uploads/sal-sol/sal.webp" width="201" height="50" alt="Soluționarea alternativă a litigiilor" />
                </Link>
-               <Link href={"/"}>
+               <Link href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO">
                   <Image src="https://cityprintshop.ro/wp-content/uploads/sal-sol/sol.webp" width="201" height="50" alt="Soluționarea online a litigiilor" />
                </Link>
             </div>
@@ -87,8 +85,8 @@ export default function Footer() {
             <p className={styles.bottomText}>@2024 - All rights reserved</p>
             <p className={styles.bottomText}>
                Designed and Developed by {" "}
-               <Link href="https://anpc.ro/ce-este-sal/" className="underline">Iosif Ștefan</Link> &{" "}
-               <Link href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO" className="underline">Mareș Gabriel</Link>
+               <Link href="https://www.linkedin.com/in/stefan2834/" className="underline">Iosif Ștefan</Link> &{" "}
+               <Link href="https://www.linkedin.com/in/mares-gabriel/" className="underline">Mareș Gabriel</Link>
             </p>
          </div>
       </footer>

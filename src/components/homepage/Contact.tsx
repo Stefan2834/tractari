@@ -15,16 +15,16 @@ import phoneImage from "@/assets/icons/phone.png"
 import map from "@/assets/map.png";
 
 export default function Contact() {
-   const { screenWidth } = useDefault();
+   const { screenWidth, data } = useDefault();
 
    return (
       <>
          <div className={styles.container} id="contact">
-            <h2 className={styles.text}>
+            <h2 className="title">
                Probleme pe drum? <br />
                Contactează-ne acum!
             </h2>
-            <p className={styles.paragraph}>
+            <p className="description">
                Nu ezita să ne contactezi dacă ai probleme cu mașina sau dacă ai vreo
                curiozitate legată de noi. Răspundem la orice oră în cel mai scurt timp posibil.
             </p>
@@ -33,25 +33,25 @@ export default function Contact() {
                style={{ height: `${screenWidth > 1200 ? "600px" : "auto"}` }}
             >
                <div className={styles.contactFlex}>
-                  <Link href="/" className={styles.containerFlex}>
+                  <Link href={`tel:+4${data.phoneLink}`} className={styles.containerFlex}>
                      <div className={styles.circle}>
                         <Image className={styles.img} src={phoneImage} alt="Logo telefon" />
                      </div>
-                     <span className={styles.span}>+4 075 475 4215</span>
+                     <span className={styles.span}>{data.phone}</span>
                   </Link>
-                  <Link href="/" className={styles.containerFlex}>
+                  <Link href={data.emailLink} className={styles.containerFlex}>
                      <div className={styles.circle}>
                         <Image className={styles.img} src={mailImage} alt="Logo email" />
                      </div>
-                     <span className={styles.span}>contact@kotasistenta.ro</span>
+                     <span className={styles.span}>{data.email}</span>
                   </Link>
-                  <Link href="/" className={styles.containerFlex}>
+                  <Link href={data.facebookLink} className={styles.containerFlex}>
                      <div className={styles.circle}>
                         <Image className={styles.img} src={facebookImage} alt="Logo facebook" />
                      </div>
-                     <span className={styles.span}>kotasistenta</span>
+                     <span className={styles.span}>{data.facebook}</span>
                   </Link>
-                  <Link href="/" className={styles.containerFlex}>
+                  <Link href={`https://wa.me/+4${data.phoneLink}`} className={styles.containerFlex}>
                      <div className={styles.circle}>
                         <Image className={styles.img} src={whatsappImage} alt="Logo whatsapp" />
                      </div>

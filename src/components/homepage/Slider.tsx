@@ -27,7 +27,7 @@ import rightArrow from "@/assets/icons/arrow.webp";
 import styles from "../../css/modules/slider.module.css"
 
 export default function Slider() {
-   const { screenWidth } = useDefault();
+   const { screenWidth, data } = useDefault();
    const [currentElement, setCurrentElement] = useState<number>(2);
 
    const sliders = [
@@ -104,7 +104,7 @@ export default function Slider() {
             </div>
          </div>
          <div className={styles.buttonMore}>
-            <Link href="/galerie-foto">
+            <Link href={data.galleryPage}>
                <CustomButton
                   padding={`${screenWidth > 600 ? "14px 110px" : "10px 40px"}`}
                   fontSize={`${screenWidth > 600 ? "22px" : "18px"}`}

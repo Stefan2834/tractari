@@ -1,9 +1,10 @@
 //Utilities
 import React from 'react'
 import { useDefault } from '@/contexts/useDefault'
+import Image from 'next/image';
 
 //Mui Components
-import { Avatar, Rating } from "@mui/material";
+import { Rating } from "@mui/material";
 
 //Types
 type CustomReviewProps = {
@@ -22,14 +23,11 @@ export default function CustomReview({ children, avatar, name, value }: CustomRe
 
     return (
         <div className={styles.reviewElement}>
-            <Avatar
+            <Image
                 alt="Avatar"
                 src={avatar}
-                sx={{
-                    width: 110,
-                    height: 110,
-                    position: "absolute",
-                    top: "-50px",
+                width={90} height={90}
+                style={{
                     scale: `${screenWidth > 600 ? "1" : "0.8"}`,
                 }}
             />

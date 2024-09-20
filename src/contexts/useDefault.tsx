@@ -1,15 +1,16 @@
 import React, { createContext, useContext, ReactNode, useState, useEffect, useRef } from "react";
 
+import { redundantData, DataType } from "@/constants/data";
+
 type ContactRefType = any;
 
 interface DefaultContextValue {
 	screenWidth: number;
 	screenHeight: number;
-	clientsNumber: number;
-	setClientsNumber: (clientsNumber: number) => void;
 	contactNameRef: ContactRefType
 	contactEmailRef: ContactRefType
-	contactMessageRef: ContactRefType
+	contactMessageRef: ContactRefType,
+	data: DataType
 }
 
 
@@ -27,7 +28,7 @@ export function DefaultContextProvider({ children }: { children: ReactNode }) {
 	const [screenWidth, setScreenWidth] = useState<number>(0);
 	const [screenHeight, setScreenHeight] = useState<number>(0);
 
-	const [clientsNumber, setClientsNumber] = useState<number>(300);
+	const data: DataType = redundantData;
 
 
 	const contactNameRef = useRef<ContactRefType>(null);
@@ -50,10 +51,10 @@ export function DefaultContextProvider({ children }: { children: ReactNode }) {
 	const value: DefaultContextValue = {
 		screenWidth,
 		screenHeight,
-		clientsNumber, setClientsNumber,
 		contactNameRef,
 		contactEmailRef,
-		contactMessageRef
+		contactMessageRef,
+		data
 	};
 
 	return <DefaultContext.Provider value={value}>{children}</DefaultContext.Provider>;

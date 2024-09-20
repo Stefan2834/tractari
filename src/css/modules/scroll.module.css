@@ -28,10 +28,11 @@
     object-position: center;
     transition: 1500ms ease-in-out;
 }
+
 .scrollTextContainer {
     transition: 1000ms ease-in-out;
     z-index: 1;
-    top: 0; 
+    top: 0;
     position: absolute;
     left: 0;
     font-size: 20px;
@@ -43,10 +44,16 @@
     flex-direction: column;
 }
 
+.scrollText:nth-child(1) {
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 47px;
+}
+
 .scrollText {
-    font-size: 48px;
-    line-height: 48px;
-    color: black;
+    font-weight: 300;
+    font-size: 35px;
+    color: #241D1D;
 }
 
 
@@ -55,10 +62,12 @@
         font-size: 36px;
         line-height: 40px;
     }
+
     .scrollElement {
-        height:600px;
+        height: 600px;
     }
+
     .scrollImg {
-        height:600px;
+        height: 600px;
     }
 }

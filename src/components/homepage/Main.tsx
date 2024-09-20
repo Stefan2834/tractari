@@ -25,7 +25,7 @@ import CustomCard from "../custom/CustomCard";
 import styles from "../../css/modules/main.module.css"
 
 export default function Main() {
-   const { screenWidth } = useDefault();
+   const { screenWidth, data } = useDefault();
 
    return (
       <>
@@ -37,21 +37,21 @@ export default function Main() {
                   TRACTĂRI AUTO ȘI ASISTENȚĂ RUTIERĂ
                </p>
                <h1>KOT ASISTENȚĂ RUTIERĂ</h1>
-               <h2 className="font-second">
+               <h2>
                   Probleme pe drum? Sună-ne acum!
                </h2>
-               <Link href="tel:+40730222643" className="mt-10">
+               <Link href={`tel:+4${data.phoneLink}`} className="mt-10">
                   <CustomButton
                      fontSize={`${screenWidth > 600 ? "20px" : "16px"}`}
                      padding={`${screenWidth > 600 ? "10px 20px" : "6px 12px"}`}
                   >
                      <span>
-                        SUNĂ ACUM - 0712 345 678
+                        DISPONIBILI ORICAND, SUNĂ ACUM - {data.phone}
                      </span>
                   </CustomButton>
                </Link>
                <Link
-                  href="https://wa.me/+400730222643"
+                  href={`https://wa.me/+4${data.phoneLink}`}
                   className={styles.linkButton}
                   style={{
                      fontSize: `${screenWidth > 600 ? "16px" : "12px"}`,
@@ -72,19 +72,19 @@ export default function Main() {
                icon={lightning}
                title="Simplu și rapid"
             >
-               Sărim în ajutorul tău în cel mai scurt timp posibil. Nu te îngrijora, vom fi acolo cât mai rapid.
+               Sărim în ajutorul tău în cel mai scurt timp posibil. Nu te îngrijora, vom fi acolo cât mai rapid. Lorem ipsum Lorem ipsum Lorem ipsum
             </CustomCard>
             <CustomCard
                icon={hours24}
                title="Oriunde și oricând"
             >
-               Venim oriunde în țară, la orice oră din zi și din noapte. Nu ezita să ne contactezi.
+               Venim oriunde în țară, la orice oră din zi și din noapte. Nu ezita să ne contactezi. Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
             </CustomCard>
             <CustomCard
                icon={checked}
                title="Servicii calitative"
             >
-               Oferim servicii de calitate superioară. Nu contează cât de avariată este mașina, noi o vom tracta.
+               Oferim servicii de calitate superioară. Nu contează cât de avariată este mașina, noi o vom tracta. Lorem ipsum Lorem ipsum Lorem ipsum
             </CustomCard>
          </div>
       </>

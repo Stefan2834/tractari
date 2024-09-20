@@ -11,24 +11,7 @@
 }
 
 .reviewTitleFlex h1 {
-    max-width: 1400px;
-    width:calc(100% - 20px);
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 68px;
-    color: #241D1D;
     margin-top: -50px;
-}
-
-
-.reviewTitleFlex h2 {
-    margin-top: 20px;
-    max-width: 1400px;
-    width:calc(100% - 20px);
-    font-size: 24px;
-    color: #241D1D;
-    font-weight: 300;
-    line-height: 29px;
 }
 
 .reviewContainer {
@@ -52,6 +35,12 @@
     margin: 25px 0;
     padding: 0 20px 80px 20px;
     flex-direction: column;
+}
+
+.reviewElement img {
+    position: absolute;
+    top:-45px;
+    border-radius: 100%;
 }
 
 .reviewName {

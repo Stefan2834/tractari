@@ -59,8 +59,8 @@
 
 @media screen and (max-width:600px) {
     .scrollText {
-        font-size: 36px;
-        line-height: 40px;
+        font-size: 32px;
+        line-height: 38px;
     }
 
     .scrollElement {

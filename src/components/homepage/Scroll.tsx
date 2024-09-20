@@ -23,7 +23,7 @@ export default function Scroll() {
                setActivateAnimation(true);
             }
          } else {
-            if(window.scrollY >= 700) {
+            if(window.scrollY >= 1200) {
                setActivateAnimation(true);
             }
          }
@@ -53,7 +53,7 @@ export default function Scroll() {
                <span
                   className="primary-color font-bold"
                   style={{
-                     fontSize: `${screenWidth > 600 ? "256px" : "196px"}`,
+                     fontSize: `${screenWidth > 600 ? "256px" : "160px"}`,
                      lineHeight: "1.1",
                   }}
                >

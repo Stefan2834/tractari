@@ -19,7 +19,7 @@ export default function Scroll() {
    useEffect(() => {
       const handleScroll = () => {
          if(screenWidth > 600) {
-            if (window.scrollY >= 600) {
+            if (window.scrollY >= 450) {
                setActivateAnimation(true);
             }
          } else {
@@ -34,7 +34,7 @@ export default function Scroll() {
 
       return () => window.removeEventListener('scroll', handleScroll);
 
-   }, []);
+   }, [screenWidth]);
 
    return (
       <div

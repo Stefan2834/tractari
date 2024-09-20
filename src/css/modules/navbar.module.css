@@ -37,6 +37,10 @@
     align-items: flex-start;
 }
 
+.containerScrolled .linkButton {
+    color: #241D1D;
+}
+
 .linkContainer {
     color: white;
     display: flex;
@@ -153,8 +157,10 @@
         height: 64px;
         padding: 0 10px;
     }
-    .containerScrolled .logo, .container .logo {
-        height:64px;
+
+    .containerScrolled .logo,
+    .container .logo {
+        height: 64px;
     }
 
     .link {
@@ -172,8 +178,8 @@
     }
 
     .logo img {
-        height:64px;
-        
+        height: 64px;
+
         width: auto;
         image-rendering: optimizeSpeed;
         object-fit: cover;

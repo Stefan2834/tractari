@@ -8,13 +8,14 @@ type CustomButtonProps = {
     padding?: string;
     fontSize?: string;
     width?: string;
+    background?: string;
 }
 
-export default function CustomButton({ children, padding, fontSize, width }: CustomButtonProps) {
+export default function CustomButton({ children, padding, fontSize, width, background }: CustomButtonProps) {
 
     return (
         <button className='custom-button'
-            style={{ padding: padding, fontSize: fontSize, width: width }}
+            style={{ padding: padding, fontSize: fontSize, width: width, backgroundColor: background }}
         >
             {children}
         </button>

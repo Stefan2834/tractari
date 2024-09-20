@@ -61,7 +61,7 @@ export default function Slider() {
                   if (rotate === 0) {
                      return (
                         <div>
-                           <Image src={img} alt="Poză cu mașina de tractare" />
+                           <Image src={img} alt="Poză cu mașina de tractare" key={index} />
                         </div>
                      );
                   } else {
@@ -73,7 +73,7 @@ export default function Slider() {
                               filter: `brightness(${1 / Math.abs(rotate / 0.6)}`,
                            }}
                         >
-                           <Image src={img} alt="Poză cu mașina de tractare" />
+                           <Image src={img} alt="Poză cu mașina de tractare" key={index} />
                         </div>
                      );
                   }

@@ -43,7 +43,7 @@ export default function Footer() {
             </Link>
             <div className={styles.containerLink}>
                <Link href={data.tarifePage} className={styles.link}>
-                  Tarife?
+                  Tarife
                </Link>
                <Link href={data.galleryPage} className={styles.link}>
                   Galerie foto

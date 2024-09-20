@@ -86,6 +86,7 @@ export default function Navbar() {
                   <CustomButton
                      fontSize="20px"
                      padding={`${screenWidth > 900 ? "6px 18px" : "4px 12px"}`}
+                     background={isScroll ? "white" : undefined}
                   >
                      <span>
                         Contacteaza-ne!

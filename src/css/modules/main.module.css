@@ -279,4 +279,12 @@
         padding: 20px 30px;
         margin: 0 30px;
     }
+    .cardAbsoluteElement h1 {
+        font-size: 22px;
+    }
+
+    .cardAbsoluteElement p {
+        font-size:14px;
+        line-height: 18px;
+    }
 }

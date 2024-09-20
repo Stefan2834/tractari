@@ -1,5 +1,6 @@
 //Utilities
 import React from "react";
+import { useDefault } from "@/contexts/useDefault";
 
 //Components
 import Main from "@/components/homepage/Main";
@@ -9,6 +10,9 @@ import Slider from "@/components/homepage/Slider";
 import Contact from "@/components/homepage/Contact";
 
 export default function Home() {
+
+   const { screenWidth } = useDefault()
+
    return (
       <div className="main-container">
          <Main />
@@ -17,7 +21,8 @@ export default function Home() {
          <div className="main-slider-content">
             <h1 className="title">
                Nu suntem unica firmă de tractaj
-               <br /> 24/7 din România, însă...
+               {screenWidth > 600 && <br />}
+               24/7 din România, însă...
             </h1>
             <p className="description">
                Ne pasă de clienții noștri, și apreciem o muncă de calitate. Tractăm orice tip de

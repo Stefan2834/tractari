@@ -83,10 +83,13 @@
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 20px 10px;
 }
 
 .anpcContainer img {
-    margin: 20px 10px;
+    border-radius: 15px;
+    width:201px;
+    height:50px;
 }
 
 
@@ -127,7 +130,7 @@
         width: 40px;
     }
 
-    .anpcContainer img {
+    .anpcContainer {
         margin: 5px 10px;
     }
 }

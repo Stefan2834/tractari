@@ -15,6 +15,9 @@ import facebook from "../assets/icons/facebook.webp";
 import logo from "../assets/logo.png";
 import phone from "../assets/icons/phone.svg"
 
+import sol from "../assets/sol.png"
+import sal from "../assets/sal.png"
+
 //Style
 import styles from "../css/modules/footer.module.css"
 
@@ -74,10 +77,10 @@ export default function Footer() {
             </div>
             <div className={styles.anpcContainer}>
                <Link href="https://anpc.ro/ce-este-sal/">
-                  <Image src="https://cityprintshop.ro/wp-content/uploads/sal-sol/sal.webp" width="201" height="50" alt="Soluționarea alternativă a litigiilor" />
+                  <Image src={sal} width="201" height="50" alt="Soluționarea alternativă a litigiilor" />
                </Link>
                <Link href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO">
-                  <Image src="https://cityprintshop.ro/wp-content/uploads/sal-sol/sol.webp" width="201" height="50" alt="Soluționarea online a litigiilor" />
+                  <Image src={sol} width="201" height="50" alt="Soluționarea online a litigiilor" />
                </Link>
             </div>
          </div>

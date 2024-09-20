@@ -8,7 +8,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 // Utilities
-import { Roboto } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -16,7 +16,7 @@ import type { AppProps } from "next/app";
 import { DefaultContextProvider } from "../contexts/useDefault";
 import { ThemeProvider } from '@mui/material/styles';
 
-const roboto = Roboto({
+const montserrat = Montserrat({
    weight: ["100", "300", "400", "500", "700", "900"],
    subsets: ["latin"],
 });
@@ -86,7 +86,7 @@ export default function App({ Component, pageProps: pageProps }: AppProps) {
    return (
       <ThemeProvider theme={theme}>
          <DefaultContextProvider>
-            <div className={roboto.className}>
+            <div className={montserrat.className}>
                <Head>
                   <meta name="description" content="Firmă de tractări prahova" />
                   <title>Kot Asistență</title>

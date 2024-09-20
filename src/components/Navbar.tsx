@@ -17,6 +17,7 @@ import styles from "../css/modules/navbar.module.css"
 export default function Navbar() {
    const [isMobileNavigation, setIsMobileNavigation] = useState<boolean>(false);
    const { screenWidth } = useDefault();
+   const [isScroll, setIsScroll] = useState<boolean>(false);
 
    const router = useRouter();
 
@@ -30,10 +31,35 @@ export default function Navbar() {
       }
    }, [screenWidth]);
 
+
+
+   useEffect(() => {
+
+      const handleScrollSize = () => {
+         const scroll = window.scrollY;
+         if (scroll > 100) {
+            setIsScroll(true);
+         } else {
+            setIsScroll(false);
+         }
+      }
+
+      handleScrollSize();
+
+      document.addEventListener("scroll", handleScrollSize)
+
+      return () => {
+         document.removeEventListener("scroll", handleScrollSize);
+      }
+   }, [])
+
    return (
       <>
          <div
             className={`${styles.container} grad`}
+            style={{
+               backgroundColor: `${isScroll ? "red" : "blue"}`,
+            }}
          >
             <Link href="/" className={styles.logo}>
                <Image src={logo} alt="Logo" />

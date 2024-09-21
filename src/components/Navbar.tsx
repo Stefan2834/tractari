@@ -96,7 +96,7 @@ export default function Navbar() {
                {screenWidth < 900 && (
                   <div className={styles.phoneNav}>
                      <div>
-                        <Link href="/" className={styles.logo}>
+                        <Link onClick={() => setIsMobileNavigation(false)} href="/" className={styles.logo}>
                            <Image src={logo} alt="Logo" />
                         </Link>
                      </div>

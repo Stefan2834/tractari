@@ -21,13 +21,13 @@ export default function Home() {
          <div className="main-slider-content">
             <h1 className="title">
                Nu suntem unica firmă de tractaj
-               {screenWidth > 600 && <br />}
+               {screenWidth > 600 && <br />}{" "}
                24/7 din România, însă...
             </h1>
             <p className="description">
-               Ne pasă de clienții noștri, și apreciem o muncă de calitate. Tractăm orice tip de
+               Ne pasă de clienții noștri, și apreciem o muncă de calitate. Tractăm orice tip de 
                autoturisme,
-               chiar dacă sistemul de direcție este grav avariat. Sărim în ajutorul tău în cel mai
+               chiar dacă sistemul de direcție este grav avariat. Sărim în ajutorul tău în cel mai 
                scurt timp posibil,
                oriunde în țară și la orice oră. Nu ezita să ne contactezi dacă întâmpini probleme.
                <br />

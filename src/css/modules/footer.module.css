@@ -87,8 +87,9 @@
 }
 
 .anpcContainer img {
-    border-radius: 15px;
-    width:201px;
+    border-radius: 16px;
+    margin:5px 0;
+    width:200px;
     height:50px;
 }
 

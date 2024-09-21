@@ -12,12 +12,12 @@ export interface DataType {
 
 export const redundantData: DataType  = {
     clientsNumber: 300,
-    phone:"0712 345 678",
-    email:"alin@gmail.com",
-    facebook:"alin cotoban",
+    phone:"0724 717 111",
+    email:"tractari@kotasistenta.ro",
+    facebook:"Tractari Floresti Prahova",
     tarifePage: "/tarife",
     galleryPage: "/galerie-foto",
-    phoneLink:"0712345678",
-    facebookLink: "",
+    phoneLink:"0724717111",
+    facebookLink: "https://www.facebook.com/profile.php?id=100075119239027",
     emailLink: ""
 }

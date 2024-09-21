@@ -8,17 +8,17 @@ import { useDefault } from "@/contexts/useDefault";
 import CustomButton from "../custom/CustomButton";
 
 //Carousel
-import photo1 from "@/assets/carousel/slider-1.webp";
-import photo2 from "@/assets/carousel/slider-2.webp";
-import photo3 from "@/assets/carousel/slider-3.webp";
-import photo4 from "@/assets/carousel/slider-4.webp";
-import photo5 from "@/assets/carousel/slider-5.webp";
-import photo6 from "@/assets/carousel/slider-6.webp";
-import photo7 from "@/assets/carousel/slider-7.webp";
-import photo8 from "@/assets/carousel/slider-8.webp";
-import photo9 from "@/assets/carousel/slider-9.webp";
-import photo10 from "@/assets/carousel/slider-10.webp";
-import photo11 from "@/assets/carousel/slider-11.webp";
+import photo1 from "@/assets/carousel/slider-15.webp";
+import photo2 from "@/assets/carousel/slider-23.webp";
+import photo3 from "@/assets/carousel/slider-24.webp";
+import photo4 from "@/assets/carousel/slider-25.webp";
+import photo5 from "@/assets/carousel/slider-26.webp";
+import photo6 from "@/assets/carousel/slider-27.webp";
+import photo7 from "@/assets/carousel/slider-28.webp";
+import photo8 from "@/assets/carousel/slider-29.webp";
+import photo9 from "@/assets/carousel/slider-30.webp";
+import photo10 from "@/assets/carousel/slider-31.webp";
+import photo11 from "@/assets/carousel/slider-32.webp";
 
 import leftArrow from "@/assets/icons/arrow.webp";
 import rightArrow from "@/assets/icons/arrow.webp";

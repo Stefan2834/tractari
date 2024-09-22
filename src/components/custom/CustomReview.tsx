@@ -15,8 +15,8 @@ type CustomReviewProps = {
 import styles from "../../css/modules/review.module.css"
 
 //Images 
-import star from "../../assets/icons/star.svg"
-import emptyStar from "../../assets/icons/empty-star.svg"
+import star from "../../assets/icons/star.webp"
+import emptyStar from "../../assets/icons/empty-star.webp"
 
 export default function CustomReview({ children, avatar, name, value }: CustomReviewProps) {
 

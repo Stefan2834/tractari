@@ -75,7 +75,7 @@ export default function Gallery() {
                 </span>
                 <div className={styles.galleryContainer}>
                     {galleryPhotos.map((image: any, index: number) => (
-                        <Image className={styles.galleryElement} key={index} src={image} alt="Poză cu mașina de tractare" />
+                        <Image className={styles.galleryElement} key={index} src={image} loading="lazy" alt="Poză cu mașina de tractare" />
                     ))}
                 </div>
                 <Contact />

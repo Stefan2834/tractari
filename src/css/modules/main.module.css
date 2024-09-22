@@ -6,7 +6,7 @@
     padding-right: 0;
     position: absolute;
     overflow: hidden;
-    background-image: url("../../assets/bg-main.jpg");
+    background-image: url("../../assets/bg-main.webp");
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.6);
@@ -165,7 +165,7 @@
 
 @media screen and (max-width:900px) {
     .background {
-        background-image: url("../../assets/bg-main-phone.jpg");
+        background-image: url("../../assets/bg-main-phone.webp");
     }
 }
 

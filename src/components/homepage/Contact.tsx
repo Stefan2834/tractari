@@ -11,8 +11,8 @@ import styles from "../../css/modules/contact.module.css"
 import mailImage from "@/assets/icons/email.webp"
 import facebookImage from "@/assets/icons/facebook.webp"
 import whatsappImage from "@/assets/icons/whatsapp.webp"
-import phoneImage from "@/assets/icons/phone.svg"
-import map from "@/assets/map.png";
+import phoneImage from "@/assets/icons/phone.webp"
+import map from "@/assets/map.webp";
 
 export default function Contact() {
    const { screenWidth, data } = useDefault();

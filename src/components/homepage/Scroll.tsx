@@ -4,7 +4,7 @@ import { useDefault } from "@/contexts/useDefault";
 import Image from "next/image"
 
 //Images
-import truck from "@/assets/truck.png";
+import truck from "@/assets/truck.webp";
 
 //Style
 import styles from "../../css/modules/scroll.module.css"

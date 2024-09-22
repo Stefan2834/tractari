@@ -9,7 +9,7 @@ import Link from "next/link";
 import CustomButton from "./custom/CustomButton";
 
 // Assets
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 
 //Style 
 import styles from "../css/modules/navbar.module.css"

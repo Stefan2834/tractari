@@ -14,7 +14,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import lightning from "@/assets/icons/lightning.webp";
 import hours24 from "@/assets/icons/24.webp";
 import checked from "@/assets/icons/checked.webp";
-import phone from "@/assets/icons/phone.svg"
+import phone from "@/assets/icons/phone.webp"
 
 
 //Custom Components

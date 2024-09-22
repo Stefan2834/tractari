@@ -12,11 +12,11 @@ import CustomButton from "./custom/CustomButton";
 import email from "../assets/icons/email.webp";
 import whatsapp from "../assets/icons/whatsapp.webp";
 import facebook from "../assets/icons/facebook.webp";
-import logo from "../assets/logo.png";
-import phone from "../assets/icons/phone.svg"
+import logo from "../assets/logo.webp";
+import phone from "../assets/icons/phone.webp"
 
-import sol from "../assets/sol.png"
-import sal from "../assets/sal.png"
+import sol from "../assets/sol.webp"
+import sal from "../assets/sal.webp"
 
 //Style
 import styles from "../css/modules/footer.module.css"

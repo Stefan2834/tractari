@@ -48,6 +48,9 @@ export const metadata: Metadata = {
       "ajutor rutier Prahova",
       "recuperare auto Prahova",
    ],
+   alternates: {
+      canonical:"https://kotasistenta.ro"
+   },
    icons: {
       apple: [
          { sizes: "57x57", url: "/apple-icon-57x57.png" },
@@ -75,7 +78,6 @@ export default function App({ Component, pageProps: pageProps }: AppProps) {
          <DefaultContextProvider>
             <div className={montserrat.className}>
                <Head>
-                  <meta name="description" content="Tractăm mașini oriunde în țară. Ai probleme cu mașina? Sună-ne iar noi te ajutăm oriunde ai fi!" />
                   <title>Kot Asistență</title>
                </Head>
                <main className="bg-white">

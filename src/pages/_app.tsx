@@ -69,25 +69,13 @@ export const metadata: Metadata = {
    },
 };
 
-import { createTheme } from "@mui/material/styles";
-
-const theme = createTheme({
-   palette: {
-      primary: {
-         main: "#E3B626",
-      },
-      secondary: {
-         main: "#0b0a0a",
-      },
-   },
-});
 
 export default function App({ Component, pageProps: pageProps }: AppProps) {
    return (
          <DefaultContextProvider>
             <div className={montserrat.className}>
                <Head>
-                  <meta name="description" content="Firmă de tractări prahova" />
+                  <meta name="description" content="Tractăm mașini oriunde în țară. Ai probleme cu mașina? Sună-ne iar noi te ajutăm oriunde ai fi!" />
                   <title>Kot Asistență</title>
                </Head>
                <main className="bg-white">

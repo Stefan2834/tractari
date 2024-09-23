@@ -79,6 +79,7 @@ export default function App({ Component, pageProps: pageProps }: AppProps) {
             <div className={montserrat.className}>
                <Head>
                   <title>Kot Asistență</title>
+                  <meta name="description" content="Tractări auto și asistență rutieră la orice oră. Contactează-ne la orice oră iar noi te vom ajuta." />
                </Head>
                <main className="bg-white">
                   <Navbar />

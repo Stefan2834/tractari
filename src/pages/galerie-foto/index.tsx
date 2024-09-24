@@ -68,10 +68,8 @@ export default function Gallery() {
             </div>
             <div className={styles.galleryDiv}>
                 <span className={styles.galleryDescription}>
-                    Ne pasă de clienții noștri, și apreciem o muncă de calitate,
-                    așa că... Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Ut et massa mi. Aliquam in hendrerit urna.Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Ut et massa mi.
+                    Suntem transparenți cu clienții noștri asa că, mai jos poți observa poze de la diferite intervenți pe care noi le-am avut.
+                    Oferim servicii calitative iar mașina ta este în siguranță cu noi.
                 </span>
                 <div className={styles.galleryContainer}>
                     {galleryPhotos.map((image: any, index: number) => (

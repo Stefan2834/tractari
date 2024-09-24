@@ -17,9 +17,9 @@ export default function Review() {
       <>
          <div className={styles.reviewTitleFlex}>
             <h1 className="title">Ce spun clientii nostri?</h1>
-            <h2 className="description">Ne pasă de clienții noștri, și apreciem o muncă de calitate,
-               așa că... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
-               Aliquam in hendrerit urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
+            <h2 className="description">Ne pasă de clienții noștri, și apreciem o muncă de calitate. 
+               Oferim servicii calitative și încercăm să fim transparenți cu părerile clienților noștri despre noi.
+               Iată mai jos câteva opinii ale cliențiilor noștri despre noi
             </h2>
          </div>
          <div

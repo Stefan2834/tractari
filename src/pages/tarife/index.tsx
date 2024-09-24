@@ -12,9 +12,8 @@ export default function Tarife() {
                 </div>
             </div>
             <div className={styles.description}>
-                Ne pasă de clienții noștri, și apreciem o muncă de calitate, așa că...
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Ut et massa mi.
+                Iată mai jos lista cu prețurile noastre în funcție de mărimea autoturismului tău și de distanța parcursă. 
+                Atenție! *Prețurile pot varia dar cel mai bine contactează-ne și lasă-ne detalii despre situația ta iar noi îți facem prețul pe loc.
             </div>
             <div className={styles.tableContainer}>
                 <table className={styles.table}>

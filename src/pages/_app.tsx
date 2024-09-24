@@ -84,6 +84,7 @@ export default function App({ Component, pageProps: pageProps }: AppProps) {
             <div className={montserrat.className}>
                <Head>
                   <title>Kot Asistență</title>
+                  <link rel="canonical" href="https://kotasistenta.ro" />
                   <meta name="description" content="Tractări auto prahova. Ai probleme cu mașina și vrei să fii tractat? Sună la 0724 717 111 iar noi răspundem la orice oră. Pentru mai multe detalii verifică secțiunea de tarife și galeria foto." />
                </Head>
                <main className="bg-white">

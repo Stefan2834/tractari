@@ -29,7 +29,7 @@ export const metadata: Metadata = {
       { name: "Mareș Gabriel", url: "https://www.linkedin.com/in/mares-gabriel/" },
    ],
    keywords: [
-      "tractări prahova",
+      "tractari prahova",
       "platforma prahova",
       "remorcare prahova",
       "tractări auto Ploiești",
@@ -49,9 +49,7 @@ export const metadata: Metadata = {
       "tractări auto DN1 Prahova",
       "tractări auto Valea Prahovei",
       "transport auto defect Prahova",
-      "tractări autostrada A3",
       "ajutor rutier Prahova",
-      "recuperare auto Prahova",
    ],
    alternates: {
       canonical:"https://kotasistenta.ro"
@@ -83,7 +81,7 @@ export default function App({ Component, pageProps: pageProps }: AppProps) {
          <DefaultContextProvider>
             <div className={montserrat.className}>
                <Head>
-                  <title>Kot Asistență</title>
+                  <title>Kot Asistență - Tractări Prahova</title>
                   <link rel="canonical" href="https://kotasistenta.ro" />
                   <meta name="description" content="Tractări auto prahova. Ai probleme cu mașina și vrei să fii tractat? Sună la 0724 717 111 iar noi răspundem la orice oră. Pentru mai multe detalii verifică secțiunea de tarife și galeria foto." />
                </Head>

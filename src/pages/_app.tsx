@@ -29,8 +29,11 @@ export const metadata: Metadata = {
       { name: "Mareș Gabriel", url: "https://www.linkedin.com/in/mares-gabriel/" },
    ],
    keywords: [
-      "tractări auto Prahova",
+      "tractări Prahova",
       "tractări auto Ploiești",
+      "tractari alin cotoban",
+      "remorcare alin cotoban",
+      "kot asistenta",
       "servicii tractări auto Prahova",
       "tractări urgente Prahova",
       "remorcări auto Prahova",
@@ -79,7 +82,7 @@ export default function App({ Component, pageProps: pageProps }: AppProps) {
             <div className={montserrat.className}>
                <Head>
                   <title>Kot Asistență</title>
-                  <meta name="description" content="Tractări auto și asistență rutieră la orice oră. Contactează-ne la orice oră iar noi te vom ajuta." />
+                  <meta name="description" content="Tractări auto prahova. Ai probleme cu mașina și vrei să fii tractat? Sună la 0724 717 111 iar noi răspundem la orice oră. Pentru mai multe detalii verifică secțiunea de tarife și galeria foto." />
                </Head>
                <main className="bg-white">
                   <Navbar />

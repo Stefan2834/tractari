@@ -83,7 +83,7 @@ export default function App({ Component, pageProps: pageProps }: AppProps) {
             <Head>
                <title>Kot Asistență - Tractări Prahova</title>
                <link rel="canonical" href="https://kotasistenta.ro" />
-               <meta name="description" content="Tractări auto prahova. Ai probleme cu mașina și vrei să fii tractat? Sună la 0724 717 111 iar noi răspundem la orice oră. Pentru mai multe detalii verifică secțiunea de tarife și galeria foto." />
+               <meta name="description" content="Tractări și remorcări auto prahova 24 din 7. Sună la 0724 717 111 pentru asistență rapidă în caz de avarii, accidente sau transport auto." />
                <meta name="keywords" content="tractari prahova, platforma prahova, remorcare prahova, tractări auto Ploiești, tractari alin cotoban, remorcare alin cotoban, kot asistenta, servicii tractări auto Prahova, tractări urgente Prahova, remorcări auto Prahova, tractări non-stop Prahova, asistență rutieră Prahova, tractări mașini ieftine Prahova, tractări rapide Ploiești, tractări 24/7 Prahova, tractări accidente Prahova, remorcări auto Ploiești, tractări auto DN1 Prahova, tractări auto Valea Prahovei, transport auto defect Prahova, ajutor rutier Prahova" />
 
                {/* Icons */}

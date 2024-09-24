@@ -29,7 +29,9 @@ export const metadata: Metadata = {
       { name: "Mareș Gabriel", url: "https://www.linkedin.com/in/mares-gabriel/" },
    ],
    keywords: [
-      "tractări Prahova",
+      "tractări prahova",
+      "platforma prahova",
+      "remorcare prahova",
       "tractări auto Ploiești",
       "tractari alin cotoban",
       "remorcare alin cotoban",

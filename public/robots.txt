@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /nogooglebot/
 Disallow: /*.png$
 Disallow: /*.webp$
 Disallow: /*.ico$

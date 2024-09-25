@@ -7,15 +7,6 @@ const nextConfig = {
         locales: ["ro"],
         defaultLocale: "ro",
     },
-    async rewrites() {
-        return [
-            {
-                source: 'http://kotasistenta.ro',
-                destination: 'https://kotasistenta.ro',
-                permanent: "true",
-            }
-        ]
-    }
 };
 
 export default nextConfig;

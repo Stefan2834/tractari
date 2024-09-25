@@ -1,6 +1,5 @@
 User-agent: *
 Disallow: /nogooglebot/
-Disallow: /sitemap.xml
 Disallow: /*.png$
 Disallow: /*.webp$
 Disallow: /*.ico$

@@ -1,0 +1,14 @@
+{
+    "redirects": [
+    {
+        "source": "http://kotasistenta.ro",
+        "destination": "https://kotasistenta.ro",
+        "permanent": true
+    },
+    {
+        "source": "http://www.kotasistenta.ro",
+        "destination": "https://www.kotasistenta.ro",
+        "permanent": true
+    }
+    ]
+}

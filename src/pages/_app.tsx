@@ -49,7 +49,7 @@ export default function App({ Component, pageProps: pageProps }: AppProps) {
                <meta name="ahrefs-site-verification" content="7032a56cb4feb225916320921e1d52b8606b13ec5cbd11ac209c36834448b179" />
 
                {/* Authors meta tags (optional) */}
-               <meta name="author" content="Iosif Stefan Alexandru, Mareș Gabriel" />
+               <meta name="author" content="Iosif Ștefan Alexandru, Mareș Gabriel" />
             </Head>
             <main className="bg-white">
                <Navbar />

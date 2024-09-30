@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 // Utilities
+import { useRouter } from "next/router";
 import { Montserrat } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -22,6 +23,9 @@ const montserrat = Montserrat({
 
 
 export default function App({ Component, pageProps: pageProps }: AppProps) {
+
+   const router = useRouter();
+
    return (
       <DefaultContextProvider>
          <div className={montserrat.className}>
@@ -29,8 +33,9 @@ export default function App({ Component, pageProps: pageProps }: AppProps) {
                <meta charSet="UTF-8" />
                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                <title>Kot Asistență - Tractări Prahova</title>
-               
+
                <link rel="canonical" href="https://kotasistenta.ro/" />
+               <link rel="canonical" href={`https://kotasistenta.ro/${router.asPath}`} />
 
                <meta name="description" content="Tractări și remorcări auto prahova 24 din 7. Sună la 0724 717 111 pentru asistență rapidă în caz de avarii, accidente sau transport auto." />
                <meta name="keywords" content="tractari prahova, platforma prahova, remorcare prahova, tractări auto Ploiești, tractari alin cotoban, remorcare alin cotoban, kot asistenta, servicii tractări auto Prahova, tractări urgente Prahova, remorcări auto Prahova, tractări non-stop Prahova, asistență rutieră Prahova, tractări mașini ieftine Prahova, tractări rapide Ploiești, tractări 24/7 Prahova, tractări accidente Prahova, remorcări auto Ploiești, tractări auto DN1 Prahova, tractări auto Valea Prahovei, transport auto defect Prahova, ajutor rutier Prahova" />

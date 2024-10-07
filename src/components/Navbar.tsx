@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useDefault } from "@/contexts/useDefault";
 import { useRouter } from "next/router";
-import Image from "next/image"
+import Image from "next/image";
 
 // Components
 import Link from "next/link";
@@ -11,8 +11,8 @@ import CustomButton from "./custom/CustomButton";
 // Assets
 import logo from "../assets/logo.webp";
 
-//Style 
-import styles from "../css/modules/navbar.module.css"
+//Style
+import styles from "../css/modules/navbar.module.css";
 
 export default function Navbar() {
    const { screenWidth, data } = useDefault();
@@ -26,15 +26,12 @@ export default function Navbar() {
    }, [isMobileNavigation]);
 
    useEffect(() => {
-      if (screenWidth > 900) {
+      if (screenWidth > 700) {
          setIsMobileNavigation(false);
       }
    }, [screenWidth]);
 
-
-
    useEffect(() => {
-
       const handleScrollSize = () => {
          const scroll = window.scrollY;
          if (scroll > 100) {
@@ -42,23 +39,21 @@ export default function Navbar() {
          } else {
             setIsScroll(false);
          }
-      }
+      };
 
       handleScrollSize();
 
-      document.addEventListener("scroll", handleScrollSize)
+      document.addEventListener("scroll", handleScrollSize);
 
       return () => {
          document.removeEventListener("scroll", handleScrollSize);
-      }
-   }, [])
+      };
+   }, []);
 
    return (
       <>
-         <div
-            className={isScroll ? styles.containerScrolled : styles.container}
-         >
-            <Link href="/" className={styles.logo}>
+         <div className={isScroll ? styles.containerScrolled : styles.container}>
+            <Link href="/" className={styles.logo} onClick={() => setIsMobileNavigation(false)}>
                <Image src={logo} alt="Logo" />
             </Link>
             <div
@@ -66,37 +61,53 @@ export default function Navbar() {
                onClick={() => setIsMobileNavigation((prevState) => !prevState)}
                data-is-mobile-navigation={isMobileNavigation ? "true" : "false"}
             >
-               <div className="line" />
-               <div className="line" />
-               <div className="line" />
+               <div className={styles.line} />
+               <div className={styles.line} />
+               <div className={styles.line} />
             </div>
             <div
                className={styles.linkContainer}
                style={{
-                  transform: `translateX(${screenWidth < 900 && !isMobileNavigation ? "100%" : "0"}`,
+                  transform: `translateX(${
+                     screenWidth < 700 && !isMobileNavigation ? "100%" : "0"
+                  }`,
                }}
             >
-               <Link onClick={() => setIsMobileNavigation(false)} href={data.tarifePage} className={`${styles.link}`}>
+               <Link
+                  onClick={() => setIsMobileNavigation(false)}
+                  href={data.tarifePage}
+                  className={`${styles.link}`}
+               >
                   Tarife
                </Link>
-               <Link onClick={() => setIsMobileNavigation(false)} href={data.galleryPage} className={`${styles.link}`}>
+               <Link
+                  onClick={() => setIsMobileNavigation(false)}
+                  href={data.galleryPage}
+                  className={`${styles.link}`}
+               >
                   Galerie foto
                </Link>
-               <Link onClick={() => setIsMobileNavigation(false)} href={`${router.pathname}#contact`} className={styles.linkButton}>
+               <Link
+                  onClick={() => setIsMobileNavigation(false)}
+                  href={`${router.pathname}#contact`}
+                  className={styles.linkButton}
+               >
                   <CustomButton
                      fontSize="20px"
                      padding={`${screenWidth > 900 ? "6px 18px" : "4px 12px"}`}
                      background={isScroll ? "white" : undefined}
                   >
-                     <span>
-                        Contacteaza-ne!
-                     </span>
+                     <p>Contacteaza-ne!</p>
                   </CustomButton>
                </Link>
-               {screenWidth < 900 && (
+               {screenWidth < 700 && (
                   <div className={styles.phoneNav}>
                      <div>
-                        <Link onClick={() => setIsMobileNavigation(false)} href="/" className={styles.logo}>
+                        <Link
+                           onClick={() => setIsMobileNavigation(false)}
+                           href="/"
+                           className={styles.mobileLogo}
+                        >
                            <Image src={logo} alt="Logo" />
                         </Link>
                      </div>
@@ -107,12 +118,12 @@ export default function Navbar() {
                )}
             </div>
          </div>
-         {screenWidth < 900 && (
+         {screenWidth < 700 && (
             <div
                onClick={() => setIsMobileNavigation(false)}
                className={styles.backgroundContainer}
                style={{
-                  transition: "400ms ease",
+                  transition: "250ms ease-out",
                   visibility: `${isMobileNavigation ? "visible" : "hidden"}`,
                   opacity: `${isMobileNavigation ? "0.5" : "0"}`,
                }}

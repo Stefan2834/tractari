@@ -37,15 +37,32 @@ body {
 }
 
 .custom-button {
-   background-color: #E3B626;
-   transition: 400ms ease;
+   background-color: #fcca28;
+   transition: 80ms ease-out;
    position: relative;
    border-radius: 4px;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
    font-weight: 500;
    margin: 0;
    font-size: 20px;
    padding: 16px 26px;
+}
+
+.custom-button * {
+   transition: 250ms ease-out;
+}
+
+.custom-button:hover {
+   background-color: #d8a603;
+}
+
+.custom-button:active,
+.custom-button:focus {
+   background-color: #a57f02;
+}
+
+.custom-button:active *,
+.custom-button:focus * {
+   scale: 0.9 !important;
 }
 
 .main-container {
@@ -59,7 +76,6 @@ body {
    color: black;
 }
 
-
 .main-slider-content {
    width: 100%;
    display: flex;
@@ -72,7 +88,6 @@ body {
 .main-slider-content h1 {
    margin-top: 160px;
 }
-
 
 .grad {
    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
@@ -89,19 +104,34 @@ body {
 
 .title {
    max-width: 1400px;
-   width: calc(100% - 20px);
+   width: calc(100% - 50px);
+   padding: 0px 50px;
+   margin-bottom: 15px;
    font-size: 56px;
    font-weight: 700;
-   line-height: 60px;
-   color: #241D1D;
+   line-height: 50px;
+   color: #241d1d;
 }
 
 .description {
-   margin-top: 20px;
    max-width: 1400px;
-   width: calc(100% - 20px);
+   width: calc(100% - 50px);
+   padding: 0px 50px;
    font-size: 24px;
-   color: #241D1D;
+   color: #241d1d;
    font-weight: 300;
    line-height: 29px;
+}
+
+@media only screen and (max-width: 1400px) {
+   .title,
+   .description {
+      width: calc(100% - 20px);
+      padding: 0px 20px;
+   }
+
+   .description {
+      padding: 0px 20px;
+      width: calc(100% - 20px);
+   }
 }

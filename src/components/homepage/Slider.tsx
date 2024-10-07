@@ -1,7 +1,7 @@
 //Utilities
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
 import { useDefault } from "@/contexts/useDefault";
 
 //Components
@@ -24,7 +24,7 @@ import leftArrow from "@/assets/icons/arrow.webp";
 import rightArrow from "@/assets/icons/arrow.webp";
 
 //Style
-import styles from "../../css/modules/slider.module.css"
+import styles from "../../css/modules/slider.module.css";
 
 export default function Slider() {
    const { screenWidth, data } = useDefault();
@@ -47,13 +47,13 @@ export default function Slider() {
    return (
       <>
          <div className={styles.container}>
-            <div
-               className={`${styles.containerClipPath} grad-slider`}
-            />
+            <div className={`${styles.containerClipPath} grad-slider`} />
             <div
                className={styles.containerMap}
                style={{
-                  transform: `translateX(${-(currentElement - 1) * 456 + (screenWidth - 456 * 3) / 2}px)`,
+                  transform: `translateX(${
+                     -(currentElement - 1) * 456 + (screenWidth - 456 * 3) / 2
+                  }px)`,
                }}
             >
                {sliders.map((img: any, index: number) => {
@@ -109,9 +109,7 @@ export default function Slider() {
                   padding={`${screenWidth > 600 ? "14px 110px" : "10px 40px"}`}
                   fontSize={`${screenWidth > 600 ? "22px" : "18px"}`}
                >
-                  <h1>
-                     Vezi întreaga galerie foto!
-                  </h1>
+                  <h1>Vezi întreaga galerie foto!</h1>
                </CustomButton>
             </Link>
          </div>

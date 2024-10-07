@@ -1,128 +1,122 @@
 .reviewTitleFlex {
-    width: 100%;
-    font-size: 24px;
-    text-align: left;
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 100px;
-    flex-direction: column;
+   width: 100%;
+   font-size: 24px;
+   text-align: left;
+   margin-bottom: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 100px;
+   flex-direction: column;
 }
 
 .reviewTitleFlex h1 {
-    margin-top: -50px;
+   margin-top: -50px;
 }
 
 .reviewContainer {
-    width: 1400px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-top: 32px;
+   width: 1400px;
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   margin-top: 32px;
 }
 
 .reviewElement {
-    max-width: calc(100% - 20px);
-    width: 450px;
-    height:300px;
-    background-color: #fcfcfc;
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-    justify-content: flex-start;
-    border-radius: 4px;
-    box-shadow: 1px 2px 3px  rgba(0, 0, 0, 0.2);
-    margin: 25px 0;
-    padding: 0 38px 0px 38px;
-    flex-direction: column;
-    
+   max-width: calc(100% - 20px);
+   width: 450px;
+   height: 300px;
+   background-color: #ffffff;
+   display: flex;
+   align-items: flex-start;
+   position: relative;
+   justify-content: flex-start;
+   border-radius: 10px;
+   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+   margin: 25px 0;
+   padding: 0 38px 0px 38px;
+   flex-direction: column;
 }
 
-.reviewElement>img {
-    position: absolute;
-    top: -45px;
-    border-radius: 100%;
+.reviewElement > img {
+   position: absolute;
+   top: -45px;
+   border-radius: 100%;
 }
 
 .reviewName {
-    text-transform: uppercase;
-    text-align: left;
-    width: 100%;
-    font-weight: 600;
-    font-size: 16px;
-    color: #B6B6B6;
-    line-height: 20px;
-    margin-top: 56px;
+   text-transform: uppercase;
+   text-align: left;
+   width: 100%;
+   font-weight: 600;
+   font-size: 16px;
+   color: #b6b6b6;
+   line-height: 20px;
+   margin-top: 56px;
+   letter-spacing: -0.5px;
 }
 
 .starContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 8px;
-}
-
-.starContainer img:nth-child(1) {
-    margin:0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 3px;
 }
 
 .starContainer img {
-    margin:0 2px;
+   margin: 0 2px 0px 0px;
+   height: 15px;
+   width: auto;
 }
 
 .reviewDescription {
-    margin-top: 28px;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 22px;
-    color: #241D1D;
-    line-height: 22px;
+   margin-top: 28px;
+   font-weight: 300;
+   font-size: 18px;
+   line-height: 22px;
+   color: #241d1d;
+   line-height: 22px;
 }
 
-
-
-
-@media screen and (max-width:1400px) {
-    .reviewTitleFlex h1 {
-        margin-top: -100px;
-    }
-    .reviewContainer {
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
+@media screen and (max-width: 1400px) {
+   .reviewTitleFlex h1 {
+      margin-top: -100px;
+   }
+   .reviewContainer {
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-around;
+   }
 }
 
+@media screen and (max-width: 800px) {
+   .reviewTitleFlex h1 {
+      font-size: 40px;
+      line-height: 48px;
+   }
 
-@media screen and (max-width:800px) {
-    .reviewTitleFlex h1 {
-        font-size: 40px;
-        line-height: 48px;
-    }
-
-    .reviewTitleFlex h2 {
-        font-size: 16px;
-        line-height: 18px;
-    }
+   .reviewTitleFlex h2 {
+      font-size: 16px;
+      line-height: 18px;
+   }
 }
 
-@media screen and (max-width:600px) {
-    .reviewElement>img {
-        scale: 0.8;
-        top: -36px;
-    }
+@media screen and (max-width: 600px) {
+   .reviewElement > img {
+      scale: 0.8;
+      top: -36px;
+   }
 
-    .reviewName {
-        margin-top: 68px;
-        margin-bottom: 0px;
-    }
+   .reviewName {
+      margin-top: 68px;
+      margin-bottom: 0px;
+   }
 
-    .reviewElement {
-        padding: 0 10px 40px 10px;
-    }
+   .reviewElement {
+      padding: 0 10px 40px 10px;
+   }
 
-    .reviewTitle {
-        font-size: 18px;
-    }
+   .reviewTitle {
+      font-size: 18px;
+   }
 }

@@ -1,287 +1,286 @@
 .background {
-    width: 100%;
-    height: calc(100svh + 100px);
-    top: 0;
-    left: 0;
-    padding-right: 0;
-    position: absolute;
-    overflow: hidden;
-    background-image: url("../../assets/bg-main.webp");
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    background-blend-mode: darken;
-    clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 100px), 0% 100%);
+   width: 100%;
+   height: calc(100svh + 100px);
+   top: 0;
+   left: 0;
+   padding-right: 0;
+   position: absolute;
+   overflow: hidden;
+   background-image: url("../../assets/bg-main.webp");
+   background-size: cover;
+   background-position: center;
+   background-color: rgba(0, 0, 0, 0.6);
+   background-blend-mode: darken;
+   clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 100px), 0% 100%);
 }
 
 .bar {
-    position: absolute;
-    top: calc(100% - 70px);
-    background: linear-gradient(67.61deg, rgba(0, 0, 0, 0.8) 15.91%, rgba(40, 37, 27, 0.8) 104.86%);
-    height: 170px;
-    width: 100%;
-    clip-path: polygon(0 120px, 100% 0, 100% 70px, 0% 100%);
+   position: absolute;
+   top: calc(100% - 70px);
+   background: linear-gradient(67.61deg, rgba(0, 0, 0, 0.8) 15.91%, rgba(40, 37, 27, 0.8) 104.86%);
+   height: 170px;
+   width: 100%;
+   clip-path: polygon(0 120px, 100% 0, 100% 70px, 0% 100%);
 }
 
 .element {
-    width: 1000px;
-    height: 100vh;
-    position: relative;
-    z-index: 1;
-    align-self: flex-start;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 64px;
-    color: white;
+   width: 1000px;
+   height: 100vh;
+   position: relative;
+   z-index: 1;
+   align-self: flex-start;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0 64px;
+   color: white;
 }
 
 .flex {
-    width: 100%;
-    height: 600px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
+   width: 100%;
+   height: 600px;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+   flex-direction: column;
 }
 
-.flex>p {
-    margin-bottom: 20px;
-    font-weight: 600;
-    font-size: 20px;
-    opacity: 0.8;
+.flex > p {
+   margin-bottom: 20px;
+   font-weight: 600;
+   font-size: 16px;
+   opacity: 0.45;
+   transform: translateX(7px);
 }
 
 .flex h1 {
-    margin-top: 20px;
-    font-size: 100px;
-    font-weight: 700;
-    line-height: 90px;
+   margin: 20px 0px 0px 0px;
+   font-size: 90px;
+   font-weight: 700;
+   line-height: 90px;
 }
 
 .flex h2 {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 29px;
-    opacity: 0.8;
+   font-size: 20px;
+   font-weight: 400;
+   line-height: 29px;
+   opacity: 0.7;
 }
 
 .buttonFlex {
-    margin-top: 40px;
-    margin-right:36px;
+   margin-top: 40px;
+   margin-right: 36px;
+   scale: 0.9;
+   transform-origin: top left;
 }
 
 .buttonFlex div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 6px 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 6px 0;
+}
+
+.buttonFlex p {
+   font-size: 16px;
+   font-weight: 700;
 }
 
 .buttonFlex img {
-    margin-right: 10px;
+   margin-right: 10px;
 }
 
 .flex span {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 20px;
 }
 
 .linkButton {
-    margin-top: 8px;
-    font-size: 20px;
-    line-height: 28px;
-    font-weight: 400;
+   font-size: 20px;
+   line-height: 28px;
+   font-weight: 400;
+   opacity: 0.7;
+   transition: 250ms ease-out;
 }
 
 .linkButton:hover {
-    text-decoration: underline;
+   opacity: 1;
+   text-decoration: underline;
 }
-
 
 .cardContainer {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    width: 1400px;
-    height: auto;
-    top: calc(100vh - 50px);
-    left: 50%;
-    transform: translate(-50%);
-    position: absolute;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+   width: 1400px;
+   height: auto;
+   top: calc(100vh - 50px);
+   left: 50%;
+   transform: translate(-50%);
+   position: absolute;
 }
-
-
 
 /* Media Queries */
 
-@media screen and (max-height:700px) {
-    .background {
-        height:800px;
-    }
-    .bar {
-        top:630px
-    }
-    .element {
-        height:800px;
-    }
-    .cardContainer {
-        top:650px;
-    }
+@media screen and (max-height: 700px) {
+   .background {
+      height: 800px;
+   }
+   .bar {
+      top: 630px;
+   }
+   .element {
+      height: 800px;
+   }
+   .cardContainer {
+      top: 650px;
+   }
 }
 
-
-@media screen and (max-width:1400px) {
-    .cardContainer {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width:1200px) {
-    .cardContainer {
-        flex-direction: column;
-        height: 800px;
-        margin-top: -50px;
-        justify-content: space-around;
-        position: relative;
-        top: 0;
-    }
-}
-
-
-@media screen and (max-width: 1000px) {
-    .flex h1 {
-        font-size: 80px;
-        line-height: 80px;
-    }
-
-    .element {
-        margin: 0 18px;
-        width: 100%;
-    }
-}
-
-
-@media screen and (max-width:900px) {
-    .background {
-        background-image: url("../../assets/bg-main-phone.webp");
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .flex h1 {
-        font-size: 60px;
-        line-height: 60px;
-    }
-}
-
-@media screen and (max-width:600px) {
-    .flex p {
-        margin-bottom: 8px;
-        font-size: 16px;
-    }
-
-    .flex h1 {
-        font-size: 48px;
-        line-height: 48px;
-    }
-
-    .flex h2 {
-        font-size: 18px;
-        line-height: 28px;
-    }
-
-    .showMore div {
-        bottom: 50px;
-    }
-
-    .cardContainer {
-        margin-top: -100px;
-    }
-
-    .flex span {
-        font-size: 16px;
-        line-height: 16px;
-        text-align: left;
-        width: 100%;
-    }
-}
-
-
-
-/* Card Element */
-
-
-.cardAbsoluteElement {
-    width: auto;
-    max-width: 400px;
-    height: 100%;
-    background-color: #fcfcfc;
-    border-radius: 8px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding: 30px 40px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.cardElement {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-}
-
-.cardAbsoluteElement img {
-    height: 40px;
-    margin-right: 12px;
-    width: auto;
-    object-fit: contain;
-    object-position: center;
-}
-
-.cardAbsoluteElement h1 {
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 34px;
-    margin-top: 12px;
-    color: black;
-    color: #241D1D;
-    letter-spacing: -0.2px;
-}
-
-.cardAbsoluteElement p {
-    margin: 24px 0;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #241D1D;
+@media screen and (max-width: 1400px) {
+   .cardContainer {
+      width: 100%;
+   }
 }
 
 @media screen and (max-width: 1200px) {
-    .cardAbsoluteElement {
-        height: auto;
-    }
-
-    .cardContainer {
-        align-items: center;
-    }
+   .cardContainer {
+      flex-direction: column;
+      height: 800px;
+      margin-top: -50px;
+      justify-content: space-around;
+      position: relative;
+      top: 0;
+   }
 }
 
+@media screen and (max-width: 1000px) {
+   .flex h1 {
+      font-size: 80px;
+      line-height: 80px;
+   }
+
+   .element {
+      margin: 0 18px;
+      width: 100%;
+   }
+}
+
+@media screen and (max-width: 900px) {
+   .background {
+      background-image: url("../../assets/bg-main-phone.webp");
+   }
+}
+
+@media screen and (max-width: 700px) {
+   .flex h1 {
+      font-size: 60px;
+      line-height: 60px;
+   }
+}
 
 @media screen and (max-width: 600px) {
-    .cardAbsoluteElement {
-        padding: 20px 30px;
-        margin: 0 30px;
-    }
+   .flex p {
+      margin-bottom: 8px;
+      font-size: 16px;
+   }
 
-    .cardAbsoluteElement h1 {
-        font-size: 22px;
-    }
+   .flex h1 {
+      font-size: 48px;
+      line-height: 48px;
+   }
 
-    .cardAbsoluteElement p {
-        font-size: 14px;
-        line-height: 18px;
-    }
+   .flex h2 {
+      font-size: 18px;
+      line-height: 28px;
+   }
+
+   .showMore div {
+      bottom: 50px;
+   }
+
+   .cardContainer {
+      margin-top: -100px;
+   }
+
+   .flex span {
+      font-size: 16px;
+      line-height: 16px;
+      text-align: left;
+      width: 100%;
+   }
+}
+
+/* Card Element */
+
+.cardAbsoluteElement {
+   width: auto;
+   max-width: 400px;
+   height: fit-content;
+   background-color: #fcfcfc;
+   border-radius: 8px;
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+   flex-direction: column;
+   padding: 25px 40px 35px 40px;
+   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cardElement {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.cardAbsoluteElement img {
+   height: 50px;
+   margin-right: 10px;
+   width: auto;
+   object-fit: contain;
+   object-position: center;
+}
+
+.cardAbsoluteElement h1 {
+   font-weight: 500;
+   font-size: 28px;
+   line-height: 34px;
+   color: #241d1d;
+   letter-spacing: -0.5px;
+}
+
+.cardAbsoluteElement p {
+   margin: 24px 0px 0px 0px;
+   font-weight: 300;
+   font-size: 16px;
+   line-height: 20px;
+   color: #241d1d;
+}
+
+@media screen and (max-width: 1200px) {
+   .cardAbsoluteElement {
+      height: auto;
+   }
+
+   .cardContainer {
+      align-items: center;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .cardAbsoluteElement {
+      padding: 20px 30px;
+      margin: 0 30px;
+   }
+
+   .cardAbsoluteElement h1 {
+      font-size: 22px;
+   }
+
+   .cardAbsoluteElement p {
+      font-size: 14px;
+      line-height: 18px;
+   }
 }

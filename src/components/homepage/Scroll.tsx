@@ -1,15 +1,13 @@
 //Utilities
 import React, { useRef, useEffect, useState } from "react";
 import { useDefault } from "@/contexts/useDefault";
-import Image from "next/image"
+import Image from "next/image";
 
 //Images
 import truck from "@/assets/truck.webp";
 
 //Style
-import styles from "../../css/modules/scroll.module.css"
-
-
+import styles from "../../css/modules/scroll.module.css";
 
 export default function Scroll() {
    const { screenWidth, data } = useDefault();
@@ -18,36 +16,42 @@ export default function Scroll() {
 
    useEffect(() => {
       const handleScroll = () => {
-         if(screenWidth > 600) {
+         if (screenWidth > 600) {
             if (window.scrollY >= 450) {
                setActivateAnimation(true);
             }
          } else {
-            if(window.scrollY >= 1200) {
+            if (window.scrollY >= 1200) {
                setActivateAnimation(true);
             }
          }
       };
 
+      window.addEventListener("scroll", handleScroll);
 
-      window.addEventListener('scroll', handleScroll);
-
-      return () => window.removeEventListener('scroll', handleScroll);
-
+      return () => window.removeEventListener("scroll", handleScroll);
    }, [screenWidth]);
 
    return (
-      <div
-         style={{ height: "800px" }}
-         className={styles.scrollContainer}
-         ref={containerRef}
-      >
-         <div className={styles.scrollElement} >
-            <Image src={truck} alt="Mașină de tractare" className={styles.scrollImg} 
-               style={{ transform: `translate(${activateAnimation ? "calc(100vh + 60% + 100px)" : "calc(-100vh - 60% - 100px)"})` }}
+      <div style={{ height: "800px" }} className={styles.scrollContainer} ref={containerRef}>
+         <div className={styles.scrollElement}>
+            <Image
+               src={truck}
+               alt="Mașină de tractare"
+               className={styles.scrollImg}
+               style={{
+                  transform: `translate(${
+                     activateAnimation ? "calc(100vh + 60% + 100px)" : "calc(-100vh - 60% - 100px)"
+                  })`,
+               }}
             />
-            <div className={styles.scrollTextContainer}
-               style={{ transform: `translate(${activateAnimation ? "0px" : "calc(-100vh - 60% - 100px)"})` }}
+            <div
+               className={styles.scrollTextContainer}
+               style={{
+                  transform: `translate(${
+                     activateAnimation ? "0px" : "calc(-100vh - 60% - 100px)"
+                  })`,
+               }}
             >
                <p className={styles.scrollText}>PESTE</p>
                <span

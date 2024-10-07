@@ -24,6 +24,7 @@ export function useDefault() {
 	return context;
 }
 
+
 export function DefaultContextProvider({ children }: { children: ReactNode }) {
 	const [screenWidth, setScreenWidth] = useState<number>(0);
 	const [screenHeight, setScreenHeight] = useState<number>(0);

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /next-sitemap.xml
+
+Disallow: /*.png$
+Disallow: /*.webp$
+Disallow: /*.ico$
+
+
+
+Sitemap: https://kotasistenta.ro/next-sitemap.xml

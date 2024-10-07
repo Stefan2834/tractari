@@ -42,7 +42,7 @@ export function DefaultContextProvider({ children }: { children: ReactNode }) {
 		}
 
 		handleResize();
-		
+
 		window.addEventListener("resize", handleResize);
 
 

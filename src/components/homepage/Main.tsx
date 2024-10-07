@@ -30,7 +30,7 @@ export default function Main() {
          <div className={styles.bar} />
          <div className={styles.element}>
             <div className={styles.flex}>
-               <p>TRACTĂRI AUTO ȘI ASISTENȚĂ RUTIERĂ</p>
+               <p>TRACTĂRI AUTO ORIUNDE ÎN PRAHOVA</p>
                <h1>KOT ASISTENȚĂ RUTIERĂ</h1>
                <h2>Probleme pe drum? Sună-ne acum!</h2>
                <Link href={`tel:+4${data.phoneLink}`} className={styles.buttonFlex}>
@@ -58,16 +58,16 @@ export default function Main() {
          </div>
          <div className={styles.cardContainer}>
             <CustomCard icon={lightning} title="Simplu și rapid">
-               Sărim în ajutorul tău în cel mai scurt timp posibil. Nu te îngrijora, vom fi acolo
-               cât mai rapid. Lorem ipsum Lorem ipsum Lorem ipsum
+               Sărim în ajutorul tău în cel mai scurt timp posibil. Nu te îngrijora, vom fi acolo în
+               cel mai scurt timp posibil.
             </CustomCard>
             <CustomCard icon={hours24} title="Oriunde și oricând">
-               Venim oriunde în țară, la orice oră din zi și din noapte. Nu ezita să ne contactezi.
-               Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+               Venim oriunde în Prahova dar și în țară. Contactează-ne la telefon sau pe whatsapp
+               iar noi îți vom răspunde la orice oră.
             </CustomCard>
             <CustomCard icon={checked} title="Servicii calitative">
                Oferim servicii de calitate superioară. Nu contează cât de avariată este mașina, noi
-               o vom tracta. Lorem ipsum Lorem ipsum Lorem ipsum
+               o să ne ocupăm de tractat.
             </CustomCard>
          </div>
       </>

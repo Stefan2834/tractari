@@ -1,6 +1,6 @@
 //Utilities
 import React from "react";
-import Image from "next/image"
+import Image from "next/image";
 
 //Images
 import image1 from "@/assets/carousel/slider-1.webp";
@@ -36,48 +36,76 @@ import image30 from "@/assets/carousel/slider-30.webp";
 import image31 from "@/assets/carousel/slider-31.webp";
 import image32 from "@/assets/carousel/slider-32.webp";
 
-
-
 //Components
 import Contact from "@/components/homepage/Contact";
 
-
 //Style
-import styles from "../../css/modules/gallery.module.css"
-
+import styles from "../../css/modules/gallery.module.css";
+import Head from "next/head";
 
 const galleryPhotos = [
-    image1, image2, image3,
-    image4, image5, image6,
-    image7, image8, image9,
-    image10, image11, image12,
-    image13, image14, image15,
-    image16, image17, image18,
-    image19, image20, image21,
-    image22, image23, image24,
-    image25, image26, image27,
-    image28, image29, image30,
-    image31, image32
-]
+   image1,
+   image2,
+   image3,
+   image4,
+   image5,
+   image6,
+   image7,
+   image8,
+   image9,
+   image10,
+   image11,
+   image12,
+   image13,
+   image14,
+   image15,
+   image16,
+   image17,
+   image18,
+   image19,
+   image20,
+   image21,
+   image22,
+   image23,
+   image24,
+   image25,
+   image26,
+   image27,
+   image28,
+   image29,
+   image30,
+   image31,
+   image32,
+];
 
 export default function Gallery() {
-    return (
-        <>
-            <div className={styles.galleryMain}>
-                <span className={styles.galleryText}>Galerie foto</span>
+   return (
+      <>
+         <Head>
+            <title>Galerie Foto - Kot Asistență - Tractări 24/7 Prahova</title>
+         </Head>
+         <div className={styles.galleryMain}>
+            <span className={styles.galleryText}>Galerie foto</span>
+         </div>
+         <div className={styles.galleryDiv}>
+            <span className={styles.galleryDescription}>
+               Suntem transparenți cu clienții noștri asa că, mai jos poți observa poze de la
+               diferite intervenți pe care noi le-am avut. Oferim servicii calitative iar mașina ta
+               este în siguranță cu noi.
+            </span>
+            <div className={styles.galleryContainer}>
+               {galleryPhotos.map((image: any, index: number) => (
+                  <Image
+                     className={styles.galleryElement}
+                     key={index}
+                     src={image}
+                     loading="lazy"
+                     alt="Poză cu mașina de tractare"
+                  />
+               ))}
             </div>
-            <div className={styles.galleryDiv}>
-                <span className={styles.galleryDescription}>
-                    Suntem transparenți cu clienții noștri asa că, mai jos poți observa poze de la diferite intervenți pe care noi le-am avut.
-                    Oferim servicii calitative iar mașina ta este în siguranță cu noi.
-                </span>
-                <div className={styles.galleryContainer}>
-                    {galleryPhotos.map((image: any, index: number) => (
-                        <Image className={styles.galleryElement} key={index} src={image} loading="lazy" alt="Poză cu mașina de tractare" />
-                    ))}
-                </div>
-                <Contact />
-            </div>
-        </>
-    );
+            <Contact />
+         </div>
+      </>
+   );
 }

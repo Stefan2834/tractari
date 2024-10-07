@@ -2,11 +2,10 @@
    width: 100%;
    font-size: 24px;
    text-align: left;
-   margin-bottom: 40px;
    display: flex;
    align-items: center;
    justify-content: center;
-   margin-bottom: 100px;
+   margin: 120px 0px;
    flex-direction: column;
 }
 
@@ -18,8 +17,9 @@
    width: 1400px;
    display: flex;
    align-items: flex-start;
-   justify-content: space-between;
+   justify-content: center;
    margin-top: 32px;
+   gap: 40px;
 }
 
 .reviewElement {
@@ -85,7 +85,6 @@
    .reviewContainer {
       width: 100%;
       flex-wrap: wrap;
-      justify-content: space-around;
    }
 }
 

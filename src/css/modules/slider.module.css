@@ -1,164 +1,183 @@
 .container {
-    margin-top: 64px;
-    width: 100vw;
-    position: relative;
-    height: 900px;
+   margin-top: 64px;
+   width: 100vw;
+   position: relative;
+   height: 900px;
 }
 
 .containerClipPath {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%) !important;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   overflow: visible;
+   clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%) !important;
 }
 
 .containerMap {
-    width: 5000vw;
-    height: 700px;
-    display: flex;
-    position: relative;
-    align-items: center;
-    transition: 400ms ease;
-    top: 100px;
+   width: 5000vw;
+   height: 700px;
+   display: flex;
+   position: relative;
+   align-items: center;
+   transition: 400ms ease;
+   top: 100px;
 }
 
 .containerMap div {
-    width: 400px;
-    position: relative;
-    margin: 0 28px;
-    height: 600px;
-    position: relative;
-    transition: 400ms ease;
-    overflow: hidden;
+   width: 400px;
+   position: relative;
+   margin: 0 28px;
+   height: 600px;
+   position: relative;
+   transition: 400ms ease;
+   overflow: hidden;
 }
 
 .sliderInactive {
-    scale: 0.8;
+   scale: 0.8;
 }
 
 .containerMap img {
-    object-position: center;
-    overflow: hidden;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 4px;
+   object-position: center;
+   overflow: hidden;
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+   border-radius: 4px;
 }
 
 .buttonContainer {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -200px;
-    position: relative;
-    z-index: 10;
-    color: white;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: -200px;
+   position: relative;
+   z-index: 10;
+   color: white;
 }
 
 .sliderButton {
-    width: 96px;
-    height: 96px;
-    margin: 0 8px;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.15);
-    background-color: #F9CB38;
+   width: 96px;
+   height: 96px;
+   margin: 0 8px;
+   border-radius: 9999px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.15);
+   background-color: #f9cb38;
+   transition: 200ms ease-in-out;
+}
+
+.sliderButton:hover {
+   width: 96px;
+   height: 96px;
+   background-color: #e8b921;
+}
+
+.sliderButton:active {
+   scale: 0.9;
+   background-color: #bd9308;
+}
+
+.sliderButton:nth-of-type(1) > img {
+   transform: translateX(-3px);
+   user-select: none;
+}
+
+.sliderButton:nth-of-type(2) > img {
+   transform: translateX(-3px);
+   rotate: 180deg;
+   user-select: none;
 }
 
 .sliderLeft {
-    height: 45px;
-    width: auto
+   height: 45px;
+   width: auto;
 }
 
 .sliderRight {
-    height: 45px;
-    width: auto;
-    transform: rotate(180deg);
-    position: relative;
+   height: 45px;
+   width: auto;
+   transform: rotate(180deg);
+   position: relative;
 }
 
 .buttonMore {
-    margin-top: 80px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   margin-top: 80px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .buttonMore h1 {
-    font-weight: 600;
-    font-size: 28px;
-    color: #FCFBFA;
-    margin: 4px 0;
+   font-weight: 600;
+   font-size: 20px;
+   color: #fcfbfa;
+   margin: 4px 0;
 }
-
-
-
 
 /* Media Queries */
 
-@media screen and (max-width:1200px) {
-    .buttonContainer {
-        margin-top: -190px;
-    }
+@media screen and (max-width: 1200px) {
+   .buttonContainer {
+      margin-top: -190px;
+   }
 
-    .sliderButton {
-        width: 80px;
-        height: 80px;
-    }
+   .sliderButton {
+      width: 80px;
+      height: 80px;
+   }
 
-    .sliderLeft,
-    .sliderRight {
-        height: 40px;
-    }
+   .sliderLeft,
+   .sliderRight {
+      height: 40px;
+   }
 }
 
-
-@media screen and (max-width:1000px) {
-    .buttonMore h1 {
-        font-size: 24px;
-        line-height: 26px;
-    }
+@media screen and (max-width: 1000px) {
+   .buttonMore h1 {
+      font-size: 24px;
+      line-height: 26px;
+   }
 }
 
-@media screen and (max-width:800px) {
-    .buttonContainer {
-        margin-top: -180px;
-    }
+@media screen and (max-width: 800px) {
+   .buttonContainer {
+      margin-top: -180px;
+   }
 
-    .sliderButton {
-        width: 60px;
-        height: 60px;
-    }
+   .sliderButton {
+      width: 60px;
+      height: 60px;
+   }
 
-    .sliderLeft,
-    .sliderRight {
-        height: 30px;
-    }
+   .sliderLeft,
+   .sliderRight {
+      height: 30px;
+   }
 }
 
-@media screen and (max-width:600px) {
-    .containerMap div {
-        scale: 0.8;
-        top: -20%;
-    }
+@media screen and (max-width: 600px) {
+   .containerMap div {
+      scale: 0.8;
+      top: -20%;
+   }
 
-    .container {
-        height: 700px;
-    }
+   .container {
+      height: 700px;
+   }
 
-    .sliderInactive {
-        scale: 0.5;
-    }
+   .sliderInactive {
+      scale: 0.5;
+   }
 
-    .buttonMore h1 {
-        font-size: 20px;
-        line-height: 24px;
-        font-weight: 600;
-    }
+   .buttonMore h1 {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 600;
+   }
 }

@@ -105,10 +105,7 @@ export default function Slider() {
          </div>
          <div className={styles.buttonMore}>
             <Link href={data.galleryPage}>
-               <CustomButton
-                  padding={`${screenWidth > 600 ? "14px 110px" : "10px 40px"}`}
-                  fontSize={`${screenWidth > 600 ? "22px" : "18px"}`}
-               >
+               <CustomButton padding={`${screenWidth > 600 ? "14px 110px" : "10px 40px"}`}>
                   <h1>Vezi întreaga galerie foto!</h1>
                </CustomButton>
             </Link>

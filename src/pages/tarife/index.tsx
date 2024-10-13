@@ -15,9 +15,12 @@ export default function Tarife() {
                <div className={styles.mainText}>Tarife</div>
             </div>
             <div className={styles.description}>
-               Iată mai jos lista cu prețurile noastre în funcție de mărimea autoturismului tău și
-               de distanța parcursă. Atenție! *Prețurile pot varia dar cel mai bine contactează-ne
-               și lasă-ne detalii despre situația ta iar noi îți facem prețul pe loc.
+               Mai jos vei găsi lista cu prețurile noastre, stabilite în funcție de mărimea autoturismului și de distanța parcursă. 
+               Punem accent pe transparență și oferim soluții personalizate pentru fiecare client, 
+               astfel încât să primești cel mai bun raport calitate-preț pentru serviciile de tractări auto în Prahova.
+               Atenție! Prețurile afișate pot varia în funcție de complexitatea situației. 
+               Cel mai bine este să ne contactezi direct și să ne oferi detalii despre problema ta. 
+               Echipa noastră îți va face o ofertă personalizată pe loc, astfel încât să te asiguri că primești cel mai corect preț pentru intervenția noastră.
             </div>
             <div className={styles.tableContainer}>
                <table className={styles.table}>

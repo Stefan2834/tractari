@@ -28,10 +28,12 @@ export default function Home() {
                   {screenWidth > 600 && <br />} 24/7 din România, însă...
                </h1>
                <p className="description">
-                  Ne pasă de clienții noștri, și apreciem o muncă de calitate. Tractăm orice tip de
-                  autoturisme, chiar dacă sistemul de direcție este grav avariat. Sărim în ajutorul
-                  tău în cel mai scurt timp posibil, oriunde în țară și la orice oră. Nu ezita să ne
-                  contactezi dacă întâmpini probleme.
+                  Suntem dedicați să oferim cele mai bune servicii de tractări auto în Prahova și nu numai. 
+                  Ne pasă de fiecare client și punem accent pe o muncă de calitate, indiferent de complexitatea situației. Tractăm orice tip de autoturisme, 
+                  inclusiv vehicule cu sistem de direcție grav avariat.
+                  Dacă te afli în județul Prahova și ai nevoie de o intervenție rapidă, echipa noastră va ajunge la tine în cel mai scurt timp, 
+                  oferind asistență de urgență oriunde în zonă, fie la Ploiești, Câmpina sau alte localități din județ. Suntem disponibili 24/7 pentru a veni în ajutorul tău, 
+                  oriunde te-ai afla, nu doar în Prahova, ci și în toată România.
                   <br />
                </p>
             </div>

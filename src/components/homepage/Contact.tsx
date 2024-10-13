@@ -25,8 +25,11 @@ export default function Contact() {
                Sună-ne acum!
             </h2>
             <p className="description">
-               Nu ezita să ne contactezi dacă ai probleme cu mașina sau dacă ai vreo
-               curiozitate legată de noi. Răspundem la orice oră în cel mai scurt timp posibil.
+               Nu ezita să ne contactezi dacă întâmpini probleme cu mașina în județul Prahova sau dacă ai întrebări legate de serviciile
+               noastre de tractări auto. Suntem aici pentru tine 24/7, gata să oferim asistență rapidă și eficientă oriunde te-ai afla,
+               fie în Ploiești, Câmpina, sau alte localități din Prahova.
+               Indiferent dacă ai nevoie de ajutor de urgență sau ai doar o curiozitate, echipa noastră îți va răspunde prompt,
+               la orice oră din zi sau noapte. Contactează-ne și vom fi la dispoziția ta în cel mai scurt timp!
             </p>
             <div
                className={styles.form}

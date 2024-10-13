@@ -89,9 +89,11 @@ export default function Gallery() {
          </div>
          <div className={styles.galleryDiv}>
             <span className={styles.galleryDescription}>
-               Suntem transparenți cu clienții noștri asa că, mai jos poți observa poze de la
-               diferite intervenți pe care noi le-am avut. Oferim servicii calitative iar mașina ta
-               este în siguranță cu noi.
+               Suntem transparenți cu clienții noștri, așa că, mai jos poți vedea imagini reale de la diferite intervenții pe care le-am realizat
+               în județul Prahova și în alte zone din România. Ne mândrim cu serviciile noastre calitative,
+               iar aceste fotografii demonstrează angajamentul nostru pentru siguranța și satisfacția clienților.
+               Fiecare intervenție este tratată cu profesionalism, iar mașina ta este întotdeauna în siguranță cu noi. 
+               Indiferent de situație, fie că este vorba de o avarie gravă sau o simplă defecțiune, poți avea încredere că vehiculul tău este în mâini bune.
             </span>
             <div className={styles.galleryContainer}>
                {galleryPhotos.map((image: any, index: number) => (

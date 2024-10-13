@@ -18,9 +18,12 @@ export default function Review() {
          <div className={styles.reviewTitleFlex}>
             <h1 className="title">Ce spun clientii nostri?</h1>
             <h2 className="description">
-               Ne pasă de clienții noștri, și apreciem o muncă de calitate. Oferim servicii
-               calitative și încercăm să fim transparenți cu părerile clienților noștri despre noi.
-               Iată mai jos câteva opinii ale cliențiilor noștri despre noi
+               Ne pasă profund de clienții noștri și ne străduim să oferim cele mai bune servicii de tractări auto în Prahova.
+               Punem accent pe calitate și profesionalism în fiecare intervenție, fie că este vorba de tractări de urgență, asistență rutieră sau transport auto.
+               Ne angajăm să fim transparenți și să oferim soluții rapide și eficiente, indiferent de situație.
+               Apreciem fiecare părere venită din partea clienților noștri și credem că feedback-ul acestora ne ajută să ne îmbunătățim constant serviciile.
+               Mai jos, poți citi câteva dintre recenziile clienților noștri mulțumiți, care au beneficiat de serviciile noastre de tractări în județul Prahova.
+               Opiniile lor reflectă angajamentul nostru de a oferi servicii de top în domeniul tractărilor auto.
             </h2>
          </div>
          <div className={styles.reviewContainer} style={{ height: "auto" }}>

@@ -45,7 +45,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Kot Asistență - Tractări 24/7 Prahova</title>
+                <title>Kot Asistenta - Tractari Prahova</title>
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
